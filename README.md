@@ -3,8 +3,24 @@ draft for format specs for lrc/SyncedLyric
 
 meaning by line/paragraph/word depending on context
 
+Format
+
+#[Verse 2]
+[00:00.00] Finding life along the way
+[00:00.00] [Meaning]Melodies we haven't played
+[00:00.00] No, I don't want no rest [/Meaning: That feeling where you just cant stop listening and can’t fall alseep because its to good to listen or to watch, its either its amazing or entertaining for you to hear or watch.](Yeah, yeah)
+[00:00.00] Echoin' around these walls
+[00:00.00] Fighting to create a song (Yeah)
+[00:00.00] I don't wanna miss a beat
+
 word meaning for foreign language
 
 Translation - Per Line for foreign language
 
-Singer - A song may have multiple singers
+#Singer - A song may have multiple singers
+
+Format
+
+[00:12.00] [Singer:Jhon]Line 1 lyrics
+[00:16.00] [Singer:Luis]Line 2 lyrics
+[1:01.00] [Singer:William,Luis]Line 3 lyrics
