@@ -1,7 +1,7 @@
 # lrc_SyncedLyrics_v2
 draft for format specs for lrc/SyncedLyric. Please contribute
 
-## Contextual Meaning - by word/line/paragraph
+## 1 Contextual Meaning - by word/line/paragraph
 
 ### Format
 
@@ -15,7 +15,7 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 [00:00.00] I don't wanna miss a beat
 ```
 
-## Foreign Language Translation - per Word 
+## 2 Foreign Language Translation - per Word 
 
 ### Format
 
@@ -23,7 +23,7 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-## Foreign Language Translation - Per Line/Phrase
+## 3 Foreign Language Translation - Per Line/Phrase
 
 ### Format
 
@@ -34,7 +34,7 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 [00:00.00] Kerro, häntä ootan yhä vaan
 ```
 
-## Singer - A song may have multiple singers
+## 4 Singer - A song may have multiple singers
 
 ### Format
 
