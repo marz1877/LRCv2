@@ -43,3 +43,10 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 [00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
 [1:01.00] [Singer:William,Luis]Line 3 lyrics
 ```
+## 5 Languages - Just metadata for song like "[ar:Lyrics artist]"
+
+### Format
+
+```
+[language:Languages in the lyrics]
+```
