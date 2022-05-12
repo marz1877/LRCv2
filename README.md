@@ -1,7 +1,7 @@
 # lrc_SyncedLyrics_v2
 draft for format specs for lrc/SyncedLyric
 
-meaning by line/paragraph/word depending on context
+Contextual Meaning - by word/line/paragraph
 
 Format
 
@@ -13,14 +13,25 @@ Format
 [00:00.00] Fighting to create a song (Yeah)
 [00:00.00] I don't wanna miss a beat
 
-word meaning for foreign language
+Foreign Language Translation - per Word 
 
-Translation - Per Line for foreign language
+Format
+
+[00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
+
+Foreign Language Translation - Per Line/Phrase
+
+Format
+
+[00:00.00] Tuuli tuule sinne [PhraseMeanind,fi>en]missä muruseni on[/PhraseMeanind:Literal:Where my loved ones are,CommonUsage:where's my baby?]
+[00:00.00] Leiki hetki hänen hiuksillaan
+[00:00.00] Kerro rakkauteni, kerro kuinka ikävöin
+[00:00.00] Kerro, häntä ootan yhä vaan
 
 #Singer - A song may have multiple singers
 
 Format
 
-[00:12.00] [Singer:Jhon]Line 1 lyrics
-[00:16.00] [Singer:Luis]Line 2 lyrics
+[00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
+[00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
 [1:01.00] [Singer:William,Luis]Line 3 lyrics
