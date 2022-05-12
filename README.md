@@ -5,7 +5,7 @@ draft for format specs for lrc/SyncedLyric
 
 ### Format
 
-`#[Verse 2]
+``#[Verse 2]
 [00:00.00] Finding life along the way
 
 [00:00.00] [Meaning]Melodies we haven't played
@@ -16,7 +16,7 @@ draft for format specs for lrc/SyncedLyric
 
 [00:00.00] Fighting to create a song (Yeah)
 
-[00:00.00] I don't wanna miss a beat`
+[00:00.00] I don't wanna miss a beat``
 
 ## Foreign Language Translation - per Word 
 
