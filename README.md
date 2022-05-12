@@ -1,5 +1,5 @@
 # lrc_SyncedLyrics_v2
-draft for format specs for lrc/SyncedLyric
+draft for format specs for lrc/SyncedLyric. Please contribute
 
 ## Contextual Meaning - by word/line/paragraph
 
