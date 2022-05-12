@@ -11,11 +11,8 @@ draft for format specs for lrc/SyncedLyric
 [00:00.00] [Meaning]Melodies we haven't played
 
 [00:00.00] No, I don't want no rest [/Meaning: That feeling where you just cant stop listening and can’t fall alseep because its to good to listen or to watch, its either its amazing or entertaining for you to hear or watch.](Yeah, yeah)
-
 [00:00.00] Echoin' around these walls
-
 [00:00.00] Fighting to create a song (Yeah)
-
 [00:00.00] I don't wanna miss a beat```
 
 ## Foreign Language Translation - per Word 
