@@ -29,11 +29,8 @@ draft for format specs for lrc/SyncedLyric
 
 ```
 [00:00.00] Tuuli tuule sinne [PhraseMeanind,fi>en]missä muruseni on[/PhraseMeanind:Literal:Where my loved ones are,CommonUsage:where's my baby?]
-
 [00:00.00] Leiki hetki hänen hiuksillaan
-
 [00:00.00] Kerro rakkauteni, kerro kuinka ikävöin
-
 [00:00.00] Kerro, häntä ootan yhä vaan
 ```
 
@@ -43,8 +40,6 @@ draft for format specs for lrc/SyncedLyric
 
 ```
 [00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
-
 [00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
-
 [1:01.00] [Singer:William,Luis]Line 3 lyrics
 ```
