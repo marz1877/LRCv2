@@ -50,3 +50,9 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 ```
 [language:Languages in the lyrics]
 ```
+## UI for Translation and Meaning Feature
+
+![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
+
+
+
