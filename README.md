@@ -1,6 +1,28 @@
 # lrc_SyncedLyrics_v2
 draft for format specs for lrc/SyncedLyric. Please contribute
 
+Also See - https://id3.org/Lyrics3v2
+
+## 10 .lrc/SyncedLyrics version info
+
+Format 
+
+```
+[lrc version:2]
+```
+
+## 4 Singer - A song may have multiple singers
+
+also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+
+### Format
+
+```
+[00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
+[00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
+[1:01.00] [Singer:William,Luis]Line 3 lyrics
+```
+
 ## 1 Contextual Meaning - by word/line/paragraph
 
 ### Format
@@ -34,23 +56,13 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 [00:00.00] Kerro, häntä ootan yhä vaan
 ```
 
-## 4 Singer - A song may have multiple singers
-
-also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
-
-### Format
-
-```
-[00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
-[00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
-[1:01.00] [Singer:William,Luis]Line 3 lyrics
-```
 ## 5 Languages - Just metadata for song like "[ar:Lyrics artist]"
 
 ### Format
 
 ```
 [language:Languages in the lyrics]
+example [language:en,es,de]
 ```
 ## 6 UI for Translation and Meaning Feature
 
@@ -82,5 +94,3 @@ Format
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
-
-
