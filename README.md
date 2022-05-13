@@ -78,7 +78,7 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
-## 9 Custom Color per Word for expression
+## 9 Custom Color - for expression
 
 Format
 
