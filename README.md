@@ -78,15 +78,7 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
-## 9 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
-
-A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
-
-![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
-
-It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
-
-## 10 Custom Color per Word for expression
+## 9 Custom Color per Word for expression
 
 Format
 
@@ -94,3 +86,11 @@ Format
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
+
+## 10 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
+
+A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
+
+![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
+
+It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
