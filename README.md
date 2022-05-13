@@ -3,7 +3,7 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 
 Also See - https://id3.org/Lyrics3v2
 
-## 10 .lrc/SyncedLyrics version info
+## 1 .lrc/SyncedLyrics version info
 
 Format 
 
@@ -11,7 +11,7 @@ Format
 [lrc version:2]
 ```
 
-## 4 Singer - A song may have multiple singers
+## 2 Singer - A song may have multiple singers
 
 also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
 
@@ -23,7 +23,7 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [1:01.00] [Singer:William,Luis]Line 3 lyrics
 ```
 
-## 1 Contextual Meaning - by word/line/paragraph
+## 3 Contextual Meaning - by word/line/paragraph
 
 ### Format
 
@@ -37,7 +37,7 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [00:00.00] I don't wanna miss a beat
 ```
 
-## 2 Foreign Language Translation - per Word 
+## 4 Foreign Language Translation - per Word 
 
 ### Format
 
@@ -45,7 +45,7 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-## 3 Foreign Language Translation - Per Line/Phrase
+## 5 Foreign Language Translation - Per Line/Phrase
 
 ### Format
 
@@ -56,7 +56,7 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [00:00.00] Kerro, häntä ootan yhä vaan
 ```
 
-## 5 Languages - Just metadata for song like "[ar:Lyrics artist]"
+## 6 Languages - Just metadata for song like "[ar:Lyrics artist]"
 
 ### Format
 
@@ -64,7 +64,7 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [language:Languages in the lyrics]
 example [language:en,es,de]
 ```
-## 6 UI for Translation and Meaning Feature
+## 7 UI for Translation and Meaning Feature
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
@@ -72,13 +72,13 @@ When meaning mode from the top button is selected hovering over will show line, 
 
 When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
 
-## 7 Milliseconds Word accuraccy for Karaeoke Mode
+## 8 Milliseconds Word accuraccy for Karaeoke Mode
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
-## 8 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
+## 9 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
 
 A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
 
@@ -86,7 +86,7 @@ A midi of voice melody can be supplied with audio files and the player can show 
 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
 
-## 9 Custom Color per Word for expression
+## 10 Custom Color per Word for expression
 
 Format
 
