@@ -107,3 +107,25 @@ A midi of voice melody can be supplied with audio files and the player can show 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
 
 Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that file can be used to generate to midi.
+
+## 12 Chords
+
+Format
+
+```
+[00:22.37] [cr]Today[/cr=F#m7] [cr]is gonna be the day
+[00:24.17]That they're [/cr=A][cr]gonna throw it back to[/cr=Esus4] [cr]you[/cr=B7sus4]
+[00:27.39]By now you should've somehow
+[00:29.65]Realized what you gotta do
+[00:32.88]I don't believe that anybody
+[00:35.39]Feels the way I do about you now
+[00:43.89]Backbeat, the word is on the street
+[00:45.89]That the fire in your heart is out
+[00:49.65]I'm sure you've heard it all before
+[00:51.64]But you never really had a doubt
+```
+
+
+
+
+
