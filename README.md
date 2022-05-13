@@ -6,6 +6,16 @@ https://github.com/openlyrics/openlyrics
 
 Will need a WYSIWYG editor if someone is using every feature.
 
+## 0 Player to read filename with type speficied
+
+If a audio file is played and there is a .lrc in the same directory or it is specefied in player
+the .lrc can be named
+```
+sameasaudiofilename_translation.lrc
+sameasaudiofilename_meaning.lrc
+sameasaudiofilename_chords.lrc
+```
+
 ## 1 .lrc/SyncedLyrics version info
 
 Format 
