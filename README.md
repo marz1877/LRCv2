@@ -8,6 +8,9 @@ Will need a WYSIWYG editor if someone is using every feature.
 file extension - .lrc, .music, as metadata
 purposes - lyrics, kareoke with time and pitch, chords, meaning, translation
 
+These features are not too much for creating .lrc all can be automated except meaning and translation. speech recognition can time the lyrics. chords can be automated too.
+Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that file can be used to generate to midi.
+
 ## 0 Player to read filename with type speficied
 
 If a audio file is played and there is a .lrc in the same directory or it is specefied in player
