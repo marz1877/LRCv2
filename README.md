@@ -66,7 +66,7 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
-#8 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
+## 8 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
 
 A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
 
