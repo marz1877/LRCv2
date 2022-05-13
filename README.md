@@ -86,8 +86,16 @@ Format
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
+## 10 Custom Size - for expression
 
-## 10 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
+Format
+
+```
+[02:16.00] [sz=10]Destroy yourself, see who gives a[/sz] [sz=20]duck[/sz]
+[02:18.00] See who gives a duck
+```
+
+## 11 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
 
 A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
 
