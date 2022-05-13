@@ -38,7 +38,9 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [00:00.00] I don't wanna miss a beat
 ```
 
-## 4 Foreign Language Translation - per Word 
+## 4 Foreign Language Translation - per Word
+
+Dictionary in the player may not work as word has to be explained contexually and as used in gerneral/other cases.
 
 ### Format
 
@@ -103,3 +105,5 @@ A midi of voice melody can be supplied with audio files and the player can show 
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
+
+Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that file can be used to generate to midi.
