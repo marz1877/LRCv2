@@ -5,6 +5,8 @@ Also See - https://id3.org/Lyrics3v2
 https://github.com/openlyrics/openlyrics
 
 Will need a WYSIWYG editor if someone is using every feature.
+file extension - .lrc, .music, as metadata
+purposes - lyrics, kareoke with time and pitch, chords, meaning, translation
 
 ## 0 Player to read filename with type speficied
 
