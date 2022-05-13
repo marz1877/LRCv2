@@ -36,6 +36,8 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 
 ## 4 Singer - A song may have multiple singers
 
+also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+
 ### Format
 
 ```
@@ -50,7 +52,7 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 ```
 [language:Languages in the lyrics]
 ```
-## UI for Translation and Meaning Feature
+## 6 UI for Translation and Meaning Feature
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
@@ -58,8 +60,16 @@ When meaning mode from the top button is selected hovering over will show line, 
 
 When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
 
-## milliseconds Word accuraccy for Karaeoke Mode
+## 7 Milliseconds Word accuraccy for Karaeoke Mode
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
+
+#8 Full Karaeoke - with MIDI for voice melody with pitch recognision and midi roll
+
+A midi of voice melody can be supplied with audio files and the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
+
+![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
+
+It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
