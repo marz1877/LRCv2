@@ -2,6 +2,7 @@
 draft for format specs for lrc/SyncedLyric. Please contribute
 
 Also See - https://id3.org/Lyrics3v2
+https://github.com/openlyrics/openlyrics
 
 ## 1 .lrc/SyncedLyrics version info
 
