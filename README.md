@@ -4,6 +4,8 @@ draft for format specs for lrc/SyncedLyric. Please contribute
 Also See - https://id3.org/Lyrics3v2
 https://github.com/openlyrics/openlyrics
 
+Will need a WYSIWYG editor if someone is using every feature.
+
 ## 1 .lrc/SyncedLyrics version info
 
 Format 
@@ -91,7 +93,7 @@ Format
 ```
 ## 10 Custom Size - for expression
 
-Format
+### Format
 
 ```
 [02:16.00] [sz=10]Destroy yourself, see who gives a[/sz] [sz=20]duck[/sz]
@@ -110,7 +112,7 @@ Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that
 
 ## 12 Chords
 
-Format
+### Format
 
 ```
 [00:22.37] [cr]Today[/cr=F#m7] [cr]is gonna be the day
@@ -124,8 +126,3 @@ Format
 [00:49.65]I'm sure you've heard it all before
 [00:51.64]But you never really had a doubt
 ```
-
-
-
-
-
