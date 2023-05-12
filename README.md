@@ -106,6 +106,21 @@ When translation mode is selected hovering over will hilight phrases (as small a
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
+```
+[Verse 1]
+[00:00.00]I <00:00.00> walk <00:00.38> a <00:00.52> lonely <00:00.95> road
+[00:01.79]The <00:02.19> only <00:02.40> one <00:02.79>
+[00:03.08]that <00:03.25> I <00:03.40> have <00:03.70> ever <00:03.90> known
+[00:05.00]Don't <00:05.18> know <00:05.36> where <00:05.54> it <00:05.72> goes
+[00:07.15]But <00:07.32> it's <00:07.60> home <00:07.91> to <00:08.08> me, <00:08.23> and <00:08.45> I <00:08.61> walk <00:08.81> alone
+
+[Chorus]
+[00:14.15]I <00:14.38> walk <00:14.57> this <00:14.72> empty <00:15.04> street
+[00:18.17]On <00:18.38> the <00:18.51> Boulevard <00:18.89> of <00:19.05> Broken <00:19.35> Dreams
+[00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
+[00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
+```
+
 https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
 ## 9 Custom Color - for expression
