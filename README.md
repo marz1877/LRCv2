@@ -103,7 +103,7 @@ When meaning mode from the top button is selected hovering over will show line, 
 When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
 
 ## 8 Milliseconds Word accuraccy for Karaeoke Mode
-
+Also See - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 ```
