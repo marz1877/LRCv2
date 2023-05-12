@@ -1,14 +1,15 @@
 # lrc_SyncedLyrics_v2
 Draft for format specs of lrc(SyncedLyric) v2. Please contribute
 
-
-
 Will need a WYSIWYG editor if someone is using every feature.
-file extension - .lrc, .music, as metadata
+file extension - .lrc, .music, or add it to metadata
 purposes - lyrics, kareoke with time and pitch, Chords, meaning, translation
 
-These features are not too much for creating .lrc all can be automated except meaning and translation. Speech Recognition can time the lyrics. Chords can be automated too.
-Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that file can be used to generate to midi.
+All features for creating .lrc can be automated except Meaning.
+Synced Lyrics can be retrived or Speech Recognition can time lyrics.
+Chords can be automated (using software like Riffstation) or retrived from server.
+Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://github.com/DamRsn/NeuralNote.
+Translation retrived or can be automated using Google Translate.
 
 ## 0 Player to read filename with type speficied
 
