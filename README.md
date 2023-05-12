@@ -1,14 +1,13 @@
 # lrc_SyncedLyrics_v2
-draft for format specs for lrc/SyncedLyric. Please contribute
+Draft for format specs of lrc(SyncedLyric) v2. Please contribute
 
-Also See - https://id3.org/Lyrics3v2
-https://github.com/openlyrics/openlyrics
+
 
 Will need a WYSIWYG editor if someone is using every feature.
 file extension - .lrc, .music, as metadata
-purposes - lyrics, kareoke with time and pitch, chords, meaning, translation
+purposes - lyrics, kareoke with time and pitch, Chords, meaning, translation
 
-These features are not too much for creating .lrc all can be automated except meaning and translation. speech recognition can time the lyrics. chords can be automated too.
+These features are not too much for creating .lrc all can be automated except meaning and translation. Speech Recognition can time the lyrics. Chords can be automated too.
 Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that file can be used to generate to midi.
 
 ## 0 Player to read filename with type speficied
@@ -20,6 +19,7 @@ sameasaudiofilename_translation.lrc
 sameasaudiofilename_meaning.lrc
 sameasaudiofilename_chords.lrc
 ```
+1 file can have all 3 chords, meaning, translation
 
 ## 1 .lrc/SyncedLyrics version info
 
@@ -32,6 +32,7 @@ Format
 ## 2 Singer - A song may have multiple singers
 
 also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
 
 ### Format
 
@@ -55,7 +56,10 @@ also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extende
 [00:00.00] I don't wanna miss a beat
 ```
 
-## 4 Foreign Language Translation - per Word
+## 4 Language Translation - Dictionary/Contexually per Word
+
+When using translation specify lanuages eg. German to English  `de>en`
+I file can have multiple translations
 
 Dictionary in the player may not work as word has to be explained contexually and as used in gerneral/other cases.
 
@@ -108,6 +112,8 @@ Format
 ```
 ## 10 Custom Size - for expression
 
+This can be turned off when using slidding lyrics depending of screen types. For example on phone with scrooling lyrics size can be hard to do.
+
 ### Format
 
 ```
@@ -127,6 +133,8 @@ Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that
 
 ## 12 Chords
 
+Client may have ablity to transpose scale, have "no capo version", or show simple chord progression eg. `II V IV`
+
 ### Format
 
 ```
@@ -141,3 +149,6 @@ Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that
 [00:49.65]I'm sure you've heard it all before
 [00:51.64]But you never really had a doubt
 ```
+## Also See
+ID3 Specs https://id3.org/Lyrics3v2
+foobar2000 lyrics component https://github.com/openlyrics/openlyrics
