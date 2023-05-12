@@ -136,17 +136,17 @@ Client may have ablity to transpose scale, have "no capo version", or show simpl
 ### Format
 
 ```
-[00:22.37] [cr]Today[/cr=F#m7] [cr]is gonna be the day
-[00:24.17]That they're [/cr=A][cr]gonna throw it back to[/cr=Esus4] [cr]you[/cr=B7sus4]
-[00:27.39]By now you should've somehow
-[00:29.65]Realized what you gotta do
-[00:32.88]I don't believe that anybody
-[00:35.39]Feels the way I do about you now
-[00:43.89]Backbeat, the word is on the street
-[00:45.89]That the fire in your heart is out
-[00:49.65]I'm sure you've heard it all before
-[00:51.64]But you never really had a doubt
+[00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
+[00:29.45] [cr]Don't know where it [/cr=G][cr]goes,[/cr=Em] [cr]but it's home to me [/cr=G][cr]and I walk alone[/cr=Em]
+[00:36.72] [cr]I walk this empty[/cr=Em] [cr]street[/cr=G][cr]On the Boulevard of Broken Dreams[/cr=D]
+[00:43.78] [cr]Where the city[/cr=Em] [cr]sleeps[/cr=G][cr]and I'm the only one and I walk alone[/cr=Em]
+[00:57.58] [cr]I walk alone,[/cr=Em] [cr]I walk alone[/cr=G][cr]I walk alone[/cr=D][cr]I walk alone and I walk a...[/cr=Em]
 ```
+## 13 Censoring Words
+
+Add option to convert words like fuck, shit to F**k and S**t
+
+
 ## Also See
 ID3 Specs https://id3.org/Lyrics3v2
 foobar2000 lyrics component https://github.com/openlyrics/openlyrics
