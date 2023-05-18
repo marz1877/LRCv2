@@ -14,7 +14,7 @@ Synced Lyrics can be retrived or Speech Recognition can time lyrics.
 
 Chords can be automated (using software like Riffstation) or retrived from server.
 
-Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://github.com/DamRsn/NeuralNote.
+Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://www.sonicvisualiser.org/tony/ https://github.com/DamRsn/NeuralNote.
 
 Translation retrived or can be automated using Google Translate.
 
