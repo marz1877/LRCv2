@@ -173,3 +173,4 @@ Add option to convert words like fuck, shit to F**k and S**t
 ## Also See
 ID3 Specs https://id3.org/Lyrics3v2
 foobar2000 lyrics component https://github.com/openlyrics/openlyrics
+https://github.com/Aegisub/Aegisub
