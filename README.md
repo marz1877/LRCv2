@@ -154,9 +154,12 @@ Vocal Melody can be exracted automatedlly. Isolate the vocal range and then that
 
 ## 12 Chords
 
-Client may have ablity to transpose scale, have "no capo version", or show simple chord progression eg. `II V IV`
+Use https://github.com/ChordPro/chordpro
 
-### Format
+Client may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
+
+
+#### Old Proposed Format
 
 ```
 [00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
@@ -165,12 +168,15 @@ Client may have ablity to transpose scale, have "no capo version", or show simpl
 [00:43.78] [cr]Where the city[/cr=Em] [cr]sleeps[/cr=G][cr]and I'm the only one and I walk alone[/cr=Em]
 [00:57.58] [cr]I walk alone,[/cr=Em] [cr]I walk alone[/cr=G][cr]I walk alone[/cr=D][cr]I walk alone and I walk a...[/cr=Em]
 ```
+
 ## 13 Censoring Words
 
 Add option to convert words like fuck, shit to F**k and S**t
 
+https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
 ## Also See
+
 ID3 Specs https://id3.org/Lyrics3v2
 foobar2000 lyrics component https://github.com/openlyrics/openlyrics
 https://github.com/Aegisub/Aegisub
