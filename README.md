@@ -18,14 +18,14 @@ Vocal Melody can be exracted automatedlly using free software like melody.ml to 
 
 Translation retrived or can be automated using Google Translate.
 
-## 0 Player to read filename with type speficied
+## 0. Player to read filename with type speficied
 
 If a audio file is played and there is a .lrc in the same directory or it is specefied in player
 the .lrc can be named
 ```
 sameasaudiofilename_translation.lrc
 sameasaudiofilename_meaning.lrc
-sameasaudiofilename_chords.lrc
+~sameasaudiofilename_chords.lrc~
 ```
 1 file can have all 3 chords, meaning, translation
 
