@@ -25,7 +25,7 @@ the .lrc can be named
 ```
 sameasaudiofilename_translation.lrc
 sameasaudiofilename_meaning.lrc
-~sameasaudiofilename_chords.lrc~
+~sameasaudiofilename_chords.lrc (.chordpro)
 ```
 1 file can have all 3 chords, meaning, translation
 
@@ -39,7 +39,7 @@ Format
 
 ## 2 Singer - A song may have multiple singers
 
-also see - https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+Also See - Extended LRC - (Wikipedia repmved it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
 Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
 
 ### Format
@@ -103,8 +103,13 @@ When meaning mode from the top button is selected hovering over will show line, 
 When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
 
 ## 8 Milliseconds Word accuraccy for Karaeoke Mode
+
 Also See - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
+LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
+
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
+
+### Format (same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
 
 ```
 [Verse 1]
@@ -120,8 +125,6 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 [00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
 [00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
 ```
-
-https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
 ## 9 Custom Color - for expression
 
