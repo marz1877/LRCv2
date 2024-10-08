@@ -35,15 +35,15 @@ Format
 ```
 ## 1.2 Metadata - Language   
 
-like "[ar:Lyrics artist]"
+like `[ar:Lyrics artist]`
 
 ### Format
-
 ```
 [language:Languages in the lyrics]
 ```
+### Example
 ```
-example [language:en,es,de]
+[language:en,es,de]
 ```
 
 ## 2. Singers - Song with multiple singers
@@ -198,8 +198,6 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 
-
-
 #### Old Proposed Format (use ChordPro instead)
 
 <details>
@@ -212,7 +210,6 @@ Please don't take [D7]my sunshine a[G]way
 [00:43.78] [cr]Where the city[/cr=Em] [cr]sleeps[/cr=G][cr]and I'm the only one and I walk alone[/cr=Em]
 [00:57.58] [cr]I walk alone,[/cr=Em] [cr]I walk alone[/cr=G][cr]I walk alone[/cr=D][cr]I walk alone and I walk a...[/cr=Em]
 ```
-
 </details>
 
 # Other Features
@@ -230,6 +227,9 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 (same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
 
+<details>
+  <summary>Click me</summary>
+
 ```
 [Verse 1]
 [00:00.00]I <00:00.00> walk <00:00.38> a <00:00.52> lonely <00:00.95> road
@@ -244,6 +244,7 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 [00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
 [00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
 ```
+</details>
 
 ## Expect Adaptation By
 1. Spotify(https://open.spotify.com/)
