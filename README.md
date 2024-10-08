@@ -255,6 +255,7 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 ## Expect Adaptation By
 1. Spotify(https://open.spotify.com/)
+1. ‎Apple Music(https://music.apple.com/)
 1. MusixMatch(https://www.musixmatch.com/)
 1. Genius(https://genius.com/)
 1. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
