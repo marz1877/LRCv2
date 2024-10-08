@@ -161,11 +161,12 @@ Client may have ablity to transpose scale, have "no capo version", or show chord
 #### Word-by-Word Millisecond accurate for Karaeoke Mode
 
 Also See - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
-LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
+LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag , https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
-### Format (same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
+### Format 
+(same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
 
 ```
 [Verse 1]
