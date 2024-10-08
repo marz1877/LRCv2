@@ -2,11 +2,9 @@
 
 Draft for format specs of lrc(SyncedLyric) v2. Open for contribution.
 
-1. Will need a WYSIWYG editor if someone is using every feature.
-
-2. File Extension - .lrc, .music, or add it to metadata
-
-3. Purposes - lyrics, kareoke with time and pitch, Chords, meaning, translation
+1. Will need a WYSIWYG editor if using every feature.
+2. File Extension - .lrc, .music, or add it to metadata.
+3. Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
 
 ### Automation
 All features for creating .lrc can be automated except Meaning.
