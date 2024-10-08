@@ -63,16 +63,16 @@ Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Wala
 
 ## 3.1 Meaning Contextual - by word/line
 
-Genius is the only online database with lyric meaning
+Genius - Online lyric meaning database
 
 ### Format
 
 ```
-[00:00.00] [Meaning] I walk a lonely road [/Meaning: The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.]
-[00:15.67] [Meaning] Don't know where it goes [/Meaning: The singer is uncertain of where the path will take him, and is unsure of what the future holds.]
-[00:28.03] [Meaning] My shadow's the only one that walks beside me [/Meaning: The singer feels alone and abandoned, as represented by his shadow being the only companion on his journey.]
-[00:42.25] [Meaning] I walk this empty street [/Meaning: The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
-[00:53.04] [Meaning] On the boulevard of broken dreams [/Meaning: The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
+[00:00.00] [Meaning]I walk a lonely road[/Meaning:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.]
+[00:15.67] [Meaning]Don't know where it goes[/Meaning:The singer is uncertain of where the path will take him, and is unsure of what the future holds.]
+[00:28.03] [Meaning]My shadow's the only one that walks beside me [/Meaning:The singer feels alone and abandoned, as represented by his shadow being the only companion on his journey.]
+[00:42.25] [Meaning]I walk this empty street [/Meaning:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
+[00:53.04] [Meaning]On the boulevard of broken dreams[/Meaning:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
 ```
 ## 3.2 Language Translation - Per Line, Phrase, Word
 
