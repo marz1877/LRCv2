@@ -1,4 +1,4 @@
-# LRC_SyncedLyrics_v2
+# LRCv2
 Open for contribution. ID3 standardized SYNCEDLYRICS but not .lrc.make it standard.
 
 1. Will need a WYSIWYG editor if using every feature.
