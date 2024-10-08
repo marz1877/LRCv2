@@ -89,7 +89,10 @@ https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 [00:25.30] [Translation,fin>eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/Translation: Literal:From my bed I saw the sky, begun to wait]
 [00:57.81] Tuuli tuule sinne [Translation,fin>eng]missä muruseni on[/Translation: Literal:Where my loved ones are, CommonUsage: where's my baby?]
 ```
-Current Forat with per line translation and both laguages in sepearte lines with same time stamp -
+
+
+<details>
+  <summary>## Current Format with per line translation and both laguages in sepearte lines with same time stamp -</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
@@ -109,6 +112,7 @@ Current Forat with per line translation and both laguages in sepearte lines with
 [00:53.53] Kävisipä pian tuulemaan
 [00:53.53] Wish the wind would soon start to blow
 ```
+</details>
 
 ### 3.3 Contexual Language Translation - per Word/Phrase
 
