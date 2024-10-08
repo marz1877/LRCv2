@@ -24,7 +24,7 @@ sameasaudiofilename_meaning.lrc        for seperate meaning lrc
 sameasaudiofilename.chordpro           for chordpro
 ```
 
-1 file can have all 3 chords, meaning, translation
+1 file can have all 3 meaning, translation, chords
 
 ## 1.1 Metadata - .lrc version info
 
@@ -156,12 +156,12 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 ## 8. Karaeoke - Voice melody's MIDI and Mic INput using pitch recognision and midi roll
 
 1. Voice melody's midi can be supplied with audio files or extracted realtime using -
- 2. https://hub.docker.com/r/aclmb/stemgen steam seperator
- 2. https://github.com/spotify/basic-pitch audio-to-Midi
+ - https://hub.docker.com/r/aclmb/stemgen steam seperator
+ - https://github.com/spotify/basic-pitch audio-to-Midi
 1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
-1. COnvert Audio-to-Midi using-
- 2. https://www.sonicvisualiser.org/tony/
- 2. https://github.com/DamRsn/NeuralNote.
+1. Convert Audio-to-Midi using-
+ - https://www.sonicvisualiser.org/tony/
+ - https://github.com/DamRsn/NeuralNote.
 
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 
