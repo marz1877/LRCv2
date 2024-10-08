@@ -173,6 +173,26 @@ ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
 
 Client may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
 
+### ChordPro Format Example
+
+```
+{title: You Are My Sunshine}
+
+{c:Verse 1}
+[G]The other night dear as I lay sleeping
+[G7]I dreamed I [C]held you in my [G]arms
+[G7]But when I a[C]woke dear I was mis[G]taken
+So I hung my [D7]head and [G]cried
+
+{c:Chorus}
+{soc}
+You are my sunshine my only sunshine
+[G7]You make me [C]happy when skies are [G]gray
+[G7]You'll never [C]know dear how much I [G]love you
+Please don't take [D7]my sunshine a[G]way
+{eoc}
+```
+
 #### Old Proposed Format (use ChordPro instead)
 ```
 [00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
