@@ -1,6 +1,5 @@
-# lrc_SyncedLyrics_v2
-
-Draft for format specs of lrc(SyncedLyric) v2. Open for contribution.
+# LRC_SyncedLyrics_v2
+### Draft for format specs of lrc(SyncedLyric) v2. Open for contribution.
 
 1. Will need a WYSIWYG editor if using every feature.
 2. File Extension - .lrc, .music, or add it to metadata.
