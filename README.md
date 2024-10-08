@@ -167,9 +167,13 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
  - https://www.sonicvisualiser.org/tony/
  - https://github.com/DamRsn/NeuralNote.
 
-![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
-
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
+
+###<details>
+  <summary>UI</summary>
+
+![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
+</details>
 
 ## 9. Lyrics+Chords in ChordPro Fomat
 
@@ -180,7 +184,6 @@ Client may have ablity to transpose scale, have "no capo version", or show chord
  ### ChordPro Format Example
 <details>
   <summary>Click me</summary>
-
 
 ```
 {title: You Are My Sunshine}
