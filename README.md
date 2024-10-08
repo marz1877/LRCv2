@@ -74,17 +74,40 @@ Genius is the only online database with lyric meaning
 [00:42.25] [Meaning] I walk this empty street [/Meaning: The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
 [00:53.04] [Meaning] On the boulevard of broken dreams [/Meaning: The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
 ```
-## 3.2 Language Translation - Per Line,Phrase, Word
+## 3.2 Language Translation - Per Line, Phrase, Word
 
-Client (Player) can have a dictionary.
+Client (Player) can have a dictionary for per word/phrase/slang/idiom translation.
+
+Translation right now - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
+https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 
 ### Format
 
 ```
-[00:00.00] Tuuli tuule sinne [Translation,fin>eng]missä muruseni on[/Translation:Literal:Where my loved ones are,CommonUsage:where's my baby?]
-[00:00.00] Leiki hetki hänen hiuksillaan
-[00:00.00] Kerro rakkauteni, kerro kuinka ikävöin
-[00:00.00] Kerro, häntä ootan yhä vaan
+[00:13.75] [Translation,fin>eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/Translation: Literal:At night again I went to sleep in the balcony], CommonUsage: where's my baby?]
+[00:19.62] [Translation,fin>eng]Jotta lähempänä mua ois hän[/Translation: Literal:So that they would be closer to me]
+[00:25.30] [Translation,fin>eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/Translation: Literal:From my bed I saw the sky, begun to wait]
+[00:57.81] Tuuli tuule sinne [Translation,fin>eng]missä muruseni on[/Translation: Literal:Where my loved ones are, CommonUsage: where's my baby?]
+```
+Current Forat with per line translation and both laguages in sepearte lines with same time stamp -
+
+```
+[00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
+[00:13.75] At night again I went to sleep in the balcony
+[00:19.62] Jotta lähempänä mua ois hän
+[00:19.62] So that they would be closer to me
+[00:25.30] Pediltäni taivas näkyy, ryhdyin oottamaan,
+[00:25.30] From my bed I saw the sky, begun to wait
+[00:30.92] Että näen tähden lentävän
+[00:30.92] To see a star flying
+[00:36.59] Sanovat jos jossain huomaa tähdenlennon niin
+[00:36.59] They say that if you somewhere spot a shooting star
+[00:42.17] Toivoa voit silloin mitä vaan
+[00:42.17] Then you can wish for anything
+[00:47.75] Yöllä ylös taivaalle mä pyynnön kuiskasin
+[00:47.75] At night for the sky I whispered a plea...
+[00:53.53] Kävisipä pian tuulemaan
+[00:53.53] Wish the wind would soon start to blow
 ```
 
 ### 3.3 Contexual Language Translation - per Word/Phrase
@@ -100,7 +123,7 @@ Dictionary in the player may not be useful as word can be contexual and as used 
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-## 4. UI for Translation and Meaning Feature
+## 4. Suggested UI for Translation and Meaning Feature
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
@@ -132,18 +155,18 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 
 ## 8. Karaeoke - Voice melody's MIDI and Mic INput using pitch recognision and midi roll
 
-Voiice melody's midi can be supplied with audio files or extracted realtime using -
-https://hub.docker.com/r/aclmb/stemgen steam seperator
-https://github.com/spotify/basic-pitch audio-to-Midi
-the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
+1. Voice melody's midi can be supplied with audio files or extracted realtime using -
+2. https://hub.docker.com/r/aclmb/stemgen steam seperator
+2. https://github.com/spotify/basic-pitch audio-to-Midi
+1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
 
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 
-It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG  https://en.wikipedia.org/wiki/MP3%2BG
+It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
 
 ## 9. Lyrics+Chords in ChordPro Fomat
 
-ChordPro - https://github.com/ChordPro/chordpro
+ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
 
 Client may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
 
@@ -160,12 +183,15 @@ Client may have ablity to transpose scale, have "no capo version", or show chord
 
 #### Word-by-Word Millisecond accurate for Karaeoke Mode
 
-Also See - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
-LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag , https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
+##### Also See - 
+A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
+LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
+Enhanced_format - https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 ### Format 
+
 (same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
 
 ```
@@ -183,8 +209,18 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 [00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
 ```
 
-## Also See
+## Expect Adaptation By
+1. Spotify(https://open.spotify.com/)
+1. MusixMatch(https://www.musixmatch.com/)
+1. Genius(https://genius.com/)
+1. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
 
-1. ID3 Specs -                                      https://id3.org/Lyrics3v2
-1. foobar2000 lyrics component -                    https://github.com/openlyrics/openlyrics
-1. Cross-platform advanced subtitle editor -        https://github.com/Aegisub/Aegisub
+## Also See
+1. ID3 Specs - https://id3.org/Lyrics3v21. 
+1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
+2. OpenLyrics (https://github.com/openlyrics/openlyrics) - is a free, open XML standard for Christian worship songs. The goal of OpenLyrics is to provide an application-independant and operating system-independant song format for interoperability between applications
+
+## SyncedLyric Sources
+1. https://www.rentanadviser.com
+2. https://www.megalobiz.com/
+3. https://www.lyricsify.com/
