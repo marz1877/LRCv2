@@ -158,8 +158,8 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 1. Voice melody's midi can be supplied with audio files or extracted realtime using -
  - https://hub.docker.com/r/aclmb/stemgen steam seperator
  - https://github.com/spotify/basic-pitch audio-to-Midi
-1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
-1. Convert Audio-to-Midi using-
+2. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
+3. Convert Audio-to-Midi using-
  - https://www.sonicvisualiser.org/tony/
  - https://github.com/DamRsn/NeuralNote.
 
@@ -194,6 +194,9 @@ Please don't take [D7]my sunshine a[G]way
 ```
 
 #### Old Proposed Format (use ChordPro instead)
+
+<details>
+  <summary>Click me</summary>  
 ```
 [00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
 [00:29.45] [cr]Don't know where it [/cr=G][cr]goes,[/cr=Em] [cr]but it's home to me [/cr=G][cr]and I walk alone[/cr=Em]
@@ -201,6 +204,7 @@ Please don't take [D7]my sunshine a[G]way
 [00:43.78] [cr]Where the city[/cr=Em] [cr]sleeps[/cr=G][cr]and I'm the only one and I walk alone[/cr=Em]
 [00:57.58] [cr]I walk alone,[/cr=Em] [cr]I walk alone[/cr=G][cr]I walk alone[/cr=D][cr]I walk alone and I walk a...[/cr=Em]
 ```
+</details>
 
 # Other Features
 
