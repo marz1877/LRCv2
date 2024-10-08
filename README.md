@@ -156,12 +156,12 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 ## 8. Karaeoke - Voice melody's MIDI and Mic INput using pitch recognision and midi roll
 
 1. Voice melody's midi can be supplied with audio files or extracted realtime using -
-2. https://hub.docker.com/r/aclmb/stemgen steam seperator
-2. https://github.com/spotify/basic-pitch audio-to-Midi
+ 2. https://hub.docker.com/r/aclmb/stemgen steam seperator
+ 2. https://github.com/spotify/basic-pitch audio-to-Midi
 1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
 1. COnvert Audio-to-Midi using-
-2. https://www.sonicvisualiser.org/tony/
-2. https://github.com/DamRsn/NeuralNote.
+ 2. https://www.sonicvisualiser.org/tony/
+ 2. https://github.com/DamRsn/NeuralNote.
 
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 
@@ -218,15 +218,15 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 1. Genius(https://genius.com/)
 1. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
-2. https://lrc-maker.github.io/
-3. https://github.com/lemutec/LyricStudio
+1. https://lrc-maker.github.io/
+1. https://github.com/lemutec/LyricStudio
 
 ## Also See
 1. ID3 Specs - https://id3.org/Lyrics3v21. 
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
-2. OpenLyrics (https://github.com/openlyrics/openlyrics) - is a free, open XML standard for Christian worship songs. The goal of OpenLyrics is to provide an application-independant and operating system-independant song format for interoperability between applications
+1. OpenLyrics (https://github.com/openlyrics/openlyrics) - is a free, open XML standard for Christian worship songs. The goal of OpenLyrics is to provide an application-independant and operating system-independant song format for interoperability between applications
 
 ## SyncedLyric Sources
 1. https://www.rentanadviser.com
-2. https://www.megalobiz.com/
-3. https://www.lyricsify.com/
+1. https://www.megalobiz.com/
+1. https://www.lyricsify.com/
