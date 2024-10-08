@@ -11,11 +11,11 @@ Draft for format specs of lrc(SyncedLyric) v2. Open for contribution.
 ### Automation
 All features for creating .lrc can be automated except Meaning.
 
-Get Lyrics from Internet sources like Genius or Speech-to-Text (https://github.com/openai/whisper).
-Synced Lyrics can be retrived or Speech Recognition can time lyrics.
-Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
-Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://www.sonicvisualiser.org/tony/ https://github.com/DamRsn/NeuralNote.
-Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
+1. Get Lyrics from Internet sources like Genius or Speech-to-Text (https://github.com/openai/whisper).
+2. Synced Lyrics can be retrived or Speech Recognition can time lyrics.
+3. Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
+4. Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://www.sonicvisualiser.org/tony/ https://github.com/DamRsn/NeuralNote.
+5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
 
 ## 0. Player to read filename with type speficied
 
