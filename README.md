@@ -14,7 +14,7 @@ All features for creating .lrc can be automated except Meaning.
 4. Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://www.sonicvisualiser.org/tony/ https://github.com/DamRsn/NeuralNote.
 5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
 
-## 0. Player to read filename with type speficied
+## Player to read filename with type speficied
 
 If a audio file is played and there is a .lrc in the same directory or it is specefied in player the .lrc can be named -
 ```
