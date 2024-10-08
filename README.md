@@ -11,7 +11,7 @@ All features for creating .lrc can be automated except Meaning.
 1. Get Lyrics from Internet sources like Genius or Speech-to-Text/Speech Recognition (https://github.com/openai/whisper).
 2. Synced Lyrics can be retrived or time lyrics using https://github.com/oseiskar/autosubsync.
 3. Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
-4. Vocal Melody can be exracted automatedlly using free software like melody.ml to Isolate the vocal range and covert it to MIDI using https://www.sonicvisualiser.org/tony/ https://github.com/DamRsn/NeuralNote.
+4. Vocal Melody can be Isolate automatedlly using (See below) and covert it to MIDI using (See Below).
 5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
 
 ## Player to read filename with type speficied
@@ -158,7 +158,10 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 1. Voice melody's midi can be supplied with audio files or extracted realtime using -
 2. https://hub.docker.com/r/aclmb/stemgen steam seperator
 2. https://github.com/spotify/basic-pitch audio-to-Midi
-1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method.
+1. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
+1. COnvert Audio-to-Midi using-
+2. https://www.sonicvisualiser.org/tony/
+2. https://github.com/DamRsn/NeuralNote.
 
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 
@@ -214,6 +217,9 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 1. MusixMatch(https://www.musixmatch.com/)
 1. Genius(https://genius.com/)
 1. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
+1. https://github.com/Spikatrix/LRC-Editor
+2. https://lrc-maker.github.io/
+3. https://github.com/lemutec/LyricStudio
 
 ## Also See
 1. ID3 Specs - https://id3.org/Lyrics3v21. 
