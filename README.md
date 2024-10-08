@@ -184,6 +184,6 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 ## Also See
 
-ID3 Specs -                                      https://id3.org/Lyrics3v2
-foobar2000 lyrics component -                    https://github.com/openlyrics/openlyrics
-Cross-platform advanced subtitle editor -        https://github.com/Aegisub/Aegisub
+1. ID3 Specs -                                      https://id3.org/Lyrics3v2
+1. foobar2000 lyrics component -                    https://github.com/openlyrics/openlyrics
+1. Cross-platform advanced subtitle editor -        https://github.com/Aegisub/Aegisub
