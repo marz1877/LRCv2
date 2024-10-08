@@ -161,10 +161,11 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 
 1. Voice melody's midi can be supplied with audio files or extracted realtime using -
  - https://hub.docker.com/r/aclmb/stemgen steam seperator
- - https://github.com/spotify/basic-pitch audio-to-Midi
+
 2. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
 3. Convert Audio-to-Midi using-
- - https://www.sonicvisualiser.org/tony/
+ - https://www.sonicvisualiser.org/tony/ / https://github.com/sonic-visualiser/tony
+ - https://github.com/spotify/basic-pitch audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote.
 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
