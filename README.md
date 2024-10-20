@@ -31,7 +31,7 @@ LYRICS_translation   - Translation
 LYRICS_meaning       - Meaning
 Chordpro             - For Chords in Chordpro format
 ```
-1 file can have all 3 meaning, translation, chords. Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` and sections like `{c:Verse 1}`
+1 file can have all 3 meaning, translation, chords. Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but I recommend `[c:Verse 1]`
 
 ## 1.1 Metadata - .lrc version info
 
@@ -229,18 +229,16 @@ Please don't take [D7]my sunshine a[G]way
 
 # Other Features
 
-#### Word-by-Word Millisecond accurate for Karaeoke Mode
+#### Word-by-Word Millisecond accurate for Karaeoke Mode (same as A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
 
 ##### Also See - 
-A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
-LRC Enhanced Format - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
 Enhanced_format - https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 ### Format 
 
-(same as https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
+
 
 <details>
   <summary>Click me</summary>
@@ -262,21 +260,28 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 </details>
 
 ## Expect Adaptation By
-1. Spotify(https://open.spotify.com/)
-1. ‎Apple Music(https://music.apple.com/)
-1. MusixMatch(https://www.musixmatch.com/)
-1. Genius(https://genius.com/)
-1. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
+1. Xiph.Org Foundation(https://xiph.org/)
+2. FFmpeg(https://ffmpeg.org/)
+3. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
 
+1. Spotify(https://open.spotify.com/)
+1. ‎Apple Music(https://music.apple.com/)
+1. MusixMatch(https://www.musixmatch.com/)
+1. Genius(https://genius.com/)
+
 ## Also See
 1. ID3 Specs - https://id3.org/Lyrics3v21. 
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
-1. OpenLyrics (https://github.com/openlyrics/openlyrics) - is a free, open XML standard for Christian worship songs. The goal of OpenLyrics is to provide an application-independant and operating system-independant song format for interoperability between applications
+1. OpenLyrics (https://github.com/openlyrics/openlyrics) - free, open XML standard for Christian worship songs. goal is to provide app &  OS-independant song format for interoperability between apps
 
 ## SyncedLyric Sources
 1. https://www.rentanadviser.com
 1. https://www.megalobiz.com/
 1. https://www.lyricsify.com/
+
+## License
+
+Current version of LRCv2 specs free to use for Open Source software. Paid services and software need to ask permission.
