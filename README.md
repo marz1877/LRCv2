@@ -1,8 +1,8 @@
 # LRCv2
 Open for contribution. ID3 standardized SYNCEDLYRICS but not .lrc.make it standard.
 
-1. Will need a WYSIWYG editor if using every feature.
-2. File Extension - .lrc, .music, or add it to metadata.
+1. Will need a WYSIWYG editor specially if using every feature.
+2. File Extension - .lrc or in metadata.
 3. Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
 
 ### Automation
@@ -31,7 +31,8 @@ LYRICS_translation   - Translation
 LYRICS_meaning       - Meaning
 Chordpro             - For Chords in Chordpro format
 ```
-1 file can have all 3 meaning, translation, chords. Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but I recommend `[c:Verse 1]`
+1 file can have all 3 meaning, translation, chords.
+Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but I recommend `[c:Verse 1]`
 
 ## 1.1 Metadata - .lrc version info
 
@@ -52,6 +53,10 @@ like `[ar:Lyrics artist]`
 ```
 [language:en,es,de]
 ```
+
+## 1.3 Metadata - Sections
+
+Mark sections like `[c:Verse 1]`
 
 ## 2. Singers - Song with multiple singers
 
