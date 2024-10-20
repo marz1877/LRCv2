@@ -6,25 +6,32 @@ Open for contribution. ID3 standardized SYNCEDLYRICS but not .lrc.make it standa
 3. Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
 
 ### Automation
-All features for creating .lrc can be automated except Meaning.
+All features for creating .lrc can be automated 
 
 1. Get Lyrics from Internet sources like Genius or Speech-to-Text/Speech Recognition (https://github.com/openai/whisper).
 2. Synced Lyrics can be retrived or time lyrics using https://github.com/oseiskar/autosubsync.
 3. Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
 4. Vocal Melody can be Isolate automatedlly using (See below) and covert it to MIDI using (See Below).
 5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
+6. Meaning can be retrived from Genius or LLM like ollama LLM models.
 
 ## Player to read filename with type speficied
 
 If a audio file is played and there is a .lrc in the same directory or it is specefied in player the .lrc can be named -
 ```
-sameasaudiofilename.lrc
-sameasaudiofilename_translation.lrc    for seperate translation lrc
-sameasaudiofilename_meaning.lrc        for seperate meaning lrc
-sameasaudiofilename.chordpro           for chordpro
+sameasaudiofilename.lrc              -
+sameasaudiofilename_translation.lrc  -  for seperate translation lrc
+sameasaudiofilename_meaning.lrc      -  for seperate meaning lrc
+sameasaudiofilename.chordpro         -  for chordpro
 ```
-
-1 file can have all 3 meaning, translation, chords
+Or Metadata fields -
+```
+SYNCEDLYRICS         - Lyrics
+LYRICS_translation   - Translation
+LYRICS_meaning       - Meaning
+Chordpro             - For Chords in Chordpro format
+```
+1 file can have all 3 meaning, translation, chords. Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` and sections like `{c:Verse 1}`
 
 ## 1.1 Metadata - .lrc version info
 
