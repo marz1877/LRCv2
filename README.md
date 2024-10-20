@@ -229,16 +229,12 @@ Please don't take [D7]my sunshine a[G]way
 
 # Other Features
 
-#### Word-by-Word Millisecond accurate for Karaeoke Mode (same as A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
-
-##### Also See - 
-Enhanced_format - https://en.wikipedia.org/wiki/LRC_(file_format)#Enhanced_format
+### Word-by-Word Millisecond accurate for Karaeoke Mode 
+(same as A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag )
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
-### Format 
-
-
+### Format
 
 <details>
   <summary>Click me</summary>
