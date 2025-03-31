@@ -1,9 +1,14 @@
 # LRCv2
-Open for contribution. ID3 standardized SYNCEDLYRICS but not .lrc.make it standard.
+Open for contribution.
+ID3 standardized SYNCEDLYRICS but not .lrc.
 
-1. Will need a WYSIWYG editor specially if using every feature.
-2. File Extension - .lrc or in metadata.
-3. Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
+#### Software
+Will need a WYSIWYG editor specially if using every feature.
+
+#### Uses
+Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
+
+### File Extension .lrc or in metadata.
 
 ### Automation
 All features for creating .lrc can be automated 
