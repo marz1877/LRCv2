@@ -1,12 +1,14 @@
-# LRCv2
+# LRCv2 Specefications
 Open for contribution.
+
+#### Other Formats
 ID3 standardized SYNCEDLYRICS but not .lrc.
 
 #### Software
 Will need a WYSIWYG editor specially if using every feature.
 
 #### Uses
-Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
+Purpose - Lyrics, Kareoke with Time and Pitch, Chords, Meaning, translation.
 
 ### File Extension .lrc or in metadata.
 
@@ -14,7 +16,7 @@ Purpose - lyrics, kareoke with time and pitch, Chords, meaning, translation.
 All features for creating .lrc can be automated 
 
 1. Get Lyrics from Internet sources like Genius or Speech-to-Text/Speech Recognition (https://github.com/openai/whisper).
-2. Synced Lyrics can be retrived or time lyrics using https://github.com/oseiskar/autosubsync.
+2. Synced Lyrics can be retrived or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
 3. Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
 4. Vocal Melody can be Isolate automatedlly using (See below) and covert it to MIDI using (See Below).
 5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
@@ -290,4 +292,4 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 ## License
 
-Current version of LRCv2 specs free to use for Open Source software. Paid services and software need to ask permission.
+Current version of LRCv2 specs free to use for Open Source software. Paid services and software need to ask permission for any software using LRCv2 specs.
