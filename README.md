@@ -158,24 +158,24 @@ When translation mode is selected hovering over will hilight phrases (as small a
 ## 5. Custom Text Color (for expression)
 
 ### Format
-
 ```
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
-## 6. Custom Text Size (for expression)
+
+## 6. Censoring Words
+
+Add option to convert words like fuck, shit to F**k and S**t using Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+
+## 7. Custom Text Size (for expression)
 
 This can be turned off when using slidding lyrics depending of screen types. For example on phone with scrooling lyrics size can be hard to do.
 
 ### Format
-
 ```
 [02:16.00] [sz=10]Destroy yourself, see who gives a[/sz] [sz=20]duck[/sz]
 [02:18.00] See who gives a duck
 ```
-## 7. Censoring Words
-
-Add option to convert words like fuck, shit to F**k and S**t using Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
 ## 8. Karaeoke - Voice melody's MIDI and Mic INput using pitch recognision and midi roll
 
