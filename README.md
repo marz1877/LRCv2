@@ -191,7 +191,8 @@ Add option to convert words like fuck, shit to F**k and S**t using Dictionary - 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
 
 <details>
-  <summary>UI</summary>  
+  <summary>UI</summary>
+  
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
@@ -242,7 +243,7 @@ Please don't take [D7]my sunshine a[G]way
 # Other Features
 
 ### Word-by-Word Millisecond accurate for Karaeoke Mode 
-(same as A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag )
+Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
 
 Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
