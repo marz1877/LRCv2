@@ -202,7 +202,7 @@ ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
 
 Client may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
 
- ### ChordPro Format Example
+### ChordPro Format Example
 <details>
   <summary>Click me</summary>
 
@@ -226,7 +226,7 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 
-#### Old Proposed Format (use ChordPro instead)
+##### Old Proposed Format (use ChordPro instead)
 
 <details>
   <summary>Click me</summary>  
