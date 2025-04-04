@@ -269,17 +269,17 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 </details>
 
 ## Expect Adaptation By
-1. Xiph.Org Foundation(https://xiph.org/)
-2. FFmpeg(https://ffmpeg.org/)
-3. OpenLyrics foobar2000 lyrics component(https://github.com/jacquesh/foo_openlyrics)
+1. [Xiph.Org Foundation](https://xiph.org/)
+2. [FFmpeg](https://ffmpeg.org/)
+3. [OpenLyrics foobar2000 lyrics component](https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
 
-1. Spotify(https://open.spotify.com/)
-1. ‎Apple Music(https://music.apple.com/)
-1. MusixMatch(https://www.musixmatch.com/)
-1. Genius(https://genius.com/)
+1. [Spotify](https://open.spotify.com/)
+1. ‎[Apple Music](https://music.apple.com/)
+1. [MusixMatch](https://www.musixmatch.com/)
+1. [Genius](https://genius.com/)
 
 ## Also See
 1. ID3 Specs - https://id3.org/Lyrics3v21. 
