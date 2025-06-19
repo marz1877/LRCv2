@@ -81,6 +81,26 @@ Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Wala
 [1:01.00] [Singer:William,Luis]Line 3 lyrics [/Singer:William,Luis]
 ```
 
+### 2.1 Per Section
+
+```
+[Verse 1 : Vocalist Name]
+```
+
+Example on Genius lyrics - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
+
+```
+[c:Verse 1: Singer Name]
+[00:13.10] Some
+[00:18.58] Lovely
+[00:24.94] Lyrics
+[00:31.38] I hope music players adopt your proposal
+# Blank synced line ends the section?
+[00:37.58]
+```
+
+Genius often has multi-singer info.
+
 ## 3.1 Meaning Contextual - by word/line
 
 Genius - Online lyric meaning database
