@@ -313,4 +313,4 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 
 ## License
 
-LRCv2 specs free to use for Open Source and Non-Profit software. Paid services/software or depedancy using LRCv2 specs need to ask permission.
+LRCv2 specs free to use for Open Source and 0 revenue software. Paid services/software or depedancy using LRCv2 specs need to ask permission.
