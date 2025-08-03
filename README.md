@@ -213,6 +213,8 @@ This can be turned off when using slidding lyrics depending of screen types. For
  - MP4/M4A with SMF tracks
  - WAV with MIDI Metadata
 
+ https://github.com/jeffreyjohnens/MetaMIDIDataset
+
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
 
 <details>
