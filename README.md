@@ -208,6 +208,11 @@ This can be turned off when using slidding lyrics depending of screen types. For
  - https://github.com/spotify/basic-pitch audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote.
 
+4. Current Audio+MIDI Formats
+ - Multitrack OGG
+ - MP4/M4A with SMF tracks
+ - WAV with MIDI Metadata
+
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
 
 <details>
