@@ -1,27 +1,27 @@
 # LRCv2 Specefications
-Open for contribution.
 
-#### Other Formats
-ID3 standardized SYNCEDLYRICS but not .lrc.
-
-#### Software
-Will need a WYSIWYG editor specially if using every feature. SOmething like https://github.com/Royce551/FRESHLyricMaker
+## Software
+Will need a WYSIWYG editor specially if using every feature. Something like https://github.com/Royce551/FRESHLyricMaker
 Kareoke fork https://github.com/UltraStar-Deluxe/USDX/
 
-#### Uses
-Purpose - Lyrics, Kareoke with Time and Pitch, Chords, Meaning, translation.
+## Use Cases
+- Lyrics
+- Kareoke with Time and Pitch,
+- Chords
+- Meaning
+- Translation
 
-### File Extension .lrc or in metadata.
+## Storing Lyrics
+- File Extension .lrc or in metadata.
 
 ### Automation
-All features for creating .lrc can be automated 
-
-1. Get Lyrics from Internet sources like Genius (using https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text/Speech Recognition (https://github.com/openai/whisper).
-2. Synced Lyrics can be retrived or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
-3. Chords can be automated (using software like Riffstation) or retrived from database like ultimateguitar.
-4. Vocal Melody can be Isolate automatedlly using (See below) and covert it to MIDI using (See Below).
-5. Translation can be retrived from Musixmatch or Google Translate or Offline using https://github.com/argosopentech/argos-translate.
-6. Meaning can be retrived from Genius or LLM like ollama LLM models.
+**All features for creating .lrc can be automated**
+1. Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text (https://github.com/openai/whisper).
+2. Synced Lyrics: MusixMatch or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
+3. Chords: Riffstation software or UltimateGuitar DB.
+4. Translation: Musixmatch or Google Translate / Offline (https://github.com/argosopentech/argos-translate).
+5. Meaning: Genius.
+6. For Karaoke: Vocal Melody Isolation using (See below) and covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
 ## Player to read filename with type speficied
 
@@ -99,14 +99,13 @@ Example on Genius lyrics - https://genius.com/Krewella-crying-on-the-dancefloor-
 [00:37.58]
 ```
 
-Genius often has multi-singer info.
+Genius has multi-singer infomation sometimes.
 
 ## 3.1 Meaning Contextual - by word/line
 
-Genius - Online lyric meaning database
+Genius: Lyric meaning database
 
 ### Format
-
 ```
 [00:00.00] [Meaning]I walk a lonely road[/Meaning:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.]
 [00:15.67] [Meaning]Don't know where it goes[/Meaning:The singer is uncertain of where the path will take him, and is unsure of what the future holds.]
@@ -116,12 +115,13 @@ Genius - Online lyric meaning database
 ```
 ## 3.2 Language Translation - Per Line, Phrase, Word
 
-Client (Player) can have a dictionary for per word/phrase/slang/idiom translation.
+- Player can have a dictionary for per word/phrase/slang/idiom translation.
 
-Translation right now - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
-https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
+- Translation example:
+  - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
+  - https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 
-### Format
+### Format Translation
 
 ```
 [00:13.75] [Translation,fin>eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/Translation: Literal:At night again I went to sleep in the balcony], CommonUsage: where's my baby?]
@@ -171,7 +171,7 @@ Dictionary in the player may not be useful as word can be contexual and as used 
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
-When meaning mode from the top button is selected hovering over will show line, phrase or paragraph hilighted depening on context (when explaing song lyrics only one line or paragraph is sufficient) 
+When meaning mode from the top button is selected hovering should show line, phrase or paragraph hilighted depening on context (when explaing song lyrics only one line or paragraph is sufficient) 
 
 When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
 
@@ -184,12 +184,11 @@ When translation mode is selected hovering over will hilight phrases (as small a
 ```
 
 ## 6. Censoring Words
-
-Add option to convert words like fuck, shit to F**k and S**t using Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+- Add option to convert words like fuck, shit to F**k and S**t.
+- Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
 ## 7. Custom Text Size (for expression)
-
-This can be turned off when using slidding lyrics depending of screen types. For example on phone with scrooling lyrics size can be hard to do.
+- This can be turned off when using slidding lyrics depending of screen types. For example on phone with scrolling lyrics size can be hard to do.
 
 ### Format
 ```
@@ -225,9 +224,9 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 
 ## 9. Lyrics+Chords in ChordPro Fomat
 
-ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
+- ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
 
-Client may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
+- Player may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
 
 ### ChordPro Format Example
 <details>
@@ -253,7 +252,7 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 
-##### Old Proposed Format (use ChordPro instead)
+##### Old Format (ChordPro is preferred)
 
 <details>
   <summary>Click me</summary>  
@@ -269,10 +268,11 @@ Please don't take [D7]my sunshine a[G]way
 
 # Other Features
 
-### Word-by-Word Millisecond accurate for Karaeoke Mode 
-Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
+### Word-by-Word
+- Use Case: Millisecond accurate for Karaeoke Mode 
+- Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
 
-Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
+- Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
 
 ### Format
 
@@ -296,28 +296,119 @@ Words with milliseconds accuracy - Will hilight words as they are being played. 
 </details>
 
 ## Expect Adaptation By
-1. [Xiph.Org Foundation](https://xiph.org/)
-2. [FFmpeg](https://ffmpeg.org/)
+1. [Spotify](https://open.spotify.com/)
+1. ‎[Apple Music](https://music.apple.com/)
+2. [Tencent Music](https://www.tencentmusic.com/en-us/)
+3. [Amazon Music](https://music.amazon.com)
+   
+1. [MusixMatch](https://www.musixmatch.com/)
+1. [Genius](https://genius.com/)
+
+1. https://db.openkj.org/
+2. https://github.com/UltraStar-Deluxe/USDX
+3. https://github.com/gyunaev/spivak
+
 3. [OpenLyrics foobar2000 lyrics component](https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
-
-1. [Spotify](https://open.spotify.com/)
-1. ‎[Apple Music](https://music.apple.com/)
-1. [MusixMatch](https://www.musixmatch.com/)
-1. [Genius](https://genius.com/)
-
-## Also See
-1. ID3 Specs - https://id3.org/Lyrics3v21. 
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
-1. OpenLyrics (https://github.com/openlyrics/openlyrics) - free, open XML standard for Christian worship songs. goal is to provide app &  OS-independant song format for interoperability between apps
 
-## SyncedLyric Sources
-1. https://www.rentanadviser.com
-1. https://www.megalobiz.com/
-1. https://www.lyricsify.com/
+1. [Xiph.Org Foundation](https://xiph.org/)
+2. [FFmpeg](https://ffmpeg.org/)
+
+# Other Formats
+1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
+1. OpenLyrics - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
+1. Lyrics File (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+#### Lyricsfile Format
+<details>
+  <summary>Click me</summary>
+  
+```
+version: '1.0'
+metadata:
+  title: 'Your Shape'
+  artist: 'Eddy'
+  duration_ms: 235000
+
+lines:
+  - text: "The school isn't the best place to find a lover"
+    start_ms: 12450
+    end_ms: 18200
+    words:
+      - text: 'The '
+        start_ms: 12450
+        end_ms: 12900
+      - text: 'school '
+        start_ms: 12900
+        end_ms: 13500
+      - text: "isn't "
+        start_ms: 13500
+        end_ms: 14200
+      - text: 'the '
+        start_ms: 14200
+        end_ms: 14600
+      - text: 'best '
+        start_ms: 14600
+        end_ms: 15200
+      - text: 'place '
+        start_ms: 15200
+        end_ms: 15800
+      - text: 'to '
+        start_ms: 15800
+        end_ms: 16200
+      - text: 'find '
+        start_ms: 16200
+        end_ms: 16800
+      - text: 'a '
+        start_ms: 16800
+        end_ms: 17100
+      - text: 'lover'
+        start_ms: 17100
+        end_ms: 18200
+  - text: 'So the bar is where I go'
+    start_ms: 18500
+    end_ms: 22100
+    words:
+      - text: 'So '
+        start_ms: 18500
+        end_ms: 19000
+      - text: 'the '
+        start_ms: 19000
+        end_ms: 19400
+      - text: 'bar '
+        start_ms: 19400
+        end_ms: 20000
+      - text: 'is '
+        start_ms: 20000
+        end_ms: 20400
+      - text: 'where '
+        start_ms: 20400
+        end_ms: 21000
+      - text: 'I '
+        start_ms: 21000
+        end_ms: 21400
+      - text: 'go'
+        start_ms: 21400
+        end_ms: 22100
+
+plain: |
+  [Verse 1]
+  The club isn't the best place to find a lover
+  So the bar is where I go
+```
+</details>
 
 ## License
 
-LRCv2 specs free to use for Open Source and 0 revenue software. Paid services/software or depedancy using LRCv2 specs need to ask permission.
+- LRCv2 specs is free to use.
+- Must give credit.
+
+## Synced-Lyric Sources
+1. https://www.musixmatch.com/
+2. https://www.rentanadviser.com
+1. https://www.megalobiz.com/
+1. https://www.lyricsify.com/
+
+Open for contribution.
