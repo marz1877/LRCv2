@@ -30,7 +30,7 @@ XML-inspired
 
 - One LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
-## Storing Lyrics
+## Storing
 **File Extension .lrc or in metadata.**
 - When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.
 - Player to read filename with type speficied
@@ -42,7 +42,7 @@ AudioFilename_translation.lrc  -  for seperate translation lrc
 AudioFilename_meaning.lrc      -  for seperate meaning lrc
 AudioFilename.chordpro         -  for chords
 ```
-#### Metadata fields -
+### When inside audio use Metadata fields -
 ```
 SYNCEDLYRICS             - Synced Lyrics
 SYNCEDLYRICS_Word        - Word-by-Word Lyrics
@@ -353,7 +353,7 @@ MusixMatch Syntax and UI
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-## 4. Suggested UI for Translation and Meaning Feature
+# 4. Suggested UI for Translation and Meaning Feature
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
@@ -384,7 +384,7 @@ MusixMatch Syntax and UI
 ```
 </details>
 
-## 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
+# 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
 
 1. Voice melody MIDI
 - Can be placed alongside with audio file.
@@ -483,11 +483,15 @@ Format
 ```
 <00:00.00>File Name</00:00.00>
 ```
-11. Background Image
-Optional
-Can load background images in zip file
+11. Background Image/Video
+- Optional
+- MAY load background images/video in zip file
+- Player MUST not play audio from the video
 
 Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
+
+# Other Recommendations
+- Player MAY have option to mute or turn down instruments using steam seperation.
 
 # Expect Adaptation By
 
@@ -525,9 +529,12 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 # Other Lyric Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
+1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
+1. .mscz/.mscx - https://musescore.org/en/handbook/3/file-formats#mscz
+1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files
 
 # Software
-LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
+- LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
 
 # License
 - LRCv2 specs is free to use.
