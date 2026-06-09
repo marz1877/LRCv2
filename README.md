@@ -218,15 +218,19 @@ plain: |
 </details>
 
 # 2. Multi Singers
+`[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>  
 
-Format
-```
-[00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
-[00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
-[1:01.00] [Singer:William,Luis]Line 3 lyrics [/Singer:William,Luis]
-```
+<details>
+  <summary>Format</summary>
 
-### Also See - previous standard achive similar objective but there not adapted -
+  ```
+[00:12.00] <s:Jhon>Line 1 lyrics</s:Jhon>
+[00:16.00] <s:Luis>Line 2 lyrics</s:Luis>
+[1:01.00] <s:William,Luis>Line 3 lyrics</s:William,Luis>
+```
+</details>
+
+#### Also See - other formats with similar objective -
 - Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
 - Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
 
