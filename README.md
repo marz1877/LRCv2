@@ -10,15 +10,6 @@ LRCv2 needs WYSIWYG editor specially when using many features at once. Something
 4. Kareoke with Time and Pitch
 5. Chords: Music Learner
 
-# Metadata
-Start of the data
-```
-[lrc version:2.0]
-[language:en,es]
-[features:meanings,translations,chords,colors]
-[encoding:UTF-8]
-```
-
 ## Automation
 **All features for creating .lrc can be automated**
 1. Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text (https://github.com/openai/whisper).
@@ -35,7 +26,7 @@ Start of the data
 ## Storing Lyrics
 - File Extension .lrc or in metadata.
 
-- ChordPro uses `{title: You Are My Sunshine}` but LRCv1 uses `[ti:Let's Twist Again]` and sections `{c:Verse 1}` but LRCv2 recommends `[c:Verse 1]`
+- ChordPro uses Title `{title: You Are My Sunshine}` and LRCv1 `[ti:Let's Twist Again]` and for Sections LRCv2 `{c:Verse 1}` but LRCv2 recommends [] for everything `[c:Verse 1]`
 
 ### Player to read filename with type speficied
 *When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.*
@@ -58,52 +49,39 @@ Chordpro             - Chords
 ```
 
 
-## 1.1 Metadata - .lrc version info
+## 1.1 Metadata
+**lrc version info**
 
-Format 
-
+**Start of the data**
 ```
-[lrc version:2]
-```
-## 1.2 Metadata - Language   
-
-like `[ar:Lyrics artist]`
-
-### Format
-```
-[language:Languages in the lyrics]
-```
-### Example
-```
-[language:en,es,de]
+[lrc version:2.0]
+[language:en,es]
+[features:meanings,translations,chords,colors]
+[encoding:UTF-8]
 ```
 
-## 1.3 Metadata - Sections
+Artist: `[ar:Song artist]`
+Language: `[language:en,es,de]`
+Sections: `[c:Verse 1]`
 
-Mark sections like `[c:Verse 1]`
+# 2. Multi Singers
 
-## 2. Singers - Song with many singers
-
-### Also See these previous standard achive similar objective but there not adapted -
-
-- Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
-- Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
-
-### Format
-
+Format
 ```
 [00:12.00] [Singer:Jhon]Line 1 lyrics[/Singer:Jhon]
 [00:16.00] [Singer:Luis]Line 2 lyrics[/Singer:Luis]
 [1:01.00] [Singer:William,Luis]Line 3 lyrics [/Singer:William,Luis]
 ```
 
-### 2.1 Per Section
+### Also See - previous standard achive similar objective but there not adapted -
+- Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+- Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
 
-```
-[Verse 1 : Vocalist Name]
-```
+## 2.1 Per Section
 
-Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
+`[Verse 1 : Vocalist Name]`
+
+Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . Genius has multi-singer infomation sometimes.
 
 ```
 [c:Verse 1: Singer Name]
@@ -114,8 +92,6 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
 # Blank synced line ends the section?
 [00:37.58]
 ```
-
-Genius has multi-singer infomation sometimes.
 
 ## 3.1 Meaning: Contextual - by word/line
 
@@ -146,34 +122,36 @@ On the Boulevard of Broken Dreams[/M:The phrase “Boulevard of Broken Dreams”
 The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.]
 ```
 
-## Break Link
+# Break Line
 **Explicitly add Breaklines**
 ```
-I walk a lonely road [br]
-The only one that I have ever known [br]
-Don't know where it goes [br]
-But it's home to me, and I walk alone [br]
-I walk this empty street [br]
-On the Boulevard of Broken Dreams [br]
+I walk a lonely road [Br]
+The only one that I have ever known [Br]
+Don't know where it goes [Br]
+But it's home to me, and I walk alone [Br]
+I walk this empty street [Br]
+On the Boulevard of Broken Dreams [Br]
 ```
 
 ## 3.2 Language Translation - Per Line, Phrase, Word
 
-- Player can have a dictionary for per word/phrase/slang/idiom translation.
+- Player MAY include dictionary for per word/phrase/slang/idiom translation.
 
 - Translation example:
   - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
   - https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 
 ### Format Translation
-
+- MUST specify translation lanuages. e.g. for German to English use `de>en`.
+- One Lyric MAY multiple translations.
+- Format `[00:13.75] [T,lang1>lang2]Line[/T: Transaltion]`
+- Example
 ```
-[00:13.75] [Translation,fin>eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/Translation: Literal:At night again I went to sleep in the balcony], CommonUsage: where's my baby?]
-[00:19.62] [Translation,fin>eng]Jotta lähempänä mua ois hän[/Translation: Literal:So that they would be closer to me]
-[00:25.30] [Translation,fin>eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/Translation: Literal:From my bed I saw the sky, begun to wait]
-[00:57.81] Tuuli tuule sinne [Translation,fin>eng]missä muruseni on[/Translation: Literal:Where my loved ones are, CommonUsage: where's my baby?]
+[00:13.75] [T,fin>eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T: At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
+[00:19.62] [T,fin>eng]Jotta lähempänä mua ois hän[/T: So that they would be closer to me]
+[00:25.30] [T,fin>eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T: From my bed I saw the sky, begun to wait]
+[00:57.81] Tuuli tuule sinne [T,fin>eng]missä muruseni on[/T: Where my loved ones are, CommonUsage: where's my baby?]
 ```
-
 
 <details>
   <summary>## Current Format with per line translation and both laguages in sepearte lines with same time stamp -</summary>
@@ -200,9 +178,6 @@ On the Boulevard of Broken Dreams [br]
 
 ### 3.3 Contexual Language Translation - per Word/Phrase
 
-specify translation lanuages for German to English like `de>en`
-file can have multiple translations
-
 Dictionary in the player may not be useful as word can be contexual and as used in gerneral/other cases.
 
 ### Format
@@ -219,20 +194,20 @@ When meaning mode from the top button is selected hovering should show line, phr
 
 In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
 
-## 5. Custom Text Color (for expression)
+# 5. Custom Text Color (for expression)
 
-### Format
+# Format
 ```
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
 
-## 6. Censoring Words
-- Add option to convert words like fuck, shit to F**k and S**t.
-- Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+# 6. Censoring Words
+- Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
+- Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
-## 7. Custom Text Size (for expression)
-- This can be turned off when using slidding lyrics depending of screen types. For example on phone with scrolling lyrics size can be hard to do.
+# 7. Custom Text Size (for word expression)
+- MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
 ```
@@ -240,23 +215,25 @@ In translation mode: hovering over should hilight phrases (as small as possible)
 [02:18.00] See who gives a duck
 ```
 
-## 8. Karaeoke - Voice melody's MIDI and Mic INput using pitch recognision and midi roll
+## 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
 
-1. Voice melody's midi can be supplied with audio files or extracted realtime using -
- - https://hub.docker.com/r/aclmb/stemgen steam seperator
+1. Voice melody MIDI
+- Can be placed alongside with audio file.
+- or Extracted realtime using https://hub.docker.com/r/aclmb/stemgen steam seperator.
 
-2. the player can show midi roll and take mic input to work as a kareoke that can also work as a sining learing method
-3. Convert Audio-to-Midi using-
- - https://www.sonicvisualiser.org/tony/ / https://github.com/sonic-visualiser/tony
- - https://github.com/spotify/basic-pitch audio-to-Midi   
- - https://github.com/DamRsn/NeuralNote.
+#### [Recommended Tools] Audio-to-Midi Convertion:
+ - https://www.sonicvisualiser.org/tony/ , https://github.com/sonic-visualiser/tony
+ - https://github.com/spotify/basic-pitch - Audio-to-Midi   
+ - https://github.com/DamRsn/NeuralNote .
 
-4. Current Audio+MIDI Formats
- - Multitrack OGG
- - MP4/M4A with SMF tracks
- - WAV with MIDI Metadata
+2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
 
- https://github.com/jeffreyjohnens/MetaMIDIDataset
+#### Other Audio+MIDI Formats
+  1. Multitrack OGG
+  1. MP4/M4A with SMF tracks
+  1. WAV with MIDI Metadata
+
+ - https://github.com/jeffreyjohnens/MetaMIDIDataset
 
 It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikipedia.org/wiki/MP3%2BG
 
@@ -266,15 +243,15 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
-## 9. Lyrics+Chords in ChordPro Fomat
+# 9. Lyrics + Chords
+
+- Player MAY add options to -
+  - Transpose scale / "No Capo version"
+  - Show chord Progression eg. `II V IV` (https://chromewebstore.google.com/detail/kantan-chord/ncdpcgdgemdklhocjgecijjjhaboopbp)
 
 - ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
-
-- Player may have ablity to transpose scale, have "no capo version", or show chord progression eg. `II V IV`
-
-### ChordPro Format Example
 <details>
-  <summary>Click me</summary>
+  <summary>ChordPro Format</summary>
 
 ```
 {title: You Are My Sunshine}
@@ -296,10 +273,12 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 
-##### Old Format (ChordPro is preferred)
+### LRCv2 Format
+
+Format `[cr]Lyric [/cr=Em]`
 
 <details>
-  <summary>Click me</summary>  
+  <summary>Example</summary>  
  
 ```
 [00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
@@ -311,6 +290,45 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 # Other Features
+
+### Syllable-by-Syllable
+**Only useful for kareoke or rap lyrics**
+<details>
+  <summary>Format</summary>
+  
+```
+[00:11.45] I [00:11.89] walk [00:12.33] a [00:12.77] lone- [00:13.43] ly [00:13.75] road
+[00:14.09] The [00:14.48] on- [00:14.87] ly [00:15.26] one [00:15.65] that [00:16.05] I [00:16.44] have [00:16.83] ev- [00:17.04] er [00:17.25] known
+[00:17.25] Don't [00:17.95] know [00:18.64] where [00:19.34] it [00:19.69] goes
+[00:20.03] But [00:20.73] it's [00:21.43] home [00:22.12] to [00:22.82] me [00:23.52] and [00:24.21] I [00:24.91] walk [00:25.61] a- [00:26.31] lone
+
+[00:27.93] I [00:28.55] walk [00:29.18] this [00:29.80] emp- [00:30.42] ty [00:31.05] street
+[00:31.68] On [00:32.03] the [00:32.38] Bou- [00:32.73] le- [00:33.08] vard [00:33.42] of [00:33.77] Bro- [00:34.12] ken [00:34.47] Dreams
+[00:33.77] Where [00:34.59] the [00:35.40] ci- [00:36.22] ty [00:36.63] sleeps
+[00:37.04] And [00:37.58] I'm [00:38.12] the [00:38.66] on- [00:39.20] ly [00:39.74] one [00:40.28] and [00:40.82] I [00:41.10] walk [00:41.37] a-lone
+
+[00:41.37] I [00:41.84] walk [00:42.31] a-lone [00:43.26] I [00:43.73] walk [00:44.20] a-lone
+[00:45.15] I [00:45.80] walk [00:46.45] a-lone [00:47.75] I [00:48.40] walk [00:49.05] a-
+
+[00:51.64] My [00:52.07] shad- [00:52.50] ow's [00:52.93] the [00:53.36] on- [00:53.79] ly [00:54.22] one [00:54.65] that [00:55.08] walks [00:55.51] be- [00:55.94] side [00:56.37] me
+[00:56.40] My [00:56.99] shal- [00:57.58] low [00:58.16] heart's [00:58.75] the [00:59.34] on- [00:59.93] ly [01:00.52] thing [01:01.11] that's [01:01.69] beat- [01:02.28] ing
+[01:03.46] Some- [01:03.99] times [01:04.52] I [01:05.05] wish [01:05.58] some- [01:06.11] one [01:06.64] out [01:07.17] there [01:07.70] will [01:08.23] find [01:08.46] me
+[01:08.72] 'Til [01:09.51] then [01:10.30] I [01:11.09] walk [01:11.88] a- [01:12.67] lone
+
+[01:13.48] Ah-ah [01:15.22] Ah-ah [01:16.96] Ah-ah [01:18.70] Ah-ah
+[01:20.44] Ah-ah [01:22.05] Ah-ah [01:23.66] Ah-ah
+
+[01:25.28] I'm [01:25.89] walk- [01:26.50] ing [01:27.10] down [01:27.71] the [01:28.31] line
+[01:28.92] That [01:29.44] di- [01:29.96] vides [01:30.48] me [01:31.00] some- [01:31.52] where [01:32.04] in [01:32.56] my [01:32.74] mind
+[01:31.64] On [01:32.31] the [01:32.98] bor- [01:33.65] der- [01:34.15] line
+[01:34.32] Of [01:34.82] the [01:35.33] edge [01:35.84] and [01:36.35] where [01:36.86] I [01:37.37] walk [01:37.88] a- [01:38.39] lone
+
+[01:39.91] Read [01:40.84] be- [01:41.77] tween [01:42.70] the [01:43.63] lines
+[01:44.56] What's [01:45.07] fucked [01:45.58] up [01:46.10] and [01:46.61] ev- [01:47.12] ery- [01:47.63] thing's [01:48.14] al- [01:48.40] right
+[01:48.66] Check [01:49.48] my [01:50.30] vi- [01:51.12] tal [01:51.53] signs
+[01:51.95] To [01:52.33] know [01:52.70] I'm [01:53.08] still [01:53.45] a- [01:53.83] live [01:54.20] and [01:54.58] I [01:54.95] walk [01:55.33] a-lone
+```
+</details>
 
 ### Word-by-Word
 - Use Case: Millisecond accurate for Karaeoke Mode 
@@ -355,6 +373,7 @@ Please don't take [D7]my sunshine a[G]way
 1. https://www.plex.tv/plexamp/
 
 **Karaeoke**
+1. https://github.com/DoubleDee73/Yass-Reloaded
 1. https://db.openkj.org/
 1. https://github.com/UltraStar-Deluxe/USDX
 1. https://github.com/gyunaev/spivak
@@ -375,9 +394,8 @@ Please don't take [D7]my sunshine a[G]way
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 1. **Lyrics File** (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
-#### Lyricsfile Format
 <details>
-  <summary>Click me</summary>
+  <summary>Lyricsfile Format</summary>
   
 ```
 version: '1.0'
@@ -455,14 +473,13 @@ plain: |
 </details>
 
 ## License
-
 - LRCv2 specs is free to use.
 - Must give credit.
 
-## Synced-Lyric Sources
+### Synced-Lyric Sources
 1. https://www.musixmatch.com/
 2. https://www.rentanadviser.com
-1. https://www.megalobiz.com/
-1. https://www.lyricsify.com/
+3. https://www.megalobiz.com/
+4. https://www.lyricsify.com/
 
 Open for contribution.
