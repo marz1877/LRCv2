@@ -1,10 +1,11 @@
-# LRCv2 Specefications
+# LRCv2 Specifications
+LRC v2 format specs proposal. Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Kareoke with Time and Pitch
 
 ## Software
 LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
 
 ## Use Cases
-1. Lyrics
+1. Synced Lyrics
 2. Meaning
 3. Translation: Multi-lingua people, Language learning, Forign music listening
 4. Kareoke with Time and Pitch
@@ -12,24 +13,30 @@ LRCv2 needs WYSIWYG editor specially when using many features at once. Something
 
 ## Automation
 **All features for creating .lrc can be automated**
-1. Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text (https://github.com/openai/whisper).
-  - Synced Lyrics: MusixMatch or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
-3. Chords: Riffstation software or UltimateGuitar DB.
-4. Translation: Musixmatch or Google Translate / Offline (https://github.com/argosopentech/argos-translate).
-5. Meaning: Genius.
+1. Lyrics
+  - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
+  - Speech-to-Text: https://github.com/openai/whisper
+  - Synced Lyrics DB: MusixMatch
+  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator .
+3. Chords:
+  - Software: Riffstation
+  - DB: UltimateGuitar
+4. Translation:
+  - DB: Musixmatch
+  - Service: Google Translate
+  - Software: Offline (https://github.com/argosopentech/argos-translate)
+5. Meaning: Genius
 6. For Karaoke:
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- one LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
+- One LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing Lyrics
-- File Extension .lrc or in metadata.
-
-### Player to read filename with type speficied
-*When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.*
-*Can have seperate .lrc per usecase or all-in-one*
-
+**File Extension .lrc or in metadata.**
+- When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.
+- Player to read filename with type speficied
+- Can have seperate .lrc per usecase or all-in-one
 *Suggested file naming*
 ```
 AudioFilename.lrc              -
@@ -37,11 +44,13 @@ AudioFilename_translation.lrc  -  for seperate translation lrc
 AudioFilename_meaning.lrc      -  for seperate meaning lrc
 AudioFilename.chordpro         -  for chords
 ```
-#### Metadata field names -
+#### Metadata fields -
 ```
-SYNCEDLYRICS         - Lyrics
-LYRICS_translation   - Translation
-  LYRICS_translation_es   - Translation Spanish
+SYNCEDLYRICS             - Synced Lyrics
+SYNCEDLYRICS_Word        - Word-by-Word Lyrics
+SYNCEDLYRICS_Syllable        - Syllable-by-Syllable Lyrics
+LYRICS_TRANSLATION       - Translation
+  LYRICS_TRANSLATION_ES   - Translation Spanish
 LYRICS_meaning       - Meaning
 Chordpro             - Chords
 ```
@@ -59,16 +68,15 @@ Chordpro             - Chords
 
 Artist: `[ar:Song artist]`
 Language: `[language:en,es,de]`
-Sections: `[c:Verse 1]`
 
-- ChordPro uses Title `{title: You Are My Sunshine}` and LRCv1 `[ti:Let's Twist Again]` and for Sections LRCv2 `{c:Verse 1}` but LRCv2 recommends [] for everything `[c:Verse 1]`
+- NOTE: LRCv1 uses `[ti:Let's Twist Again]` and ChordPro uses Title `{title: You Are My Sunshine}` 
 
 # 1. Time Stamping
 - MUST use Breakline [Br] at the end of each line
 - MUST using opening and closing time.
 
 ## Break Line
-- MUST Explicitly add Breaklines
+- MUST Explicitly add Breaklines using `[Br]`
 
 <details>
   <summary>Format</summary>
@@ -85,35 +93,34 @@ On the Boulevard of Broken Dreams [Br]
 
 ## Word-by-Word
 - Use Case: Alternative to syllable mode for Karaeoke Mode 
-- Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
-
-- Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
+- Other Format: [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
+- Players MAY hilight words as they are being played.
 
 ### Format
 
 <details>
-  <summary>Click me</summary>
+  <summary>Formar</summary>
 
 ```
-[Verse 1]
-[00:00.00]I <00:00.00> walk <00:00.38> a <00:00.52> lonely <00:00.95> road
-[00:01.79]The <00:02.19> only <00:02.40> one <00:02.79>
-[00:03.08]that <00:03.25> I <00:03.40> have <00:03.70> ever <00:03.90> known
-[00:05.00]Don't <00:05.18> know <00:05.36> where <00:05.54> it <00:05.72> goes
-[00:07.15]But <00:07.32> it's <00:07.60> home <00:07.91> to <00:08.08> me, <00:08.23> and <00:08.45> I <00:08.61> walk <00:08.81> alone
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> [Br]
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> [Br]
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> [Br]
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> [Br]
 
-[Chorus]
-[00:14.15]I <00:14.38> walk <00:14.57> this <00:14.72> empty <00:15.04> street
-[00:18.17]On <00:18.38> the <00:18.51> Boulevard <00:18.89> of <00:19.05> Broken <00:19.35> Dreams
-[00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
-[00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> [Br]
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> [Br]
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> [Br]
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> [Br]
+
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> [Br]
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> [Br]
 ```
 </details>
 
 ## Syllable-by-Syllable
-**Only useful for kareoke or rap lyrics**
+Use Case: Only kareoke or rap lyrics
 <details>
-  <summary>Format</summary>
+  <summary>Syllable-by-Syllable Format</summary>
   
 ```
 <00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> [Br]
@@ -225,7 +232,9 @@ Format
 
 ## 2.1 Per Section
 
-`[Verse 1 : Vocalist Name]`
+- LRCv1 uses for `{c:Verse 1}`
+- LRCv2 recommends [] for everything `[c:Verse 1]`
+- If Entire Section is sung by 1 singer then `[c:Verse 1 : Vocalist Name]`
 
 Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . Genius has multi-singer infomation sometimes.
 
@@ -240,11 +249,15 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . G
 ```
 
 # 3 Meaning
-Genius: Lyric meaning database
+
+- Recommended Lyric meaning database: Genius
 
 ## Contextual
 by Paragrah/line/word
 
+<details>
+  <summary>Format</summary>
+  
 ### Format
 ```
 [00:00.00] [M]I walk a lonely road[/M:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.]
@@ -253,9 +266,10 @@ by Paragrah/line/word
 [00:42.25] [M]I walk this empty street [/M:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
 [00:53.04] [M]On the boulevard of broken dreams[/M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
 ```
+</details>
 
-## Hyperlink ine Meaning
-- Meaning can have hyperlinks inside them
+## Hyperlink inside Meaning
+- Meaning MAY CONTAIN hyperlinks
 
 <details>
   <summary>Format</summary>
@@ -274,27 +288,31 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 ```
 </details>
 
+## 3.2 Language Translation - Per Word,Phrase, Line
 
-
-## 3.2 Language Translation - Per Line, Phrase, Word
-
+### Word
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
 
+### Line
 - Translation example:
   - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
   - https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 
-### Format Translation
-- MUST specify translation lanuages. e.g. for German to English use `de:en`.
+### Translation Format
+- MUST specify translation lanuages. e.g. German to English is `de:en`.
 - One Lyric MAY multiple translations.
-- Format `[00:13.75] [T,lang1:lang2]Line[/T: Transaltion]`
-- Example
+- Format `[00:13.75] [T:lang1:lang2]Line[/T: Transaltion]`
+- MAY contain literal and common usage meaning
+- <details>
+  <summary>Example</summary>
+  
 ```
-[00:13.75] [T,fin:eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T:At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
-[00:19.62] [T,fin:eng]Jotta lähempänä mua ois hän[/T:So that they would be closer to me]
-[00:25.30] [T,fin:eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait]
-[00:57.81] Tuuli tuule sinne [T,fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?]
+[00:13.75] [T:fin:eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T: Literal: At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
+[00:19.62] [T:fin:eng]Jotta lähempänä mua ois hän[/T:So that they would be closer to me]
+[00:25.30] [T:fin:eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait]
+[00:57.81] Tuuli tuule sinne [T:fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?]
 ```
+</details>
 
 <details>
   <summary>## Current Format used by MusixMatch with per line translation and both laguages in sepearte lines with same time stamp</summary>
