@@ -26,8 +26,6 @@ LRCv2 needs WYSIWYG editor specially when using many features at once. Something
 ## Storing Lyrics
 - File Extension .lrc or in metadata.
 
-- ChordPro uses Title `{title: You Are My Sunshine}` and LRCv1 `[ti:Let's Twist Again]` and for Sections LRCv2 `{c:Verse 1}` but LRCv2 recommends [] for everything `[c:Verse 1]`
-
 ### Player to read filename with type speficied
 *When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.*
 *Can have seperate .lrc per usecase or all-in-one*
@@ -49,7 +47,7 @@ Chordpro             - Chords
 ```
 
 
-## 1.1 Metadata
+## Metadata
 **lrc version info**
 
 **Start of the data**
@@ -63,6 +61,139 @@ Chordpro             - Chords
 Artist: `[ar:Song artist]`
 Language: `[language:en,es,de]`
 Sections: `[c:Verse 1]`
+
+- ChordPro uses Title `{title: You Are My Sunshine}` and LRCv1 `[ti:Let's Twist Again]` and for Sections LRCv2 `{c:Verse 1}` but LRCv2 recommends [] for everything `[c:Verse 1]`
+
+# 1. Time Stamping
+- MUST use Breakline [Br] at the end of each line
+- MUST using opening and closing time.
+
+## Word-by-Word
+- Use Case: Alternative to syllable mode for Karaeoke Mode 
+- Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
+
+- Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
+
+### Format
+
+<details>
+  <summary>Click me</summary>
+
+```
+[Verse 1]
+[00:00.00]I <00:00.00> walk <00:00.38> a <00:00.52> lonely <00:00.95> road
+[00:01.79]The <00:02.19> only <00:02.40> one <00:02.79>
+[00:03.08]that <00:03.25> I <00:03.40> have <00:03.70> ever <00:03.90> known
+[00:05.00]Don't <00:05.18> know <00:05.36> where <00:05.54> it <00:05.72> goes
+[00:07.15]But <00:07.32> it's <00:07.60> home <00:07.91> to <00:08.08> me, <00:08.23> and <00:08.45> I <00:08.61> walk <00:08.81> alone
+
+[Chorus]
+[00:14.15]I <00:14.38> walk <00:14.57> this <00:14.72> empty <00:15.04> street
+[00:18.17]On <00:18.38> the <00:18.51> Boulevard <00:18.89> of <00:19.05> Broken <00:19.35> Dreams
+[00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
+[00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
+```
+</details>
+
+## Syllable-by-Syllable
+**Only useful for kareoke or rap lyrics**
+<details>
+  <summary>Format</summary>
+  
+```
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> [Br]
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> [Br]
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> [Br]
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> [Br]
+
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> [Br]
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> [Br]
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> [Br]
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> [Br]
+
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> [Br]
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> [Br]
+```
+</details>
+
+1. **Lyrics File** (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+<details>
+  <summary>Lyricsfile Format</summary>
+  
+```
+version: '1.0'
+metadata:
+  title: 'Your Shape'
+  artist: 'Eddy'
+  duration_ms: 235000
+
+lines:
+  - text: "The school isn't the best place to find a lover"
+    start_ms: 12450
+    end_ms: 18200
+    words:
+      - text: 'The '
+        start_ms: 12450
+        end_ms: 12900
+      - text: 'school '
+        start_ms: 12900
+        end_ms: 13500
+      - text: "isn't "
+        start_ms: 13500
+        end_ms: 14200
+      - text: 'the '
+        start_ms: 14200
+        end_ms: 14600
+      - text: 'best '
+        start_ms: 14600
+        end_ms: 15200
+      - text: 'place '
+        start_ms: 15200
+        end_ms: 15800
+      - text: 'to '
+        start_ms: 15800
+        end_ms: 16200
+      - text: 'find '
+        start_ms: 16200
+        end_ms: 16800
+      - text: 'a '
+        start_ms: 16800
+        end_ms: 17100
+      - text: 'lover'
+        start_ms: 17100
+        end_ms: 18200
+  - text: 'So the bar is where I go'
+    start_ms: 18500
+    end_ms: 22100
+    words:
+      - text: 'So '
+        start_ms: 18500
+        end_ms: 19000
+      - text: 'the '
+        start_ms: 19000
+        end_ms: 19400
+      - text: 'bar '
+        start_ms: 19400
+        end_ms: 20000
+      - text: 'is '
+        start_ms: 20000
+        end_ms: 20400
+      - text: 'where '
+        start_ms: 20400
+        end_ms: 21000
+      - text: 'I '
+        start_ms: 21000
+        end_ms: 21400
+      - text: 'go'
+        start_ms: 21400
+        end_ms: 22100
+
+plain: |
+  [Verse 1]
+  The club isn't the best place to find a lover
+  So the bar is where I go
+```
+</details>
 
 # 2. Multi Singers
 
@@ -93,7 +224,7 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . G
 [00:37.58]
 ```
 
-## 3.1 Meaning: Contextual - by word/line
+# 3.1 Meaning: Contextual - by word/line
 
 Genius: Lyric meaning database
 
@@ -106,7 +237,7 @@ Genius: Lyric meaning database
 [00:53.04] [M]On the boulevard of broken dreams[/M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
 ```
 
-### Hyperlink inside Meaning
+## Hyperlink ine Meaning
 
 Meaning can have hyperlinks inside them
 ```
@@ -289,74 +420,6 @@ Format `[cr]Lyric [/cr=Em]`
 ```
 </details>
 
-# Other Features
-
-### Syllable-by-Syllable
-**Only useful for kareoke or rap lyrics**
-<details>
-  <summary>Format</summary>
-  
-```
-[00:11.45] I [00:11.89] walk [00:12.33] a [00:12.77] lone- [00:13.43] ly [00:13.75] road
-[00:14.09] The [00:14.48] on- [00:14.87] ly [00:15.26] one [00:15.65] that [00:16.05] I [00:16.44] have [00:16.83] ev- [00:17.04] er [00:17.25] known
-[00:17.25] Don't [00:17.95] know [00:18.64] where [00:19.34] it [00:19.69] goes
-[00:20.03] But [00:20.73] it's [00:21.43] home [00:22.12] to [00:22.82] me [00:23.52] and [00:24.21] I [00:24.91] walk [00:25.61] a- [00:26.31] lone
-
-[00:27.93] I [00:28.55] walk [00:29.18] this [00:29.80] emp- [00:30.42] ty [00:31.05] street
-[00:31.68] On [00:32.03] the [00:32.38] Bou- [00:32.73] le- [00:33.08] vard [00:33.42] of [00:33.77] Bro- [00:34.12] ken [00:34.47] Dreams
-[00:33.77] Where [00:34.59] the [00:35.40] ci- [00:36.22] ty [00:36.63] sleeps
-[00:37.04] And [00:37.58] I'm [00:38.12] the [00:38.66] on- [00:39.20] ly [00:39.74] one [00:40.28] and [00:40.82] I [00:41.10] walk [00:41.37] a-lone
-
-[00:41.37] I [00:41.84] walk [00:42.31] a-lone [00:43.26] I [00:43.73] walk [00:44.20] a-lone
-[00:45.15] I [00:45.80] walk [00:46.45] a-lone [00:47.75] I [00:48.40] walk [00:49.05] a-
-
-[00:51.64] My [00:52.07] shad- [00:52.50] ow's [00:52.93] the [00:53.36] on- [00:53.79] ly [00:54.22] one [00:54.65] that [00:55.08] walks [00:55.51] be- [00:55.94] side [00:56.37] me
-[00:56.40] My [00:56.99] shal- [00:57.58] low [00:58.16] heart's [00:58.75] the [00:59.34] on- [00:59.93] ly [01:00.52] thing [01:01.11] that's [01:01.69] beat- [01:02.28] ing
-[01:03.46] Some- [01:03.99] times [01:04.52] I [01:05.05] wish [01:05.58] some- [01:06.11] one [01:06.64] out [01:07.17] there [01:07.70] will [01:08.23] find [01:08.46] me
-[01:08.72] 'Til [01:09.51] then [01:10.30] I [01:11.09] walk [01:11.88] a- [01:12.67] lone
-
-[01:13.48] Ah-ah [01:15.22] Ah-ah [01:16.96] Ah-ah [01:18.70] Ah-ah
-[01:20.44] Ah-ah [01:22.05] Ah-ah [01:23.66] Ah-ah
-
-[01:25.28] I'm [01:25.89] walk- [01:26.50] ing [01:27.10] down [01:27.71] the [01:28.31] line
-[01:28.92] That [01:29.44] di- [01:29.96] vides [01:30.48] me [01:31.00] some- [01:31.52] where [01:32.04] in [01:32.56] my [01:32.74] mind
-[01:31.64] On [01:32.31] the [01:32.98] bor- [01:33.65] der- [01:34.15] line
-[01:34.32] Of [01:34.82] the [01:35.33] edge [01:35.84] and [01:36.35] where [01:36.86] I [01:37.37] walk [01:37.88] a- [01:38.39] lone
-
-[01:39.91] Read [01:40.84] be- [01:41.77] tween [01:42.70] the [01:43.63] lines
-[01:44.56] What's [01:45.07] fucked [01:45.58] up [01:46.10] and [01:46.61] ev- [01:47.12] ery- [01:47.63] thing's [01:48.14] al- [01:48.40] right
-[01:48.66] Check [01:49.48] my [01:50.30] vi- [01:51.12] tal [01:51.53] signs
-[01:51.95] To [01:52.33] know [01:52.70] I'm [01:53.08] still [01:53.45] a- [01:53.83] live [01:54.20] and [01:54.58] I [01:54.95] walk [01:55.33] a-lone
-```
-</details>
-
-### Word-by-Word
-- Use Case: Millisecond accurate for Karaeoke Mode 
-- Same as LRC's A2_extension:_word_time_tag - https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag
-
-- Words with milliseconds accuracy - Will hilight words as they are being played. This will be usefull for kareoke.
-
-### Format
-
-<details>
-  <summary>Click me</summary>
-
-```
-[Verse 1]
-[00:00.00]I <00:00.00> walk <00:00.38> a <00:00.52> lonely <00:00.95> road
-[00:01.79]The <00:02.19> only <00:02.40> one <00:02.79>
-[00:03.08]that <00:03.25> I <00:03.40> have <00:03.70> ever <00:03.90> known
-[00:05.00]Don't <00:05.18> know <00:05.36> where <00:05.54> it <00:05.72> goes
-[00:07.15]But <00:07.32> it's <00:07.60> home <00:07.91> to <00:08.08> me, <00:08.23> and <00:08.45> I <00:08.61> walk <00:08.81> alone
-
-[Chorus]
-[00:14.15]I <00:14.38> walk <00:14.57> this <00:14.72> empty <00:15.04> street
-[00:18.17]On <00:18.38> the <00:18.51> Boulevard <00:18.89> of <00:19.05> Broken <00:19.35> Dreams
-[00:20.69]Where <00:20.89> the <00:21.07> city <00:21.27> sleeps
-[00:26.14]and <00:26.32> I'm <00:26.50> the <00:26.68> only <00:27.06> one, <00:27.24> and <00:27.45> I <00:27.61> walk <00:27.81> alone
-```
-</details>
-
 ## Expect Adaptation By
 
 **Music Streaming**
@@ -393,84 +456,7 @@ Format `[cr]Lyric [/cr=Em]`
 # Other Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
-1. **Lyrics File** (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
-<details>
-  <summary>Lyricsfile Format</summary>
-  
-```
-version: '1.0'
-metadata:
-  title: 'Your Shape'
-  artist: 'Eddy'
-  duration_ms: 235000
 
-lines:
-  - text: "The school isn't the best place to find a lover"
-    start_ms: 12450
-    end_ms: 18200
-    words:
-      - text: 'The '
-        start_ms: 12450
-        end_ms: 12900
-      - text: 'school '
-        start_ms: 12900
-        end_ms: 13500
-      - text: "isn't "
-        start_ms: 13500
-        end_ms: 14200
-      - text: 'the '
-        start_ms: 14200
-        end_ms: 14600
-      - text: 'best '
-        start_ms: 14600
-        end_ms: 15200
-      - text: 'place '
-        start_ms: 15200
-        end_ms: 15800
-      - text: 'to '
-        start_ms: 15800
-        end_ms: 16200
-      - text: 'find '
-        start_ms: 16200
-        end_ms: 16800
-      - text: 'a '
-        start_ms: 16800
-        end_ms: 17100
-      - text: 'lover'
-        start_ms: 17100
-        end_ms: 18200
-  - text: 'So the bar is where I go'
-    start_ms: 18500
-    end_ms: 22100
-    words:
-      - text: 'So '
-        start_ms: 18500
-        end_ms: 19000
-      - text: 'the '
-        start_ms: 19000
-        end_ms: 19400
-      - text: 'bar '
-        start_ms: 19400
-        end_ms: 20000
-      - text: 'is '
-        start_ms: 20000
-        end_ms: 20400
-      - text: 'where '
-        start_ms: 20400
-        end_ms: 21000
-      - text: 'I '
-        start_ms: 21000
-        end_ms: 21400
-      - text: 'go'
-        start_ms: 21400
-        end_ms: 22100
-
-plain: |
-  [Verse 1]
-  The club isn't the best place to find a lover
-  So the bar is where I go
-```
-</details>
 
 ## License
 - LRCv2 specs is free to use.
