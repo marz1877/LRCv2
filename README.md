@@ -41,7 +41,6 @@ Start of the data
 *When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.*
 *Can have seperate .lrc per usecase or all-in-one*
 
-
 *Suggested file naming*
 ```
 AudioFilename.lrc              -
@@ -87,8 +86,8 @@ Mark sections like `[c:Verse 1]`
 
 ### Also See these previous standard achive similar objective but there not adapted -
 
-Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
-Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
+- Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
+- Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
 
 ### Format
 
@@ -118,7 +117,7 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
 
 Genius has multi-singer infomation sometimes.
 
-## 3.1 Meaning Contextual - by word/line
+## 3.1 Meaning: Contextual - by word/line
 
 Genius: Lyric meaning database
 
@@ -130,6 +129,34 @@ Genius: Lyric meaning database
 [00:42.25] [M]I walk this empty street [/M:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
 [00:53.04] [M]On the boulevard of broken dreams[/M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
 ```
+
+### Hyperlink inside Meaning
+
+Meaning can have hyperlinks inside them
+```
+[Verse 1]
+[M]I walk a lonely road
+The only one that I have ever known
+Don't know where it goes
+But it's home to me, and I walk alone[/M:It’s possible these lines were inspired by the chorus of Whitesnake’s ‘80s hit single “Here I Go Again”:]
+
+[M]I walk this empty street
+On the Boulevard of Broken Dreams[/M:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for [Los Angeles' Sunset Boulevard](https://www.tripadvisor.com/Attraction_Review-g32655-d156501-Reviews-Sunset_Boulevard-Los_Angeles_California.html) – it passes through Hollywood, so many have seen their stardom dreams die in the street.
+
+The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.]
+```
+
+## Break Link
+**Explicitly add Breaklines**
+```
+I walk a lonely road [br]
+The only one that I have ever known [br]
+Don't know where it goes [br]
+But it's home to me, and I walk alone [br]
+I walk this empty street [br]
+On the Boulevard of Broken Dreams [br]
+```
+
 ## 3.2 Language Translation - Per Line, Phrase, Word
 
 - Player can have a dictionary for per word/phrase/slang/idiom translation.
