@@ -296,31 +296,34 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 ## Expect Adaptation By
+**Music Streaming**
 1. [Spotify](https://open.spotify.com/)
 1. ‎[Apple Music](https://music.apple.com/)
 2. [Tencent Music](https://www.tencentmusic.com/en-us/)
 3. [Amazon Music](https://music.amazon.com)
-   
+**Lyrics**
 1. [MusixMatch](https://www.musixmatch.com/)
 1. [Genius](https://genius.com/)
-
+**Player**
+1. https://www.plex.tv/plexamp/
+**Karaeoke**
 1. https://db.openkj.org/
 2. https://github.com/UltraStar-Deluxe/USDX
 3. https://github.com/gyunaev/spivak
-
+**Lyrics Player/Editor**
 3. [OpenLyrics foobar2000 lyrics component](https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
-
+**Audio Codec/Metadata**
 1. [Xiph.Org Foundation](https://xiph.org/)
 2. [FFmpeg](https://ffmpeg.org/)
 
 # Other Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
-1. OpenLyrics - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
-1. Lyrics File (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
+1. **Lyrics File** (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
 #### Lyricsfile Format
 <details>
   <summary>Click me</summary>
