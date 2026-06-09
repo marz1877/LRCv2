@@ -1,8 +1,6 @@
 # LRCv2 Specifications
-LRC v2 format specs proposal. Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Kareoke with Time and Pitch
-
-## Software
-LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
+LRC v2 format specs proposal - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Kareoke with Time and Pitch.
+XML-inspired
 
 ## Use Cases
 1. Synced Lyrics
@@ -18,15 +16,15 @@ LRCv2 needs WYSIWYG editor specially when using many features at once. Something
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
   - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator .
-3. Chords:
-  - Software: Riffstation
+2. Chords:
+  - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
   - DB: UltimateGuitar
-4. Translation:
+3. Translation:
   - DB: Musixmatch
-  - Service: Google Translate
-  - Software: Offline (https://github.com/argosopentech/argos-translate)
-5. Meaning: Genius
-6. For Karaoke:
+  - Online: [Google Translate](https://translate.google.com)
+  - Software: https://github.com/argosopentech/argos-translate
+4. Meaning: DB: Genius or LLM
+5. Karaoke:
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
@@ -62,6 +60,7 @@ Chordpro             - Chords
 ```
 [lrc version:2.0]
 [language:en,es]
+[BPM:123]
 [features:meanings,translations,chords,colors]
 [encoding:UTF-8]
 ```
@@ -71,25 +70,25 @@ Language: `[language:en,es,de]`
 
 - NOTE: LRCv1 uses `[ti:Let's Twist Again]` and ChordPro uses Title `{title: You Are My Sunshine}` 
 
-# 1. Time Stamping
-- MUST use Breakline [Br] at the end of each line
-- MUST using opening and closing time.
+# 1.⏱️Time Stamping
+- LRCv2 MUST use SyncedLyrics.
+- MAY use opening and closing time.
 
 ## Break Line
-- MUST Explicitly add Breaklines using `[Br]`
+- MUST Explicitly use Breakline `[Br]` at the end of each line.
 
 <details>
-  <summary>Format</summary>
+  <summary>Simplified Example</summary>
 
 ```
-I walk a lonely road [Br]
-The only one that I have ever known [Br]
-Don't know where it goes [Br]
-But it's home to me, and I walk alone [Br]
-I walk this empty street [Br]
-On the Boulevard of Broken Dreams [Br]
+I walk a lonely road <Br>
+The only one that I have ever known <Br>
+Don't know where it goes <Br>
+But it's home to me, and I walk alone <Br>
+I walk this empty street <Br>
+On the Boulevard of Broken Dreams <Br>
 ```
-</details>details>
+</details>
 
 ## Word-by-Word
 - Use Case: Alternative to syllable mode for Karaeoke Mode 
@@ -99,21 +98,21 @@ On the Boulevard of Broken Dreams [Br]
 ### Format
 
 <details>
-  <summary>Formar</summary>
+  <summary>Format</summary>
 
 ```
-<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> [Br]
-<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> [Br]
-<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> [Br]
-<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> [Br]
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <Br>
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <Br>
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <Br>
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <Br>
 
-<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> [Br]
-<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> [Br]
-<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> [Br]
-<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> [Br]
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <Br>
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <Br>
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <Br>
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <Br>
 
-<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> [Br]
-<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> [Br]
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <Br>
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <Br>
 ```
 </details>
 
@@ -138,7 +137,7 @@ Use Case: Only kareoke or rap lyrics
 ```
 </details>
 
-1. **Lyrics File** (open extensible lyrics format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+Other Formats: **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
 <details>
   <summary>Lyricsfile Format</summary>
   
@@ -218,15 +217,16 @@ plain: |
 </details>
 
 # 2. Multi Singers
-`[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>  
+
+Format: `[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>`
 
 <details>
-  <summary>Format</summary>
+  <summary>Format Example</summary>
 
   ```
-[00:12.00] <s:Jhon>Line 1 lyrics</s:Jhon>
-[00:16.00] <s:Luis>Line 2 lyrics</s:Luis>
-[1:01.00] <s:William,Luis>Line 3 lyrics</s:William,Luis>
+[00:12.00] <s:Jhon>Line 1 lyrics</s:Jhon><Br>
+[00:16.00] <s:Luis>Line 2 lyrics</s:Luis><Br>
+[1:01.00] <s:William,Luis>Line 3 lyrics</s:William,Luis><Br>
 ```
 </details>
 
@@ -388,7 +388,8 @@ MusixMatch Syntax and UI
 
 1. Voice melody MIDI
 - Can be placed alongside with audio file.
-- or Extracted realtime using https://hub.docker.com/r/aclmb/stemgen steam seperator.
+- Extract Steam (realtime or premake) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
+- Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
 #### [Recommended Tools] Audio-to-Midi Convertion:
  - https://www.sonicvisualiser.org/tony/ , https://github.com/sonic-visualiser/tony
@@ -412,9 +413,10 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
-# 9. Lyrics + Chords
+# 9. Chords
 
 - Player MAY add options to -
+  - Show Chord Charts for many instruments
   - Transpose scale / "No Capo version"
   - Show chord Progression eg. `II V IV` (https://chromewebstore.google.com/detail/kantan-chord/ncdpcgdgemdklhocjgecijjjhaboopbp)
 
@@ -458,6 +460,35 @@ Format `[ch]Lyric [/ch=Em]`
 ```
 </details>
 
+### LRCv2 Format Type 2
+
+Use a seperate Chord file with time stamps without lyrics. Which helps with song has many instrumental breaks.
+
+<details>
+  <summary>LRCv2 Format</summary>  
+ 
+```
+<00:22.37=Em> </00:00.00> <00:22.37=G> </00:22.37 <00:22.37=D> </00:22.37> <00:22.37=A> </00:22.37><Br>
+```
+</details>
+
+10. Custom Images and Text
+- MUST NOT Show lyrics and `Custom Images and Text` together.
+- custom text usecase guitar/bass/drums tabs or Music notation.
+- Custom Images Along with with Lyrics.
+
+This would need a .7z zip with all the custom data
+
+Format
+```
+<00:00.00>File Name</00:00.00>
+```
+11. Background Image
+Optional
+Can load background images in zip file
+
+Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
+
 # Expect Adaptation By
 
 **Music Streaming**
@@ -480,6 +511,7 @@ Format `[ch]Lyric [/ch=Em]`
 1. https://github.com/gyunaev/spivak
 
 **Lyrics Player/Editor**
+1. https://github.com/tranxuanthang/lrcget
 1. [OpenLyrics foobar2000 lyrics component](https://github.com/jacquesh/foo_openlyrics)
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
@@ -494,11 +526,14 @@ Format `[ch]Lyric [/ch=Em]`
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 
+# Software
+LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
+
 # License
 - LRCv2 specs is free to use.
 - Must give credit.
 
-### Synced-Lyric Sources
+# Synced-Lyric Sources
 1. https://github.com/tranxuanthang/lrclib
 1. https://www.musixmatch.com/
 1. https://www.rentanadviser.com
