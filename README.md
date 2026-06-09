@@ -1,20 +1,25 @@
 # LRCv2 Specefications
 
 ## Software
-Will need a WYSIWYG editor specially if using every feature. Something like https://github.com/Royce551/FRESHLyricMaker
-Kareoke fork https://github.com/UltraStar-Deluxe/USDX/
+LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
 
 ## Use Cases
 - Lyrics
-- Kareoke with Time and Pitch,
-- Chords
 - Meaning
-- Translation
+- Chords: Music Learner
+- Translation : Multi-lingua people, Language learning, Forign music listening
+- Kareoke with Time and Pitch
 
-## Storing Lyrics
-- File Extension .lrc or in metadata.
+# Metadata
+Start of the lyrics
+```
+[lrc version:2.0]
+[language:en,es]
+[features:meanings,translations,chords,colors]
+[encoding:UTF-8]
+```
 
-### Automation
+## Automation
 **All features for creating .lrc can be automated**
 1. Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text (https://github.com/openai/whisper).
 2. Synced Lyrics: MusixMatch or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
@@ -23,14 +28,16 @@ Kareoke fork https://github.com/UltraStar-Deluxe/USDX/
 5. Meaning: Genius.
 6. For Karaoke: Vocal Melody Isolation using (See below) and covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-## Player to read filename with type speficied
+## Storing Lyrics
+- File Extension .lrc or in metadata.
 
-If a audio file is played and there is a .lrc in the same directory or it is specefied in player the .lrc can be named -
+### Player to read filename with type speficied
+*When an audio file is played and there is a .lrc in the same directory or it is specefied in player. .lrc can be named -*
 ```
 sameasaudiofilename.lrc              -
 sameasaudiofilename_translation.lrc  -  for seperate translation lrc
 sameasaudiofilename_meaning.lrc      -  for seperate meaning lrc
-sameasaudiofilename.chordpro         -  for chordpro
+sameasaudiofilename.chordpro         -  for chords
 ```
 Or Metadata fields -
 ```
@@ -40,7 +47,7 @@ LYRICS_meaning       - Meaning
 Chordpro             - For Chords in Chordpro format
 ```
 1 file can have all 3 meaning, translation, chords.
-Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but I recommend `[c:Verse 1]`
+Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but LRCv2 recommends `[c:Verse 1]`
 
 ## 1.1 Metadata - .lrc version info
 
@@ -66,7 +73,7 @@ like `[ar:Lyrics artist]`
 
 Mark sections like `[c:Verse 1]`
 
-## 2. Singers - Song with multiple singers
+## 2. Singers - Song with many singers
 
 ### Also See these previous standard achive similar objective but there not adapted -
 
@@ -87,7 +94,7 @@ Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Wala
 [Verse 1 : Vocalist Name]
 ```
 
-Example on Genius lyrics - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
+Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics
 
 ```
 [c:Verse 1: Singer Name]
@@ -173,7 +180,7 @@ Dictionary in the player may not be useful as word can be contexual and as used 
 
 When meaning mode from the top button is selected hovering should show line, phrase or paragraph hilighted depening on context (when explaing song lyrics only one line or paragraph is sufficient) 
 
-When translation mode is selected hovering over will hilight phrases (as small as possible) giving meaning of the phrase and words used trageted for langauge learning.
+In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
 
 ## 5. Custom Text Color (for expression)
 
