@@ -21,7 +21,7 @@ LRCv2 needs WYSIWYG editor specially when using many features at once. Something
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- 1 lrcv2 can have all - Synced Lyrics + Meaning + Translatopn + Chords + Kareoke Data.
+- one LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing Lyrics
 - File Extension .lrc or in metadata.
@@ -46,7 +46,6 @@ LYRICS_meaning       - Meaning
 Chordpro             - Chords
 ```
 
-
 ## Metadata
 **lrc version info**
 
@@ -67,6 +66,22 @@ Sections: `[c:Verse 1]`
 # 1. Time Stamping
 - MUST use Breakline [Br] at the end of each line
 - MUST using opening and closing time.
+
+## Break Line
+- MUST Explicitly add Breaklines
+
+<details>
+  <summary>Format</summary>
+
+```
+I walk a lonely road [Br]
+The only one that I have ever known [Br]
+Don't know where it goes [Br]
+But it's home to me, and I walk alone [Br]
+I walk this empty street [Br]
+On the Boulevard of Broken Dreams [Br]
+```
+</details>details>
 
 ## Word-by-Word
 - Use Case: Alternative to syllable mode for Karaeoke Mode 
@@ -224,9 +239,11 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . G
 [00:37.58]
 ```
 
-# 3.1 Meaning: Contextual - by word/line
-
+# 3 Meaning
 Genius: Lyric meaning database
+
+## Contextual
+by Paragrah/line/word
 
 ### Format
 ```
@@ -238,8 +255,11 @@ Genius: Lyric meaning database
 ```
 
 ## Hyperlink ine Meaning
+- Meaning can have hyperlinks inside them
 
-Meaning can have hyperlinks inside them
+<details>
+  <summary>Format</summary>
+  
 ```
 [Verse 1]
 [M]I walk a lonely road
@@ -252,17 +272,9 @@ On the Boulevard of Broken Dreams[/M:The phrase “Boulevard of Broken Dreams”
 
 The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.]
 ```
+</details>
 
-# Break Line
-**Explicitly add Breaklines**
-```
-I walk a lonely road [Br]
-The only one that I have ever known [Br]
-Don't know where it goes [Br]
-But it's home to me, and I walk alone [Br]
-I walk this empty street [Br]
-On the Boulevard of Broken Dreams [Br]
-```
+
 
 ## 3.2 Language Translation - Per Line, Phrase, Word
 
@@ -273,19 +285,19 @@ On the Boulevard of Broken Dreams [Br]
   - https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
 
 ### Format Translation
-- MUST specify translation lanuages. e.g. for German to English use `de>en`.
+- MUST specify translation lanuages. e.g. for German to English use `de:en`.
 - One Lyric MAY multiple translations.
-- Format `[00:13.75] [T,lang1>lang2]Line[/T: Transaltion]`
+- Format `[00:13.75] [T,lang1:lang2]Line[/T: Transaltion]`
 - Example
 ```
-[00:13.75] [T,fin>eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T: At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
-[00:19.62] [T,fin>eng]Jotta lähempänä mua ois hän[/T: So that they would be closer to me]
-[00:25.30] [T,fin>eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T: From my bed I saw the sky, begun to wait]
-[00:57.81] Tuuli tuule sinne [T,fin>eng]missä muruseni on[/T: Where my loved ones are, CommonUsage: where's my baby?]
+[00:13.75] [T,fin:eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T:At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
+[00:19.62] [T,fin:eng]Jotta lähempänä mua ois hän[/T:So that they would be closer to me]
+[00:25.30] [T,fin:eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait]
+[00:57.81] Tuuli tuule sinne [T,fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?]
 ```
 
 <details>
-  <summary>## Current Format with per line translation and both laguages in sepearte lines with same time stamp -</summary>
+  <summary>## Current Format used by MusixMatch with per line translation and both laguages in sepearte lines with same time stamp</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
@@ -307,9 +319,9 @@ On the Boulevard of Broken Dreams [Br]
 ```
 </details>
 
-### 3.3 Contexual Language Translation - per Word/Phrase
+## 3.3 Contexual Language Translation - per Word/Phrase
 
-Dictionary in the player may not be useful as word can be contexual and as used in gerneral/other cases.
+- NOTE: Dictionary in the player may not be useful as word can be contexual and as used in gerneral/other cases.
 
 ### Format
 
@@ -321,9 +333,8 @@ Dictionary in the player may not be useful as word can be contexual and as used 
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
-When meaning mode from the top button is selected hovering should show line, phrase or paragraph hilighted depening on context (when explaing song lyrics only one line or paragraph is sufficient) 
-
-In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
+- In meaning mode: hovering should show line, phrase or paragraph hilighted depening on context (explaination for only lines or paragraph is sufficient, words may be used rarely) 
+- In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
 
 # 5. Custom Text Color (for expression)
 
@@ -341,10 +352,13 @@ In translation mode: hovering over should hilight phrases (as small as possible)
 - MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
+<details>
+  <summary>ClickMe</summary>
 ```
 [02:16.00] [sz=10]Destroy yourself, see who gives a[/sz] [sz=20]duck[/sz]
 [02:18.00] See who gives a duck
 ```
+</details>
 
 ## 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
 
@@ -406,21 +420,21 @@ Please don't take [D7]my sunshine a[G]way
 
 ### LRCv2 Format
 
-Format `[cr]Lyric [/cr=Em]`
+Format `[ch]Lyric [/ch=Em]`
 
 <details>
-  <summary>Example</summary>  
+  <summary>LRCv2 Format</summary>  
  
 ```
-[00:22.37] [cr]I walk a [/cr=Em][cr]lonely road, [/cr=G]the [cr]only one that [/cr=D][cr]I have ever known[/cr=Em]
-[00:29.45] [cr]Don't know where it [/cr=G][cr]goes,[/cr=Em] [cr]but it's home to me [/cr=G][cr]and I walk alone[/cr=Em]
-[00:36.72] [cr]I walk this empty[/cr=Em] [cr]street[/cr=G][cr]On the Boulevard of Broken Dreams[/cr=D]
-[00:43.78] [cr]Where the city[/cr=Em] [cr]sleeps[/cr=G][cr]and I'm the only one and I walk alone[/cr=Em]
-[00:57.58] [cr]I walk alone,[/cr=Em] [cr]I walk alone[/cr=G][cr]I walk alone[/cr=D][cr]I walk alone and I walk a...[/cr=Em]
+[00:22.37] [ch]I walk a [/ch=Em][ch]lonely road, [/ch=G]the [ch]only one that [/ch=D][ch]I have ever known[/ch=Em]
+[00:29.45] [ch]Don't know where it [/ch=G][ch]goes,[/ch=Em] [ch]but it's home to me [/ch=G][ch]and I walk alone[/ch=Em]
+[00:36.72] [ch]I walk this empty[/ch=Em] [ch]street[/ch=G][ch]On the Boulevard of Broken Dreams[/ch=D]
+[00:43.78] [ch]Where the city[/ch=Em] [ch]sleeps[/ch=G][ch]and I'm the only one and I walk alone[/ch=Em]
+[00:57.58] [ch]I walk alone,[/ch=Em] [ch]I walk alone[/ch=G][ch]I walk alone[/ch=D][ch]I walk alone and I walk a...[/ch=Em]
 ```
 </details>
 
-## Expect Adaptation By
+# Expect Adaptation By
 
 **Music Streaming**
 1. [Spotify](https://open.spotify.com/)
@@ -449,16 +463,14 @@ Format `[cr]Lyric [/cr=Em]`
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
 
 **Audio Codec/Metadata**
-
 1. [Xiph.Org Foundation](https://xiph.org/)
 1. [FFmpeg](https://ffmpeg.org/)
 
-# Other Formats
+# Other Lyric Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 
-
-## License
+# License
 - LRCv2 specs is free to use.
 - Must give credit.
 
@@ -468,4 +480,4 @@ Format `[cr]Lyric [/cr=Em]`
 3. https://www.megalobiz.com/
 4. https://www.lyricsify.com/
 
-Open for contribution.
+# Open for contribution.
