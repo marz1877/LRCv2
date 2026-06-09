@@ -22,32 +22,42 @@ Start of the lyrics
 ## Automation
 **All features for creating .lrc can be automated**
 1. Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius) or Speech-to-Text (https://github.com/openai/whisper).
-2. Synced Lyrics: MusixMatch or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
+  - Synced Lyrics: MusixMatch or time lyrics using https://github.com/oseiskar/autosubsync, https://juanumusic.github.io/lyricssyncher/, https://github.com/Alien501/lrc-generator.
 3. Chords: Riffstation software or UltimateGuitar DB.
 4. Translation: Musixmatch or Google Translate / Offline (https://github.com/argosopentech/argos-translate).
 5. Meaning: Genius.
-6. For Karaoke: Vocal Melody Isolation using (See below) and covert it to MIDI using (See Below), for Karaoke Pitch matching.
+6. For Karaoke:
+  - Vocal Melody Isolation using (See below)
+  - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
+
+- 1 lrcv2 can have all - Synced Lyrics + Meaning + Translatopn + Chords + Kareoke Data.
 
 ## Storing Lyrics
 - File Extension .lrc or in metadata.
 
+- ChordPro uses `{title: You Are My Sunshine}` but LRCv1 uses `[ti:Let's Twist Again]` and sections `{c:Verse 1}` but LRCv2 recommends `[c:Verse 1]`
+
 ### Player to read filename with type speficied
-*When an audio file is played and there is a .lrc in the same directory or it is specefied in player. .lrc can be named -*
+*When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.*
+*Can have seperate .lrc per usecase or all-in-one*
+
+
+*Suggested file naming*
 ```
-sameasaudiofilename.lrc              -
-sameasaudiofilename_translation.lrc  -  for seperate translation lrc
-sameasaudiofilename_meaning.lrc      -  for seperate meaning lrc
-sameasaudiofilename.chordpro         -  for chords
+AudioFilename.lrc              -
+AudioFilename_translation.lrc  -  for seperate translation lrc
+AudioFilename_meaning.lrc      -  for seperate meaning lrc
+AudioFilename.chordpro         -  for chords
 ```
-Or Metadata fields -
+#### Metadata field names -
 ```
 SYNCEDLYRICS         - Lyrics
 LYRICS_translation   - Translation
+  LYRICS_translation_es   - Translation Spanish
 LYRICS_meaning       - Meaning
-Chordpro             - For Chords in Chordpro format
+Chordpro             - Chords
 ```
-1 file can have all 3 meaning, translation, chords.
-Keep in mind ChordPro has metadata like `{title: You Are My Sunshine}` but lrc uses `[ti:Let's Twist Again]` and sections like `{c:Verse 1}` but LRCv2 recommends `[c:Verse 1]`
+
 
 ## 1.1 Metadata - .lrc version info
 
