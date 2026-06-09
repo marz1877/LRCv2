@@ -290,20 +290,20 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 
 ## 3.2 Language Translation - Per Word,Phrase, Line
 
-### Word
+### Word-by-Word
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
 
-### Line
-- Translation example:
-  - https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
-  - https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
+### Line(s)
+- Recommended Translated Lyrics DB:
+  - https://lyricstranslate.com/ eg. https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
+  - https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 ### Translation Format
 - MUST specify translation lanuages. e.g. German to English is `de:en`.
 - One Lyric MAY multiple translations.
 - Format `[00:13.75] [T:lang1:lang2]Line[/T: Transaltion]`
 - MAY contain literal and common usage meaning
-- <details>
+<details>
   <summary>Example</summary>
   
 ```
@@ -314,8 +314,9 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 ```
 </details>
 
+MusixMatch Syntax and UI
 <details>
-  <summary>## Current Format used by MusixMatch with per line translation and both laguages in sepearte lines with same time stamp</summary>
+  <summary>MusixMatch Syntax and UI - with per-line translation and both laguages in sepearte lines with same time stamp</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
@@ -340,6 +341,7 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 ## 3.3 Contexual Language Translation - per Word/Phrase
 
 - NOTE: Dictionary in the player may not be useful as word can be contexual and as used in gerneral/other cases.
+- MAY use LLMs.
 
 ### Format
 
@@ -493,9 +495,10 @@ Format `[ch]Lyric [/ch=Em]`
 - Must give credit.
 
 ### Synced-Lyric Sources
+1. https://github.com/tranxuanthang/lrclib
 1. https://www.musixmatch.com/
-2. https://www.rentanadviser.com
-3. https://www.megalobiz.com/
-4. https://www.lyricsify.com/
+1. https://www.rentanadviser.com
+1. https://www.megalobiz.com/
+1. https://www.lyricsify.com/
 
 # Open for contribution.
