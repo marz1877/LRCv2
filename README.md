@@ -264,11 +264,11 @@ by Paragrah/line/word
   
 ### Format
 ```
-[00:00.00] [M]I walk a lonely road[/M:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.]
-[00:15.67] [M]Don't know where it goes[/M:The singer is uncertain of where the path will take him, and is unsure of what the future holds.]
-[00:28.03] [M]My shadow's the only one that walks beside me [/M:The singer feels alone and abandoned, as represented by his shadow being the only companion on his journey.]
-[00:42.25] [M]I walk this empty street [/M:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.]
-[00:53.04] [M]On the boulevard of broken dreams[/M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.]
+<00:00.00> <M>I walk a lonely road</M:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.> [Br]
+<00:15.67> <M>Don't know where it goes</M:The singer is uncertain of where the path will take him, and is unsure of what the future holds.>[Br]
+<00:28.03> <M>My shadow's the only one that walks beside me </M:The singer feels alone and abandoned, as represented by his shadow being the only companion on his journey.>[Br]
+<00:42.25> <M>I walk this empty street</M:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.>[Br]
+<00:53.04> <M>On the boulevard of broken dreams</M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.>[Br]
 ```
 </details>
 
