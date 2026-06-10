@@ -1,12 +1,12 @@
 # LRCv2 Specifications
-LRC v2 format specs proposal - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Kareoke with Time and Pitch.
+LRC v2 format specs proposal - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Karaeoke with Time and Pitch.
 XML-inspired
 
 ## Use Cases
 1. Synced Lyrics
 2. Meaning
-3. Translation: Multi-lingua people, Language learning, Forign music listening
-4. Kareoke with Time and Pitch
+3. Translation: For Multi-lingual people, Language learning, Foriegn music listening
+4. Kareoke with Time and Pitch Data
 5. Chords: Music Learner
 
 ## Automation
@@ -15,14 +15,15 @@ XML-inspired
   - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
-  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator .
+  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://lyricpotato.com/
+  - GUI Tool to Manually Per Word Sync: https://github.com/pxeemo/LySy , https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) , https://github.com/streetlegithub/amll-ttml-tool-english , https://github.com/amll-dev/applemusic-like-lyrics
 2. Chords:
   - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
   - DB: UltimateGuitar
 3. Translation:
   - DB: Musixmatch
   - Online: [Google Translate](https://translate.google.com)
-  - Software: https://github.com/argosopentech/argos-translate
+  - Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
 4. Meaning: DB: Genius or LLM
 5. Karaoke:
   - Vocal Melody Isolation using (See below)
@@ -32,10 +33,10 @@ XML-inspired
 
 ## Storing
 **File Extension .lrc or in metadata.**
-- When an audio file is played and there is a .lrc in the same directory or it can be specefied in the player.
+- as sidecar file.
 - Player to read filename with type speficied
 - Can have seperate .lrc per usecase or all-in-one
-*Suggested file naming*
+*Suggested sidecar file naming*
 ```
 AudioFilename.lrc              -
 AudioFilename_translation.lrc  -  for seperate translation lrc
@@ -158,10 +159,18 @@ The only one that I have ever known <Br>
 ```
 </details>
 
+- Other Formats
+- [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
+- YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
+- QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
+- [Lyricify](https://github.com/WXRIW/Lyricify-App])
+  - LYL	.lyl	Line-level	Lyricify	Lyricify's custom line-based format.
+  - LYS	.lys	Word/syllable	Lyricify	Supports duet/background vocals and per-syllable timing.
+  - LQE	.lqe	Word/syllable	Lyricify Quick Export	Container format that can bundle lyrics, translations, and pronunciations together.
+
 ## Word-by-Word
-- Use Case: Alternative to syllable mode for Karaeoke Mode 
+- Use Case: Karaeoke 
 - Other Format: [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
-- Players MAY hilight words as they are being played.
 
 ### Format
 
@@ -458,7 +467,7 @@ MusixMatch Syntax and UI
 # 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
 
 1. Voice melody MIDI
-- Can be placed alongside with audio file.
+- Can be placed alongside with audio file as sidecar file.
 - Extract Steam (realtime or premake) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
@@ -568,9 +577,10 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 **Music Streaming**
 1. [Spotify](https://open.spotify.com/)
+2. https://music.youtube.com/
 1. ‎[Apple Music](https://music.apple.com/)
-2. [Tencent Music](https://www.tencentmusic.com/en-us/)
-3. [Amazon Music](https://music.amazon.com)
+1. [Tencent Music](https://www.tencentmusic.com/en-us/)
+1. [Amazon Music](https://music.amazon.com)
 
 **Lyrics**
 1. [MusixMatch](https://www.musixmatch.com/)
@@ -578,6 +588,8 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 **Player**
 1. https://www.plex.tv/plexamp/
+2. https://github.com/mardous/BoomingMusic
+3. https://powerampapp.com/
 
 **Karaeoke**
 1. https://github.com/DoubleDee73/Yass-Reloaded
@@ -592,6 +604,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
+2. https://github.com/WXRIW/Lyricify-App
 
 **Audio Codec/Metadata**
 1. [Xiph.Org Foundation](https://xiph.org/)
