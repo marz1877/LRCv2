@@ -68,14 +68,86 @@ Chordpro             - Chords
 Artist: `[ar:Song artist]`
 Language: `[language:en,es,de]`
 
-- NOTE: LRCv1 uses `[ti:Let's Twist Again]` and ChordPro uses Title `{title: You Are My Sunshine}` 
+- NOTE: LRCv1 uses `[ti:Let's Twist Again]` and ChordPro uses Title `{title: You Are My Sunshine}`
+
+# Example
+
+<details>
+  <summary>Full Song - with meaning w/ hyperlink, per line sync</summary>
+  
+```
+<c:Verse 1>
+<00:11.45><m>I walk a lonely road<br>
+<00:14.09>The only one that I have ever known<br>
+<00:17.25>Don't know where it goes<br>
+<00:20.03>But it's home to me, and I walk alone<br></m:It’s possible these lines were inspired by the chorus of [Whitesnake’s ‘80s hit single “Here I Go Again”](https://en.wikipedia.org/wiki/Here_I_Go_Again):<br><br>Here I go again on my own<br>Going down the only road I’ve ever known<br>Like a drifter I was born to walk alone>
+<00:27.93><m>I walk this empty street<br>
+<00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
+<00:33.77>Where the city sleeps<br>
+<00:37.04>And I'm the only one, and I walk alone<br>
+
+<c:Pre-Chorus>
+<00:41.37>I walk alone, I walk alone<br>
+<00:45.15>I walk alone, and I walk a—<br>
+
+<c:Chorus>
+<00:51.64><m>My shadow's the only one that walks beside me<br></m:When people walk, they often form shadows, which is a dark area or shape produced by a body coming between rays of light and a surface. It is relative to the amount of sunlight the Sun provides at a particular time and location, and as the Jesus of Suburbia is the only person in the area, his shadow is his only accompaniment.<br> Also for some reason Billie just doesn’t say “the” in this lyric, but “the” is more or less implied to be said.><br>My shallow heart's the only thing that's beatin'<br>
+<01:03.46><m>Sometimes, I wish someone out there will find me<br>
+<01:08.72>'Til then, I walk alone</m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.>
+
+<c:Post-Chorus>
+<01:13.48>Ah-ah, ah-ah, ah-ah, ah-ah<br>
+<01:20.44>Ah-ah, ah-ah, ah-ah<br>
+
+<c:Verse 2>
+<01:25.28><m>I'm walkin' down the line<br>
+<01:28.92>That divides me somewhere in my mind<br>
+<01:28.92>On the borderline<br>
+<01:28.92>Of the edge and where I walk alone<br></m:These lines take a step into Jesus of Suburbia’s mind. It shows his emotional problems and his troubled thoughts that have lingered with him since he left home. He’s troubled by all the wrong he’s done and meditates all his actions.<br>The line foreshadows Jesus of Suburbia’s Dissociative Identity Disorder where he eventually shares his mind with St. Jimmy.><br>
+<01:39.91><m>Read between the lines<br>
+<01:44.56>What's fucked up and everything's all right<br></m:He’s trying to decode his inner thoughts and work out which parts of him are still functioning properly.>
+<01:48.66><m>Check my vital signs<br>
+<01:51.95>To know I'm still alive, and I walk alone<br></m:During live performances, Billie Joe Armstrong often changes this lyrics asking the crowd:>
+
+<c:Pre-Chorus>
+<01:55.71>I walk alone, I walk alone<br>
+<02:03.08>I walk alone, and I walk a—<br>
+
+<c:Chorus: Billie Joe Armstrong, Jason White>
+<02:05.82>My shadow's the only one that walks beside me<br>
+<02:11.30>My shallow heart's the only thing that's beatin'<br>
+<02:17.94>Sometimes, I wish someone out there will find me<br>
+<02:23.62>'Til then, I walk alone<br>
+
+<c:Post-Chorus>
+<02:28.78>Ah-ah, ah-ah, ah-ah, ah-ah<br></02:27.78>
+<02:35.09>Ah-ah, ah-ah<br>
+<02:35.09>I walk alone, and I walk a—<br>
+
+<c:Guitar Solo>
+
+<c:Bridge>
+<03:05.50>I walk this empty street<br>
+<03:09.51>On the Boulevard of Broken Dreams<br>
+<03:12.72>Where the city sleeps<br>
+<03:14.93>And I'm the only one, and I walk a—<br>
+
+<c:Chorus>
+<03:18.21>My shadow's the only one that walks beside me<br>
+<03:23.89>My shallow heart's the only thing that's beatin'<br>
+<03:29.56><m>Sometimes, I wish someone out there will find me<br>
+<03:35.56>'Til then, I walk alone<br></m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.> </03:46.74>
+
+<03:46.74><c:Instrumental Outro>
+```
+</details>
 
 # 1.⏱️Time Stamping
 - LRCv2 MUST use SyncedLyrics.
 - MAY use opening and closing time.
 
 ## Break Line
-- MUST Explicitly use Breakline `[Br]` at the end of each line.
+- MUST Explicitly use Breakline `<br>` at the end of each line.
 
 <details>
   <summary>Simplified Example</summary>
@@ -83,10 +155,6 @@ Language: `[language:en,es,de]`
 ```
 I walk a lonely road <Br>
 The only one that I have ever known <Br>
-Don't know where it goes <Br>
-But it's home to me, and I walk alone <Br>
-I walk this empty street <Br>
-On the Boulevard of Broken Dreams <Br>
 ```
 </details>
 
@@ -122,18 +190,18 @@ Use Case: Only kareoke or rap lyrics
   <summary>Syllable-by-Syllable Format</summary>
   
 ```
-<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> [Br]
-<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> [Br]
-<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> [Br]
-<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> [Br]
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <br>
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <br>
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <br>
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <br>
 
-<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> [Br]
-<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> [Br]
-<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> [Br]
-<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> [Br]
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <br>
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <br>
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <br>
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <br>
 
-<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> [Br]
-<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> [Br]
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <br>
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <br>
 ```
 </details>
 
@@ -237,22 +305,17 @@ Format: `[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>`
 ## 2.1 Per Section
 
 - LRCv1 uses for `{c:Verse 1}`
-- LRCv2 recommends [] for everything `[c:Verse 1]`
-- If Entire Section is sung by 1 singer then `[c:Verse 1 : Vocalist Name]`
+- LRCv2 recommends `<>` for everything `<c:Verse 1>`
+- If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
 
 Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . Genius has multi-singer infomation sometimes.
 
 ```
-[c:Verse 1: Singer Name]
-[00:13.10] Some
-[00:18.58] Lovely
+<c:Verse 1: Vocalist Name>
 [00:24.94] Lyrics
-[00:31.38] I hope music players adopt your proposal
-# Blank synced line ends the section?
-[00:37.58]
 ```
 
-# 3 Meaning
+# 3. Meaning
 
 - Recommended Lyric meaning database: Genius
 
@@ -264,11 +327,19 @@ by Paragrah/line/word
   
 ### Format
 ```
-<00:00.00> <M>I walk a lonely road</M:The singer is feeling lonely and isolated, and is on a path that no one else is traveling with him. He may feel like he doesn't fit in with others and is struggling to find his place in the world.> [Br]
-<00:15.67> <M>Don't know where it goes</M:The singer is uncertain of where the path will take him, and is unsure of what the future holds.>[Br]
-<00:28.03> <M>My shadow's the only one that walks beside me </M:The singer feels alone and abandoned, as represented by his shadow being the only companion on his journey.>[Br]
-<00:42.25> <M>I walk this empty street</M:The singer is walking down a street that feels barren and lifeless, emphasizing his feelings of loneliness and isolation.>[Br]
-<00:53.04> <M>On the boulevard of broken dreams</M:The "boulevard of broken dreams" is a metaphor for a place where people go to give up on their hopes and aspirations, and the singer feels like he is a part of this world of lost dreams and broken promises.>[Br]
+<c:Verse 1>
+<00:11.45><m>I walk a lonely road<br>
+<00:14.09>The only one that I have ever known<br>
+<00:17.25>Don't know where it goes<br>
+<00:20.03>But it's home to me, and I walk alone<br></m:It’s possible these lines were inspired by the chorus of [Whitesnake’s ‘80s hit single “Here I Go Again”](https://en.wikipedia.org/wiki/Here_I_Go_Again):<br><br>Here I go again on my own<br>Going down the only road I’ve ever known<br>Like a drifter I was born to walk alone>
+<00:27.93><m>I walk this empty street<br>
+<00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
+<00:33.77>Where the city sleeps<br>
+<00:37.04>And I'm the only one, and I walk alone<br>
+
+<c:Pre-Chorus>
+<00:41.37>I walk alone, I walk alone<br>
+<00:45.15>I walk alone, and I walk a—<br>
 ```
 </details>
 
