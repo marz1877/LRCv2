@@ -159,7 +159,7 @@ The only one that I have ever known <Br>
 ```
 </details>
 
-- Other Formats
+# Other Formats
 - [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
 - YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
 - QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
@@ -167,6 +167,11 @@ The only one that I have ever known <Br>
   - LYL	.lyl	Line-level	Lyricify	Lyricify's custom line-based format.
   - LYS	.lys	Word/syllable	Lyricify	Supports duet/background vocals and per-syllable timing.
   - LQE	.lqe	Word/syllable	Lyricify Quick Export	Container format that can bundle lyrics, translations, and pronunciations together.
+- TRC (Track Row Column) created by Motion Analysis Corporation.
+- WebVTT
+- Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
+- ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
+- KRC KuGou Music Word
 
 ## Word-by-Word
 - Use Case: Karaeoke 
