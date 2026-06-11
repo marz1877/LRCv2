@@ -1,31 +1,32 @@
 # LRCv2 Specifications
-LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Karaeoke with Time and Pitch.
+LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaeoke with Time and Pitch.
 
 ## Use Cases
 1. Synced Lyrics
 2. Meaning
-3. Translation: For Multi-lingual people, Language learning, Foriegn music listening
-4. Kareoke with Time and Pitch Data
-5. Chords: Music Learner
-
-6. 
+3. Translation: For Multi-lingual people, Language learning, Foriegn music listening.
+4. Singer metadata: Kareoke
+5. Custom Styling: Expressive lyrics.
+6. Kareoke with Time and Pitch Data, Singing Learning Tool.
+7. Chords: Music Learner.
+8. Custom Images and Text: Music Learning Tool for Music Chords/Notation
+9. Background Image/Video
 
 ### Automation
 **All features for creating .lrc can be automated**
 1. Lyrics
-  - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
   - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
   - Lyrics Syncer (Line-by-Line): Service : https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
-2. Chords:
-  - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
-  - DB: UltimateGuitar
-3. Translation:
+2. Translation:
   - DB: Musixmatch
   - Online: [Google Translate](https://translate.google.com)
   - Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
-4. Meaning: DB: Genius or LLM
+3. Meaning: DB: Genius (https://github.com/johnwmillr/LyricsGenius) or LLM
+4. Chords:
+  - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
+  - DB: UltimateGuitar
 5. Karaoke:
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
@@ -63,11 +64,21 @@ Chordpro             - Chords
 [language:en,es]
 [features:meaning,translation,chords,color,textsize]
 [encoding:UTF-8]
+[id:musicbrainz-id]
+[isrc:USWB19xxx589]
 [BPM:123]
 ```
 
+```metadata
 Artist: `[ar:Song artist]`
 Language: `[language:en,es,de]`
+```
+
+```EBNF
+timestamp := "<mm:ss.xx>"
+line := timestamp text "<br>"
+section := "<c:name>"
+```
 
 - LRCv1 uses `[ti:Let's Twist Again]`, ChordPro uses Title `{title: You Are My Sunshine}`
 
@@ -78,6 +89,7 @@ Language: `[language:en,es,de]`
   
 ```
 <c:Verse 1>
+<soc>
 <00:11.45><m>I walk a lonely road<br>
 <00:14.09>The only one that I have ever known<br>
 <00:17.25>Don't know where it goes<br>
@@ -86,21 +98,29 @@ Language: `[language:en,es,de]`
 <00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
 <00:33.77>Where the city sleeps<br>
 <00:37.04>And I'm the only one, and I walk alone<br>
+<eoc>
 
 <c:Pre-Chorus>
+<soc>
 <00:41.37>I walk alone, I walk alone<br>
 <00:45.15>I walk alone, and I walk a—<br>
+<eoc>
 
 <c:Chorus>
+<soc>
 <00:51.64><m>My shadow's the only one that walks beside me<br></m:When people walk, they often form shadows, which is a dark area or shape produced by a body coming between rays of light and a surface. It is relative to the amount of sunlight the Sun provides at a particular time and location, and as the Jesus of Suburbia is the only person in the area, his shadow is his only accompaniment.<br> Also for some reason Billie just doesn’t say “the” in this lyric, but “the” is more or less implied to be said.><br>My shallow heart's the only thing that's beatin'<br>
 <01:03.46><m>Sometimes, I wish someone out there will find me<br>
 <01:08.72>'Til then, I walk alone</m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.>
+<eoc>
 
 <c:Post-Chorus>
+<soc>
 <01:13.48>Ah-ah, ah-ah, ah-ah, ah-ah<br>
 <01:20.44>Ah-ah, ah-ah, ah-ah<br>
+<eoc>
 
 <c:Verse 2>
+<soc>
 <01:25.28><m>I'm walkin' down the line<br>
 <01:28.92>That divides me somewhere in my mind<br>
 <01:28.92>On the borderline<br>
@@ -109,35 +129,46 @@ Language: `[language:en,es,de]`
 <01:44.56>What's fucked up and everything's all right<br></m:He’s trying to decode his inner thoughts and work out which parts of him are still functioning properly.>
 <01:48.66><m>Check my vital signs<br>
 <01:51.95>To know I'm still alive, and I walk alone<br></m:During live performances, Billie Joe Armstrong often changes this lyrics asking the crowd:>
+<eoc>
 
 <c:Pre-Chorus>
+<soc>
 <01:55.71>I walk alone, I walk alone<br>
 <02:03.08>I walk alone, and I walk a—<br>
+<eoc>
 
 <c:Chorus: Billie Joe Armstrong, Jason White>
+<soc>
 <02:05.82>My shadow's the only one that walks beside me<br>
 <02:11.30>My shallow heart's the only thing that's beatin'<br>
 <02:17.94>Sometimes, I wish someone out there will find me<br>
 <02:23.62>'Til then, I walk alone<br>
+<eoc>
 
 <c:Post-Chorus>
+<soc>
 <02:28.78>Ah-ah, ah-ah, ah-ah, ah-ah<br></02:27.78>
 <02:35.09>Ah-ah, ah-ah<br>
 <02:35.09>I walk alone, and I walk a—<br>
+<eoc>
 
 <c:Guitar Solo>
 
 <c:Bridge>
+<soc>
 <03:05.50>I walk this empty street<br>
 <03:09.51>On the Boulevard of Broken Dreams<br>
 <03:12.72>Where the city sleeps<br>
 <03:14.93>And I'm the only one, and I walk a—<br>
+<eoc>
 
 <c:Chorus>
+<soc>
 <03:18.21>My shadow's the only one that walks beside me<br>
 <03:23.89>My shallow heart's the only thing that's beatin'<br>
 <03:29.56><m>Sometimes, I wish someone out there will find me<br>
 <03:35.56>'Til then, I walk alone<br></m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.> </03:46.74>
+<eoc>
 
 <03:46.74><c:Instrumental Outro>
 ```
@@ -147,6 +178,10 @@ Language: `[language:en,es,de]`
 - LRCv2 MUST use SyncedLyrics.
 - MAY use opening and closing time.
 - Break Line: MUST Explicitly use Breakline `<br>` at the end of each line.
+
+Brealine PROS:
+- No CR `Carriage Return` and LF `Line Feed` errors.
+- Consistent time metadata for line-by-line and word-by-word.
 
 <details>
   <summary>Simplified Example</summary>
@@ -158,20 +193,21 @@ The only one that I have ever known <Br>
 </details>
 
 ### Other Synced Lyric Formats
-- [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
-- YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
-- QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
-- [Lyricify](https://github.com/WXRIW/Lyricify-App])
+- [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
+- [LRCv1] [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag) (Word-by-Word)
+- (seems good) [Lyricify](https://github.com/WXRIW/Lyricify-App) https://amll.dev/en/guides/lyric/formats.html#lyricify-formats 
   - LYL	.lyl	Line-level	Lyricify	Lyricify's custom line-based format.
   - LYS	.lys	Word/syllable	Lyricify	Supports duet/background vocals and per-syllable timing.
-  - LQE	.lqe	Word/syllable	Lyricify Quick Export	Container format that can bundle lyrics, translations, and pronunciations together.
-- TRC (Track Row Column) created by Motion Analysis Corporation.
-- WebVTT
-- Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
-- ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
-- KRC KuGou Music Word
+  - [Good] LQE	.lqe	Word/syllable	Lyricify Quick Export	Container format that can bundle lyrics, translations, and pronunciations together.
+- [Basic] WebVTT (used by YouTube for subtitle and lyrics)
+- [Basic] ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
+- [proprietary] KRC KuGou Music Word
+- [proprietary] YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
+- [proprietary] QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
+- [Subtitle oriented] TRC (Track Row Column) created by Motion Analysis Corporation.
+- [Subtitle oriented] Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
 
-- **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+- [Good but YAML is hard to work with and it doesn't support many features] **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
 <details>
   <summary>Lyricsfile Format</summary>
   
@@ -251,8 +287,8 @@ plain: |
 </details>
 
 #### Word-by-Word
-- Use Case: Karaeoke 
-- Other Format: [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
+**Use Case:** Karaeoke 
+
 
 ### Format Word-by-Word
 
@@ -277,7 +313,7 @@ plain: |
 
 ## Syllable-by-Syllable
 
-- **Use Case:** Only kareoke or rap lyrics
+**Use Case:** kareoke or rap lyrics
 
 <details>
   <summary>Syllable-by-Syllable Format Example</summary>
@@ -300,26 +336,27 @@ plain: |
 
 # 2. Multi Singers
 
-Format: `[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>`
+Format: `[0:00.00] <s:Singer1,Singer2>Words</s:Singer1>`
 
 <details>
   <summary>Format Example</summary>
 
   ```
-[00:12.00] <s:Jhon>Line 1 lyrics</s:Jhon><Br>
-[00:16.00] <s:Luis>Line 2 lyrics</s:Luis><Br>
-[1:01.00] <s:William,Luis>Line 3 lyrics</s:William,Luis><Br>
+<00:12.00> <s:Jhon>Line 1 lyrics</s:Jhon><Br>
+<00:16.00> <s:Luis>Line 2 lyrics</s:Luis><Br>
+<01:01.00> <s:William,Luis>Line 3 lyrics</s:William,Luis><Br>
 ```
 </details>
 
 #### Also See - other formats with similar objective -
-- Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended
-- Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender
+- Extended LRC - (Wikipedia removed it) https://en.wikipedia.org/wiki/LRC_(file_format)#Simple_format_extended [Multiple singer]
+- Walaoke_extension:_gender - https://en.wikipedia.org/wiki/LRC_(file_format)#Walaoke_extension:_gender [Singer Gender]
 
 ## 2.1 Per Section
 
 - LRCv2 recommends `<>` for everything `<c:Verse 1>`
 - If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
+- Mark start of section with `<soc>` and end of section with `<eoc>`.
 
 Note: LRCv1 uses for `{c:Verse 1}`
 
@@ -327,7 +364,7 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics (Ge
 
 ```
 <c:Verse 1: Vocalist Name>
-[00:24.94] Lyrics
+<00:24.94> Lyrics
 ```
 
 # 3. Meaning
@@ -342,7 +379,7 @@ Format`<m>Lyrics</m:Meaning>`
 FORMAT: See Main Example
 
 ## Hyperlink inside Meaning
-- Meaning MAY contain hyperlinks
+- Meaning CAN contain hyperlinks.
 
 FORMAT: See Main Example
 
@@ -352,13 +389,15 @@ FORMAT: See Main Example
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
 
 ### Line(s)
-- Recommended Translated Lyrics DB:
-  - https://lyricstranslate.com/ eg. https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
-  - https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
+
+FORMAT: See Main Example
+
+LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 
 ### Translation Format
-- MUST specify translation lanuages. e.g. German to English is `de:en`.
-- One Lyric CAN multiple translations.
+- MUST specify translation lanuages. e.g. German to English is `deu:eng`.
+- MUST use ISO 639-3 language codes.
+- One lyric CAN multiple translations.
 - Format `<00:13.75> <T:lang1:lang2>Line</T:Transaltion>`
 - MAY contain 'literal' and 'common usage' meaning.
 <details>
@@ -414,7 +453,18 @@ Other Trnslated Lyrics Format: Syntax and UI
 - In meaning mode: hovering should show line, phrase or paragraph hilighted depening on context (explaination for only lines or paragraph is sufficient, words may be used rarely) 
 - In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
 
-# 5. Custom Text Color (for expression)
+# 5. Censoring Words
+
+- Players MUST support this feature.
+
+- Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
+- Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+
+# 6. Styling
+
+- Players MUST support this feature.
+
+## 6.1 Custom Text Color (for expression)
 
 # Format
 ```
@@ -422,11 +472,7 @@ Other Trnslated Lyrics Format: Syntax and UI
 [02:18.00] See who gives a duck
 ```
 
-# 6. Censoring Words
-- Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
-- Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
-
-# 7. Custom Text Size (for word expression)
+## 6.2 Custom Text Size (for word expression)
 - MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
@@ -438,10 +484,17 @@ Other Trnslated Lyrics Format: Syntax and UI
 ```
 </details>
 
-# 8. Karaeoke - Voice melody MIDI + Mic Input using Pitch-Recognision and midi roll UI
+# 8. Karaeoke
+**Voice melody MIDI + Mic Input w/ Pitch-Recognision on midi-piano-roll**
 
-1. Voice melody MIDI
-- Can be placed alongside with audio file as sidecar file.
+- Players MAY support this feature but explicity tell when not suported.
+
+## 1. Voice melody MIDI
+
+STORING:
+- MAYBE used as sidecar file for audio file with LRCv2.
+
+ CREATION/AUTOMATION:
 - Extract Steam (realtime or premake) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
@@ -450,7 +503,7 @@ Other Trnslated Lyrics Format: Syntax and UI
  - https://github.com/spotify/basic-pitch - Audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote .
 
-2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
+## 2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
 
 #### Other Audio+MIDI Formats
   1. Multitrack OGG
@@ -498,12 +551,12 @@ Please don't take [D7]my sunshine a[G]way
 </details>
 
 
-### LRCv2 Format
+### LRCv2 Chord+Lyrics Format
 
 Format `[ch]Lyric [/ch=Em]`
 
 <details>
-  <summary>LRCv2 Format</summary>  
+  <summary>LRCv2 Chord+Lyrics</summary>  
  
 ```
 [00:22.37] [ch]I walk a [/ch=Em][ch]lonely road, [/ch=G]the [ch]only one that [/ch=D][ch]I have ever known[/ch=Em]
@@ -514,7 +567,7 @@ Format `[ch]Lyric [/ch=Em]`
 ```
 </details>
 
-### LRCv2 Format Type 2
+### LRCv2 Chord+Lyrics (Chords Seperately) Format Type 2
 
 Use a seperate Chord file with time stamps without lyrics. Which helps with song has many instrumental breaks.
 
@@ -522,7 +575,7 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
   <summary>LRCv2 Format</summary>  
  
 ```
-<00:22.37=Em> </00:00.00> <00:22.37=G> </00:22.37 <00:22.37=D> </00:22.37> <00:22.37=A> </00:22.37><Br>
+<00:22.37=Em> Word Word</00:00.00> <00:22.37=G>Word Word </00:22.37 <00:22.37=D>Word WordWord Word </00:22.37> <00:22.37=A> Word Word</00:22.37><Br>
 ```
 </details>
 
@@ -606,16 +659,20 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
   - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) ,
   - https://github.com/streetlegithub/amll-ttml-tool-english ,
   - https://github.com/amll-dev/applemusic-like-lyrics ,
-  -  https://github.com/Raqhael-ux/Voxen-LRC-Editor
+    - https://github.com/Raqhael-ux/Voxen-LRC-Editor
 
 #### Other Tools
   - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
 
 ##### Synced-Lyric Sources
-1. https://github.com/tranxuanthang/lrclib
-1. https://www.musixmatch.com/
+1. https://github.com/tranxuanthang/lrclib (Open Source DB)
+1. https://www.musixmatch.com/ (Word-by-Word and Line-by-line)
 1. https://www.rentanadviser.com
 1. https://www.megalobiz.com/
 1. https://www.lyricsify.com/
+
+Recommended Translated Lyrics DB:
+  - https://lyricstranslate.com/ eg. https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
+  - https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 ## Open for contribution.
