@@ -1,6 +1,8 @@
 # LRCv2 Specifications
 LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaeoke with Time and Pitch.
 
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/168d0a32-3e1f-4bdd-8f55-45924f34180e" />
+
 ## Use Cases
 1. Synced Lyrics
 2. Meaning
@@ -484,10 +486,10 @@ Other Trnslated Lyrics Format: Syntax and UI
 ```
 </details>
 
-# 8. Karaeoke
+# 7. Karaeoke
 **Voice melody MIDI + Mic Input w/ Pitch-Recognision on midi-piano-roll**
 
-- Players MAY support this feature but explicity tell when not suported.
+- Optional: Players MAY support this feature but explicity tell when not suported.
 
 ## 1. Voice melody MIDI
 
@@ -521,7 +523,7 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 </details>
 
 # 9. Chords
-
+- Optional
 - Player MAY add options to -
   - Show Chord Charts for many instruments
   - Transpose scale / "No Capo version"
@@ -579,7 +581,8 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 ```
 </details>
 
-10. Custom Images and Text
+8. Custom Images and Text
+- Optional
 - MUST NOT Show lyrics and `Custom Images and Text` together.
 - custom text usecase guitar/bass/drums tabs or Music notation.
 - Custom Images Along with with Lyrics.
@@ -590,7 +593,7 @@ Format
 ```
 <00:00.00>File Name</00:00.00>
 ```
-11. Background Image/Video
+9. Background Image/Video
 - Optional
 - MAY load background images/video in zip file
 - Player MUST not play audio from the video
