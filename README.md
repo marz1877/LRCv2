@@ -1,6 +1,5 @@
 # LRCv2 Specifications
-LRC v2 format specs proposal - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Karaeoke with Time and Pitch.
-XML-inspired
+LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Chords, Karaeoke with Time and Pitch.
 
 ## Use Cases
 1. Synced Lyrics
@@ -9,7 +8,9 @@ XML-inspired
 4. Kareoke with Time and Pitch Data
 5. Chords: Music Learner
 
-## Automation
+6. 
+
+### Automation
 **All features for creating .lrc can be automated**
 1. Lyrics
   - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
@@ -32,7 +33,7 @@ XML-inspired
 - One LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
-**File Extension .lrc or in metadata.**
+**.lrc XML-inspired or in audio file's metadata**
 - as sidecar file.
 - Player to read filename with type speficied
 - Can have seperate .lrc per usecase or all-in-one
@@ -55,26 +56,25 @@ Chordpro             - Chords
 ```
 
 ## Metadata
-**lrc version info**
 
-**Start of the data**
+**Header**
 ```
 [lrc version:2.0]
 [language:en,es]
-[BPM:123]
-[features:meanings,translations,chords,colors]
+[features:meaning,translation,chords,color,textsize]
 [encoding:UTF-8]
+[BPM:123]
 ```
 
 Artist: `[ar:Song artist]`
 Language: `[language:en,es,de]`
 
-- NOTE: LRCv1 uses `[ti:Let's Twist Again]` and ChordPro uses Title `{title: You Are My Sunshine}`
+- LRCv1 uses `[ti:Let's Twist Again]`, ChordPro uses Title `{title: You Are My Sunshine}`
 
 # Example
 
 <details>
-  <summary>Full Song - with meaning w/ hyperlink, per line sync</summary>
+  <summary>LRCv2 Full Song example - with meaning w/ hyperlink, per line sync</summary>
   
 ```
 <c:Verse 1>
@@ -146,9 +146,7 @@ Language: `[language:en,es,de]`
 # 1.⏱️Time Stamping
 - LRCv2 MUST use SyncedLyrics.
 - MAY use opening and closing time.
-
-## Break Line
-- MUST Explicitly use Breakline `<br>` at the end of each line.
+- Break Line: MUST Explicitly use Breakline `<br>` at the end of each line.
 
 <details>
   <summary>Simplified Example</summary>
@@ -159,7 +157,7 @@ The only one that I have ever known <Br>
 ```
 </details>
 
-# Other Formats
+### Other Synced Lyric Formats
 - [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
 - YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
 - QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
@@ -173,53 +171,7 @@ The only one that I have ever known <Br>
 - ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
 - KRC KuGou Music Word
 
-## Word-by-Word
-- Use Case: Karaeoke 
-- Other Format: [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
-
-### Format
-
-<details>
-  <summary>Format</summary>
-
-```
-<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <Br>
-<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <Br>
-<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <Br>
-<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <Br>
-
-<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <Br>
-<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <Br>
-<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <Br>
-<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <Br>
-
-<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <Br>
-<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <Br>
-```
-</details>
-
-## Syllable-by-Syllable
-Use Case: Only kareoke or rap lyrics
-<details>
-  <summary>Syllable-by-Syllable Format</summary>
-  
-```
-<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <br>
-<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <br>
-<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <br>
-<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <br>
-
-<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <br>
-<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <br>
-<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <br>
-<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <br>
-
-<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <br>
-<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <br>
-```
-</details>
-
-Other Formats: **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+- **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
 <details>
   <summary>Lyricsfile Format</summary>
   
@@ -298,6 +250,54 @@ plain: |
 ```
 </details>
 
+#### Word-by-Word
+- Use Case: Karaeoke 
+- Other Format: [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag)
+
+### Format Word-by-Word
+
+<details>
+  <summary>LRCv2 Word-by-Word Format Example</summary>
+
+```
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <Br>
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <Br>
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <Br>
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <Br>
+
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <Br>
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <Br>
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <Br>
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <Br>
+
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <Br>
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <Br>
+```
+</details>
+
+## Syllable-by-Syllable
+
+- **Use Case:** Only kareoke or rap lyrics
+
+<details>
+  <summary>Syllable-by-Syllable Format Example</summary>
+  
+```
+<00:11.45> I <00:11.89> walk <00:12.33> a <00:12.77> lone- <00:13.43> ly <00:13.75> road </00:14.09> <br>
+<00:14.09> The <00:14.48> on- <00:14.87> ly <00:15.26> one <00:15.65> that <00:16.05> I <00:16.44> have <00:16.83> ev- <00:17.04> er <00:17.25> known </00:17.25> <br>
+<00:17.25> Don't <00:17.95> know <00:18.64> where <00:19.34> it <00:19.69> goes </00:20.03> <br>
+<00:20.03> But <00:20.73> it's <00:21.43> home <00:22.12> to <00:22.82> me <00:23.52> and <00:24.21> I <00:24.91> walk <00:25.61> a- <00:26.31> lone </00:27.93> <br>
+
+<00:27.93> I <00:28.55> walk <00:29.18> this <00:29.80> emp- <00:30.42> ty <00:31.05> street </00:31.68> <br>
+<00:31.68> On <00:32.03> the <00:32.38> Bou- <00:32.73> le- <00:33.08> vard <00:33.42> of <00:33.77> Bro- <00:34.12> ken <00:34.47> Dreams </00:35.00> <br>
+<00:33.77> Where <00:34.59> the <00:35.40> ci- <00:36.22> ty <00:36.63> sleeps </00:37.04> <br>
+<00:37.04> And <00:37.58> I'm <00:38.12> the <00:38.66> on- <00:39.20> ly <00:39.74> one <00:40.28> and <00:40.82> I <00:41.10> walk <00:41.37> a-lone </00:41.37> <br>
+
+<00:41.37> I <00:41.84> walk <00:42.31> a-lone <00:43.26> I <00:43.73> walk <00:44.20> a-lone </00:45.15> <br>
+<00:45.15> I <00:45.80> walk <00:46.45> a-lone <00:47.75> I <00:48.40> walk <00:49.05> a- </00:51.64> <br>
+```
+</details>
+
 # 2. Multi Singers
 
 Format: `[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>`
@@ -318,11 +318,12 @@ Format: `[0:00.00] <s:Singer1,Singer2>Line</s:Singer1>`
 
 ## 2.1 Per Section
 
-- LRCv1 uses for `{c:Verse 1}`
 - LRCv2 recommends `<>` for everything `<c:Verse 1>`
 - If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
 
-Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . Genius has multi-singer infomation sometimes.
+Note: LRCv1 uses for `{c:Verse 1}`
+
+Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics (Genius has multi-singer infomation).
 
 ```
 <c:Verse 1: Vocalist Name>
@@ -333,49 +334,17 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics . G
 
 - Recommended Lyric meaning database: Genius
 
+Format`<m>Lyrics</m:Meaning>`
+
 ## Contextual
-by Paragrah/line/word
+**by Paragrah/line/word**
 
-<details>
-  <summary>Format</summary>
-  
-### Format
-```
-<c:Verse 1>
-<00:11.45><m>I walk a lonely road<br>
-<00:14.09>The only one that I have ever known<br>
-<00:17.25>Don't know where it goes<br>
-<00:20.03>But it's home to me, and I walk alone<br></m:It’s possible these lines were inspired by the chorus of [Whitesnake’s ‘80s hit single “Here I Go Again”](https://en.wikipedia.org/wiki/Here_I_Go_Again):<br><br>Here I go again on my own<br>Going down the only road I’ve ever known<br>Like a drifter I was born to walk alone>
-<00:27.93><m>I walk this empty street<br>
-<00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
-<00:33.77>Where the city sleeps<br>
-<00:37.04>And I'm the only one, and I walk alone<br>
-
-<c:Pre-Chorus>
-<00:41.37>I walk alone, I walk alone<br>
-<00:45.15>I walk alone, and I walk a—<br>
-```
-</details>
+FORMAT: See Main Example
 
 ## Hyperlink inside Meaning
-- Meaning MAY CONTAIN hyperlinks
+- Meaning MAY contain hyperlinks
 
-<details>
-  <summary>Format</summary>
-  
-```
-[Verse 1]
-[M]I walk a lonely road
-The only one that I have ever known
-Don't know where it goes
-But it's home to me, and I walk alone[/M:It’s possible these lines were inspired by the chorus of Whitesnake’s ‘80s hit single “Here I Go Again”:]
-
-[M]I walk this empty street
-On the Boulevard of Broken Dreams[/M:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for [Los Angeles' Sunset Boulevard](https://www.tripadvisor.com/Attraction_Review-g32655-d156501-Reviews-Sunset_Boulevard-Los_Angeles_California.html) – it passes through Hollywood, so many have seen their stardom dreams die in the street.
-
-The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.]
-```
-</details>
+FORMAT: See Main Example
 
 ## 3.2 Language Translation - Per Word,Phrase, Line
 
@@ -389,23 +358,23 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 
 ### Translation Format
 - MUST specify translation lanuages. e.g. German to English is `de:en`.
-- One Lyric MAY multiple translations.
-- Format `[00:13.75] [T:lang1:lang2]Line[/T: Transaltion]`
-- MAY contain literal and common usage meaning
+- One Lyric CAN multiple translations.
+- Format `<00:13.75> <T:lang1:lang2>Line</T:Transaltion>`
+- MAY contain 'literal' and 'common usage' meaning.
 <details>
-  <summary>Example</summary>
+  <summary>Example with Literal and Commonusage </summary>
   
 ```
-[00:13.75] [T:fin:eng]Yöllä taas mä menin parvekkeelle nukkumaan,[/T: Literal: At night again I went to sleep in the balcony, CommonUsage: where's my baby?]
-[00:19.62] [T:fin:eng]Jotta lähempänä mua ois hän[/T:So that they would be closer to me]
-[00:25.30] [T:fin:eng]Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait]
-[00:57.81] Tuuli tuule sinne [T:fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?]
+<00:13.75> <[T:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,[/T: Literal: At night again I went to sleep in the balcony, CommonUsage: where's my baby?>
+<00:19.62> <T:fin:eng>Jotta lähempänä mua ois hän[/T:So that they would be closer to me>
+<00:25.30> <T:fin:eng>Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait>
+<00:57.81> Tuuli tuule sinne <T:fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?>
 ```
 </details>
 
-MusixMatch Syntax and UI
+Other Trnslated Lyrics Format: Syntax and UI
 <details>
-  <summary>MusixMatch Syntax and UI - with per-line translation and both laguages in sepearte lines with same time stamp</summary>
+  <summary>Current LRCv1 workaround Syntax and UI - with per-line translation and both laguages in sepearte lines with same time stamp</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
@@ -580,22 +549,23 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 # Expect Adaptation By
 
-**Music Streaming**
+**Music Streaming Services**
 1. [Spotify](https://open.spotify.com/)
 2. https://music.youtube.com/
 1. ‎[Apple Music](https://music.apple.com/)
 1. [Tencent Music](https://www.tencentmusic.com/en-us/)
 1. [Amazon Music](https://music.amazon.com)
 
-**Lyrics**
+**Lyrics Services**
 1. [MusixMatch](https://www.musixmatch.com/)
 1. [Genius](https://genius.com/)
 
-**Player**
+**Music Player Apps**
 1. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
-1. https://www.plex.tv/plexamp/
-2. https://github.com/mardous/BoomingMusic
-3. https://powerampapp.com/
+2. https://www.plex.tv/plexamp/
+3. https://github.com/mardous/BoomingMusic
+4. https://powerampapp.com/
+5. https://symfonium.app/
 
 **Karaeoke**
 1. https://github.com/DoubleDee73/Yass-Reloaded
@@ -610,41 +580,42 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
 1. Cross-platform advanced subtitle editor - https://github.com/Aegisub/Aegisub
-2. https://github.com/WXRIW/Lyricify-App
+1. https://github.com/WXRIW/Lyricify-App
 
 **Audio Codec/Metadata**
 1. [Xiph.Org Foundation](https://xiph.org/)
-1. [FFmpeg](https://ffmpeg.org/)
+2. [FFmpeg](https://ffmpeg.org/) 
 
-# Other Lyric Formats
+#### Other Lyric Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
+**Music Notation**
 1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
 1. .mscz/.mscx - https://musescore.org/en/handbook/3/file-formats#mscz
 1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files
 
-# Software
+## Software
 - LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
 
-# License
+## License
 - LRCv2 specs is free to use.
 - Must give credit.
 
-## GUI Tool to Manually Per Word Sync:
+#### GUI Tool to Manually Per Word Sync:
   - https://github.com/pxeemo/LySy ,
   - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) ,
   - https://github.com/streetlegithub/amll-ttml-tool-english ,
   - https://github.com/amll-dev/applemusic-like-lyrics ,
   -  https://github.com/Raqhael-ux/Voxen-LRC-Editor
 
-Other Tools
+#### Other Tools
   - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
 
-# Synced-Lyric Sources
+##### Synced-Lyric Sources
 1. https://github.com/tranxuanthang/lrclib
 1. https://www.musixmatch.com/
 1. https://www.rentanadviser.com
 1. https://www.megalobiz.com/
 1. https://www.lyricsify.com/
 
-# Open for contribution.
+## Open for contribution.
