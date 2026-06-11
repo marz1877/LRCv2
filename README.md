@@ -15,8 +15,7 @@ XML-inspired
   - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
-  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://lyricpotato.com/
-  - GUI Tool to Manually Per Word Sync: https://github.com/pxeemo/LySy , https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) , https://github.com/streetlegithub/amll-ttml-tool-english , https://github.com/amll-dev/applemusic-like-lyrics
+  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Chords:
   - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
   - DB: UltimateGuitar
@@ -160,7 +159,7 @@ The only one that I have ever known <Br>
 </details>
 
 # Other Formats
-- [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
+- [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
 - YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
 - QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
 - [Lyricify](https://github.com/WXRIW/Lyricify-App])
@@ -592,6 +591,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. [Genius](https://genius.com/)
 
 **Player**
+1. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
 1. https://www.plex.tv/plexamp/
 2. https://github.com/mardous/BoomingMusic
 3. https://powerampapp.com/
@@ -628,6 +628,16 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 # License
 - LRCv2 specs is free to use.
 - Must give credit.
+
+## GUI Tool to Manually Per Word Sync:
+  - https://github.com/pxeemo/LySy ,
+  - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) ,
+  - https://github.com/streetlegithub/amll-ttml-tool-english ,
+  - https://github.com/amll-dev/applemusic-like-lyrics ,
+  -  https://github.com/Raqhael-ux/Voxen-LRC-Editor
+
+Other Tools
+  - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
 
 # Synced-Lyric Sources
 1. https://github.com/tranxuanthang/lrclib
