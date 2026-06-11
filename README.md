@@ -15,7 +15,8 @@ XML-inspired
   - Lyrics: Genius (https://github.com/johnwmillr/LyricsGenius)
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
-  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
+  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
+  - Lyrics Syncer (Line-by-Line): Service : https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Chords:
   - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
   - DB: UltimateGuitar
