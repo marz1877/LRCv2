@@ -187,9 +187,9 @@ This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin�
 ```
 </details>
 
-# Core
+# Core Features
 
-# 1.⏱️Time Stamping
+## 1.⏱️Time Stamping
 - MAY use opening and closing time.
 - MAY use Breakline `<br>` at the end of each line.
 
@@ -303,8 +303,7 @@ plain: |
 They should switch to LRCv2 as every other format doesn't have all the features of LRCv2
 
 #### Word-by-Word
-**Use Case:** Karaeoke 
-
+**Use Case:** Karaeoke
 
 ### Format Word-by-Word
 
@@ -383,7 +382,7 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics (Ge
 <00:24.94> Lyrics
 ```
 
-# 3. Meaning
+## 3. Meaning
 
 - Recommended Lyric meaning database: Genius
 
@@ -479,11 +478,11 @@ Other Trnslated Lyrics Format: Syntax and UI
 
 # Extended Features
 
-# 6. Styling
+## 4. Styling
 
 - Players MUST support this feature.
 
-## 6.1 Custom Text Color (for expression)
+### 4.1 Custom Text Color (for expression)
 
 # Format
 ```
@@ -491,7 +490,7 @@ Other Trnslated Lyrics Format: Syntax and UI
 [02:18.00] See who gives a duck
 ```
 
-## 6.2 Custom Text Size (for word expression)
+## 4.2 Custom Text Size (for word expression)
 - MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
@@ -503,7 +502,7 @@ Other Trnslated Lyrics Format: Syntax and UI
 ```
 </details>
 
-# 7. Karaeoke
+## 5. Karaeoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
 - May include meatdata `[midioffset:00:00.00]`
@@ -540,7 +539,7 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
-# 9. Chords
+## 6. Chords
 - Optional
 - Player MAY add options to -
   - Show Chord Charts for many instruments
@@ -601,7 +600,7 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 
 # Special Features
 
-8. Custom Images and Text
+## 7. Custom Images and Text
 - Optional
 - MUST NOT Show lyrics and `Custom Images and Text` together.
 - custom text usecase guitar/bass/drums tabs or Music notation.
@@ -613,17 +612,17 @@ Format
 ```
 <00:00.00>File Name</00:00.00>
 ```
-9. Background Image/Video
+## 8. Background Image/Video
 - Optional
 - MAY load background images/video in zip file
 - Player MUST not play audio from the video
 
 Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
-# Other Recommendations
+## Other Recommendations
 - Player MAY have option to mute or turn down instruments using steam seperation.
 
-# Expect Adaptation By
+## Expect Adaptation By
 
 **Music Streaming Services**
 1. [Spotify](https://open.spotify.com/)
