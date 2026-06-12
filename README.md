@@ -514,7 +514,7 @@ Other Trnslated Lyrics Format: Syntax and UI
 - MAYBE used as sidecar file for audio file with LRCv2.
 
 #### CREATION/AUTOMATION:
-- Extract Steam (realtime or premake) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
+- Extract Steam (realtime or pre-make) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
 #### Recommended Tools- Audio-to-Midi Convertion:
@@ -631,18 +631,35 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. [Tencent Music](https://www.tencentmusic.com/en-us/)
 1. [Amazon Music](https://music.amazon.com)
 
-1. https://www.ultimate-guitar.com/ (Lyrics+Chords)
+1. [UltimateGuitar](https://www.ultimate-guitar.com/) (Lyrics+Chords)
 
 **Lyrics Services**
 1. [MusixMatch](https://www.musixmatch.com/) (Synced Lyrics)
 1. [Genius](https://genius.com/) (Lyrics Meaning)
 
-**Music Player Apps**
-1. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
-2. https://www.plex.tv/plexamp/
-3. https://github.com/mardous/BoomingMusic
-4. https://powerampapp.com/
-5. https://symfonium.app/
+**Music Player Apps Desktop**
+1. Foobar2000: [OpenLyrics lyrics component](https://github.com/jacquesh/foo_openlyrics)
+2. https://roon.app/en/
+3. https://jriver.com/
+4. https://audirvana.com/
+5. https://www.plex.tv/plexamp/
+6. https://github.com/digimezzo/dopamine
+7. https://www.mediamonkey.com/
+8. https://deadbeef.sourceforge.io/
+9. https://gitlab.gnome.org/GNOME/rhythmbox
+10. https://aimp.ru/
+11. https://aurisplayer.com/
+12. https://getmusicbee.com/
+
+**Stream Server**
+1. https://github.com/navidrome/navidrome
+
+**Android Players**
+1. https://github.com/MetrolistGroup/Metrolist
+2.  https://github.com/mardous/BoomingMusic
+3. https://powerampapp.com/
+4. https://symfonium.app/
+5. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
 
 **Karaeoke**
 1. https://github.com/DoubleDee73/Yass-Reloaded
@@ -651,8 +668,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. https://github.com/gyunaev/spivak
 
 **Lyrics Player/Editor**
-1. https://github.com/tranxuanthang/lrcget
-1. [OpenLyrics foobar2000 lyrics component](https://github.com/jacquesh/foo_openlyrics)
+1. https://github.com/tranxuanthang/lrcget1. 
 1. https://github.com/Spikatrix/LRC-Editor
 1. https://lrc-maker.github.io/
 1. https://github.com/lemutec/LyricStudio
@@ -687,18 +703,15 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 ## License
 - LRCv2 specs is free to use.
-- Must give credit.
 
 #### GUI Tool to Manually Per Word Sync:
-  - https://github.com/pxeemo/LySy ,
-  - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs) ,
-  - https://github.com/streetlegithub/amll-ttml-tool-english ,
-  - https://github.com/amll-dev/applemusic-like-lyrics ,
+  - https://github.com/pxeemo/LySy
+  - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs)
+  - https://github.com/streetlegithub/amll-ttml-tool-english
+  - https://github.com/amll-dev/applemusic-like-lyrics
     - https://github.com/Raqhael-ux/Voxen-LRC-Editor
 
 #### Other Tools
   - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
-
-
 
 ## Open for contribution.
