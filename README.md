@@ -15,7 +15,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 9. Background Image/Video
 
 ### Why LRCv2 is needed
-LRCv2 lacks:
+LRCv1 lacks:
 - Translation: LRCv1 Translation is a wordaround, only per line translation is possible not word or phase or paragraph
 - Meaning/annotations: Lyrics meaning usage is popular and needs a standardization.
 - Multiple singers
