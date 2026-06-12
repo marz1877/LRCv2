@@ -6,13 +6,23 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 ## Use Cases
 1. Synced Lyrics
 2. Meaning
-3. Translation: For Multi-lingual people, Language learning, Foriegn music listening.
+3. Translation: For multilingual people, Language learning, foreign music listening.
 4. Singer metadata: Kareoke
 5. Custom Styling: Expressive lyrics.
 6. Kareoke with Time and Pitch Data, Singing Learning Tool.
 7. Chords: Music Learner.
 8. Custom Images and Text: Music Learning Tool for Music Chords/Notation
 9. Background Image/Video
+
+### Why LRCv2 is needed
+LRCv2 lacks:
+- Translation: LRCv1 Translation is a wordaround, only per line translation is possible not word or phase or paragraph
+- Meaning/annotations: Lyrics meaning usage is popular and needs a standardization.
+- Multiple singers
+- Reliable word-level timing
+- Styling
+
+- Too much fragmentation in formats, all trying to achive the same thing and few differences in the features TTML,WebVTT,LRCv1-A2,YRC,QRC,KRC,LQE,LyricsFile.
 
 ### Automation
 **All features for creating .lrc can be automated**
@@ -47,6 +57,8 @@ AudioFilename_translation.lrc  -  for seperate translation lrc
 AudioFilename_meaning.lrc      -  for seperate meaning lrc
 AudioFilename.chordpro         -  for chords
 ```
+Benefit of sidecar is player can load what it supports.
+
 ### When inside audio use Metadata fields -
 ```
 SYNCEDLYRICS             - Synced Lyrics
@@ -95,9 +107,12 @@ section := "<c:name>"
 <00:11.45><m>I walk a lonely road<br>
 <00:14.09>The only one that I have ever known<br>
 <00:17.25>Don't know where it goes<br>
-<00:20.03>But it's home to me, and I walk alone<br></m:It’s possible these lines were inspired by the chorus of [Whitesnake’s ‘80s hit single “Here I Go Again”](https://en.wikipedia.org/wiki/Here_I_Go_Again):<br><br>Here I go again on my own<br>Going down the only road I’ve ever known<br>Like a drifter I was born to walk alone>
+<00:20.03>But it's home to me, and I walk alone<br></m:It’s possible these lines were inspired by the chorus of [Whitesnake’s ‘80s hit single “Here I Go Again”](https://en.wikipedia.org/wiki/Here_I_Go_Again):<br>
+<br>Here I go again on my own<br>Going down the only road I’ve ever known<br>Like a drifter I was born to walk alone>
 <00:27.93><m>I walk this empty street<br>
-<00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
+<00:31.68>On the Boulevard of Broken Dreams<br></m:The phrase “Boulevard of Broken Dreams” was first coined in a 1933 song recorded by many, from Bing Crosby to Amy Winehouse. It has since become a nickname for Los Angeles' Sunset Boulevard – it passes through Hollywood, so many have seen their stardom dreams die in the street.<br>
+The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein’s 1984 painting of the same name. This is a direct visual quotation of the painting “Nighthawks” by Edward Hopper that depicts a downtown diner at night. Helnwein replaced the diner’s occupants with American pop culture icons Humphrey Bogart, Marilyn Monroe, James Dean, and Elvis Presley to connect its bleak atmosphere with the tragic fate of some celebrities.<br>
+This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
 <00:33.77>Where the city sleeps<br>
 <00:37.04>And I'm the only one, and I walk alone<br>
 <eoc>
@@ -140,12 +155,10 @@ section := "<c:name>"
 <eoc>
 
 <c:Chorus: Billie Joe Armstrong, Jason White>
-<soc>
 <02:05.82>My shadow's the only one that walks beside me<br>
 <02:11.30>My shallow heart's the only thing that's beatin'<br>
 <02:17.94>Sometimes, I wish someone out there will find me<br>
 <02:23.62>'Til then, I walk alone<br>
-<eoc>
 
 <c:Post-Chorus>
 <soc>
@@ -157,12 +170,10 @@ section := "<c:name>"
 <c:Guitar Solo>
 
 <c:Bridge>
-<soc>
 <03:05.50>I walk this empty street<br>
 <03:09.51>On the Boulevard of Broken Dreams<br>
 <03:12.72>Where the city sleeps<br>
 <03:14.93>And I'm the only one, and I walk a—<br>
-<eoc>
 
 <c:Chorus>
 <soc>
@@ -176,13 +187,14 @@ section := "<c:name>"
 ```
 </details>
 
+# Core
+
 # 1.⏱️Time Stamping
-- LRCv2 MUST use SyncedLyrics.
 - MAY use opening and closing time.
-- Break Line: MUST Explicitly use Breakline `<br>` at the end of each line.
+- MAY use Breakline `<br>` at the end of each line.
 
 Brealine PROS:
-- No CR `Carriage Return` and LF `Line Feed` errors.
+- No CR `Carriage Return` and LF `Line Feed` issues.
 - Consistent time metadata for line-by-line and word-by-word.
 
 <details>
@@ -195,7 +207,7 @@ The only one that I have ever known <Br>
 </details>
 
 ### Other Synced Lyric Formats
-- [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music.
+- [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music. TTML support word timing, translations, syling not meaning, chords.
 - [LRCv1] [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag) (Word-by-Word)
 - (seems good) [Lyricify](https://github.com/WXRIW/Lyricify-App) https://amll.dev/en/guides/lyric/formats.html#lyricify-formats 
   - LYL	.lyl	Line-level	Lyricify	Lyricify's custom line-based format.
@@ -288,6 +300,8 @@ plain: |
 ```
 </details>
 
+They should switch to LRCv2 as every other format doesn't have all the features of LRCv2
+
 #### Word-by-Word
 **Use Case:** Karaeoke 
 
@@ -338,7 +352,7 @@ plain: |
 
 # 2. Multi Singers
 
-Format: `[0:00.00] <s:Singer1,Singer2>Words</s:Singer1>`
+Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 
 <details>
   <summary>Format Example</summary>
@@ -400,16 +414,16 @@ LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 - MUST specify translation lanuages. e.g. German to English is `deu:eng`.
 - MUST use ISO 639-3 language codes.
 - One lyric CAN multiple translations.
-- Format `<00:13.75> <T:lang1:lang2>Line</T:Transaltion>`
-- MAY contain 'literal' and 'common usage' meaning.
+- Format `<00:13.75> <T:lang1:lang2>Line</T:TransaltedText>`
+- MAY contain 'Literal' and 'Common Usage' meaning.
 <details>
   <summary>Example with Literal and Commonusage </summary>
   
 ```
-<00:13.75> <[T:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,[/T: Literal: At night again I went to sleep in the balcony, CommonUsage: where's my baby?>
-<00:19.62> <T:fin:eng>Jotta lähempänä mua ois hän[/T:So that they would be closer to me>
-<00:25.30> <T:fin:eng>Pediltäni taivas näkyy, ryhdyin oottamaan,[/T:From my bed I saw the sky, begun to wait>
-<00:57.81> Tuuli tuule sinne <T:fin:eng]missä muruseni on[/T:Where my loved ones are, CommonUsage: where's my baby?>
+<00:13.75> <t:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,</t:Literal=At night again I went to sleep in the balcony.CommonUsage=where's my baby?>
+<00:19.62> <t:fin:eng>Jotta lähempänä mua ois hän</t:So that they would be closer to me>
+<00:25.30> <t:fin:eng>Pediltäni taivas näkyy, ryhdyin oottamaan,</t:From my bed I saw the sky, begun to wait>
+<00:57.81> Tuuli tuule sinne <T:fin:eng]missä muruseni on</T:Where my loved ones are, CommonUsage: where's my baby?>
 ```
 </details>
 
@@ -448,19 +462,22 @@ Other Trnslated Lyrics Format: Syntax and UI
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-# 4. Suggested UI for Translation and Meaning Feature
+# Suggested UI for Translation and Meaning Feature
 
+### Big Screen
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
 - In meaning mode: hovering should show line, phrase or paragraph hilighted depening on context (explaination for only lines or paragraph is sufficient, words may be used rarely) 
 - In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
 
-# 5. Censoring Words
+# Censoring Words
 
 - Players MUST support this feature.
 
 - Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
 - Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+
+# Extended Features
 
 # 6. Styling
 
@@ -487,20 +504,21 @@ Other Trnslated Lyrics Format: Syntax and UI
 </details>
 
 # 7. Karaeoke
-**Voice melody MIDI + Mic Input w/ Pitch-Recognision on midi-piano-roll**
+**Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
+- May include meatdata `[midioffset:00:00.00]`
 - Optional: Players MAY support this feature but explicity tell when not suported.
 
 ## 1. Voice melody MIDI
 
-STORING:
+#### TORING:
 - MAYBE used as sidecar file for audio file with LRCv2.
 
- CREATION/AUTOMATION:
+#### CREATION/AUTOMATION:
 - Extract Steam (realtime or premake) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
-#### [Recommended Tools] Audio-to-Midi Convertion:
+#### Recommended Tools- Audio-to-Midi Convertion:
  - https://www.sonicvisualiser.org/tony/ , https://github.com/sonic-visualiser/tony
  - https://github.com/spotify/basic-pitch - Audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote .
@@ -555,17 +573,17 @@ Please don't take [D7]my sunshine a[G]way
 
 ### LRCv2 Chord+Lyrics Format
 
-Format `[ch]Lyric [/ch=Em]`
+Format `<ch>Lyric </ch:Em>`
 
 <details>
   <summary>LRCv2 Chord+Lyrics</summary>  
  
 ```
-[00:22.37] [ch]I walk a [/ch=Em][ch]lonely road, [/ch=G]the [ch]only one that [/ch=D][ch]I have ever known[/ch=Em]
-[00:29.45] [ch]Don't know where it [/ch=G][ch]goes,[/ch=Em] [ch]but it's home to me [/ch=G][ch]and I walk alone[/ch=Em]
-[00:36.72] [ch]I walk this empty[/ch=Em] [ch]street[/ch=G][ch]On the Boulevard of Broken Dreams[/ch=D]
-[00:43.78] [ch]Where the city[/ch=Em] [ch]sleeps[/ch=G][ch]and I'm the only one and I walk alone[/ch=Em]
-[00:57.58] [ch]I walk alone,[/ch=Em] [ch]I walk alone[/ch=G][ch]I walk alone[/ch=D][ch]I walk alone and I walk a...[/ch=Em]
+<00:22.37> <ch>I walk a </ch:Em><ch>lonely road, </ch:G>the <ch>only one that </ch=D><ch>I have ever known</ch:Em> <br>
+<00:29.45> <ch>Don't know where it </ch:G><ch>goes,</ch:Em> <ch>but it's home to me </ch=G><ch>and I walk alone</ch:Em> <br>
+<00:36.72> <ch>I walk this empty</ch:Em> <ch>street</ch:G><ch>On the Boulevard of Broken Dreams</ch:D> <br>
+<00:43.78> <ch>Where the city</ch:Em> <ch>sleeps</ch:G><ch>and I'm the only one and I walk alone</ch:Em> <br>
+<00:57.58> <ch>I walk alone,</ch:Em> <ch>I walk alone</ch:G.<ch>I walk alone</ch:D><ch>I walk alone and I walk a...</ch:Em> <br>
 ```
 </details>
 
@@ -580,6 +598,8 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 <00:22.37=Em> Word Word</00:00.00> <00:22.37=G>Word Word </00:22.37 <00:22.37=D>Word WordWord Word </00:22.37> <00:22.37=A> Word Word</00:22.37><Br>
 ```
 </details>
+
+# Special Features
 
 8. Custom Images and Text
 - Optional
@@ -607,14 +627,16 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 **Music Streaming Services**
 1. [Spotify](https://open.spotify.com/)
-2. https://music.youtube.com/
+2. [YouTUbeMusic](https://music.youtube.com/)
 1. ‎[Apple Music](https://music.apple.com/)
 1. [Tencent Music](https://www.tencentmusic.com/en-us/)
 1. [Amazon Music](https://music.amazon.com)
 
+1. https://www.ultimate-guitar.com/ (Lyrics+Chords)
+
 **Lyrics Services**
-1. [MusixMatch](https://www.musixmatch.com/)
-1. [Genius](https://genius.com/)
+1. [MusixMatch](https://www.musixmatch.com/) (Synced Lyrics)
+1. [Genius](https://genius.com/) (Lyrics Meaning)
 
 **Music Player Apps**
 1. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
@@ -640,7 +662,18 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 **Audio Codec/Metadata**
 1. [Xiph.Org Foundation](https://xiph.org/)
-2. [FFmpeg](https://ffmpeg.org/) 
+2. [FFmpeg](https://ffmpeg.org/)
+
+**Synced-Lyric Sources**
+1. https://github.com/tranxuanthang/lrclib (Open Source DB)
+1. https://www.musixmatch.com/ (Word-by-Word and Line-by-line)
+1. https://www.rentanadviser.com
+1. https://www.megalobiz.com/
+1. https://www.lyricsify.com/
+
+**Translated Lyrics DB:**
+1. https://lyricstranslate.com/ eg. https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
+1. https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 #### Other Lyric Formats
 1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
@@ -667,15 +700,6 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 #### Other Tools
   - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
 
-##### Synced-Lyric Sources
-1. https://github.com/tranxuanthang/lrclib (Open Source DB)
-1. https://www.musixmatch.com/ (Word-by-Word and Line-by-line)
-1. https://www.rentanadviser.com
-1. https://www.megalobiz.com/
-1. https://www.lyricsify.com/
 
-Recommended Translated Lyrics DB:
-  - https://lyricstranslate.com/ eg. https://lyricstranslate.com/en/missae-muruseni-where-my-sweetheart.html-0
-  - https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 ## Open for contribution.
