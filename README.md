@@ -353,6 +353,94 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 
 Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 
+
+<details>
+  <summary>Full Song Example</summary>
+  
+```
+<c:Verse 1: Harry, Liam>
+<soc>
+<00:00.00> <s:Harry>Written in these walls are the stories that I can't explain</s:Harry>
+<00:04.50> <s:Harry>I leave my heart open, but it stays right here empty for days</s:Liam>
+<00:09.00> <s:Liam>She told me in the mornin' she don't feel the same about us in her bones</s:Liam>
+<00:13.50> <s:Liam>It seems to me that when I die, these words will be written on my stone</s:Liam>
+<eoc>
+
+<c:Pre-Chorus: Zayn>
+<soc>
+<00:18.00> <s:Zayn>And I'll be gone, gone tonight</s:Zayn>
+<00:18.00> <s:All>Oh Oh Oh<00:20.00></s:All>
+<00:21.50> <s:Zayn>The ground beneath my feet is open wide</s:Zayn>
+<00:25.00> <s:Zayn>The way that I've been holding on too tight</s:Zayn>
+<00:29.00> <s:Zayn>With nothing in between</s:Zayn>
+<eoc>
+
+<c:Chorus: Harry, All>
+<soc>
+<00:32.00> <s:Harry,All>The story of my life, I take her home</s:Harry,All>
+<00:35.50> <s:Harry,All>I drive all night to keep her warm</s:Harry,All>
+<00:39.00> <s:Harry,All>And time is frozen (The story of, the story of)</s:Harry,All>
+<00:43.00> <s:Harry,All>The story of my life, I give her hope</s:Harry,All>
+<00:46.50> <s:Harry,All>I spend her love until she's broke inside</s:Harry,All>
+<00:50.00> <s:Harry,All>The story of my life (The story of, the story of)</s:Harry,All>
+<eoc>
+
+<c:Verse 2: Niall, Liam>
+<soc>
+<00:54.00> <s:Niall,Liam>Written on these walls are the colors that I can't change</s:Niall,Liam>
+<00:58.50> <s:Niall,Liam>Leave my heart open, but it stays right here in its cage</s:Niall,Liam>
+<01:03.00> <s:Niall,Liam>I know that in the mornin', I'll see us in the light up on the hill</s:Niall,Liam>
+<01:07.50> <s:Niall,Liam>Although I am broken, my heart is untamed still</s:Niall,Liam>
+<eoc>
+
+<c:Pre-Chorus: Louis>
+<soc>
+<01:12.00> <s:Louis>And I'll be gone, gone tonight</s:Louis>
+<01:15.50> <s:Louis>The fire beneath my feet is burning bright</s:Louis>
+<01:19.00> <s:Louis>The way that I've been holding on so tight</s:Louis>
+<01:23.00> <s:Louis>With nothing in between</s:Louis>
+<eoc>
+
+<c:Chorus: Harry, All>
+<soc>
+<01:26.00> <s:Harry,All>The story of my life, I take her home</s:Harry,All>
+<01:29.50> <s:Harry,All>I drive all night to keep her warm</s:Harry,All>
+<01:33.00> <s:Harry,All>And time is frozen (The story of, the story of)</s:Harry,All>
+<01:37.00> <s:Harry,All>The story of my life, I give her hope</s:Harry,All>
+<01:40.50> <s:Harry,All>I spend her love until she's broke inside</s:Harry,All>
+<01:44.00> <s:Harry,All>The story of my life (The story of, the story of)</s:Harry,All>
+<eoc>
+
+<c:Bridge: Zayn>
+<soc>
+<01:48.00> <s:Zayn>And I've been waiting for this time to come around</s:Zayn>
+<01:52.00> <s:Zayn>But baby, running after you is like chasin' the clouds</s:Zayn>
+<eoc>
+
+<c:Breakdown: Niall>
+<soc>
+<01:56.00> <s:Niall>The story of my life, I take her home</s:Niall>
+<02:00.00> <s:Niall>I drive all night to keep her warm</s:Niall>
+<02:04.00> <s:Niall>And time is frozen</s:Niall>
+<eoc>
+
+<c:Chorus: All, Zayn>
+<soc>
+<02:08.00> <s:All,Zayn>The story of my life, I give her hope (I give her hope)</s:All,Zayn>
+<02:12.00> <s:All,Zayn>I spend her love until she's broke inside (Till she's broke inside)</s:All,Zayn>
+<02:16.00> <s:All,Zayn>The story of my life (The story of, the story of)</s:All,Zayn>
+<eoc>
+
+<c:Outro: All, Harry>
+<soc>
+<02:20.00> <s:All,Harry>The story of my life</s:All,Harry>
+<02:24.00> <s:All,Harry>The story of my life (The story of)</s:All,Harry>
+<02:28.00> <s:All,Harry>(The story of, the story of)</s:All,Harry>
+<02:32.00> <s:All,Harry>The story of my life</s:All,Harry>
+<eoc>
+```
+</details>
+
 <details>
   <summary>Format Example</summary>
 
