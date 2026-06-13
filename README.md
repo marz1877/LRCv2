@@ -15,22 +15,22 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 9. Background Image/Video
 
 ### Why LRCv2 is needed
-LRCv1 lacks:
-- Translation: LRCv1 Translation is a wordaround, only per line translation is possible not word or phase or paragraph
-- Meaning/annotations: Lyrics meaning usage is popular and needs a standardization.
-- Multiple singers
-- Reliable word-level timing
-- Styling
+**LRCv1 lacks:**
+1. Translation: LRCv1 Translation is a wordaround, only per line translation is possible not word or phase or paragraph
+1. Meaning/annotations: Lyrics meaning usage is popular and needs a standardization.
+1. Multiple singers
+1. Reliable word-level timing
+1. Styling
 
-- Too much fragmentation in formats, all trying to achive the same thing and few differences in the features TTML,WebVTT,LRCv1-A2,YRC,QRC,KRC,LQE,LyricsFile.
+- Too much fragmentation in formats, all trying to achive the same thing and few differences in the features TTML, WebVTT, LRCv1-A2, YRC, QRC, KRC, LQE, LyricsFile.
 
 ### Automation
 **All features for creating .lrc can be automated**
 1. Lyrics
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
-  - Lyrics Syncer: https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
-  - Lyrics Syncer (Line-by-Line): Service : https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
+  - Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
+   - Lyrics Syncer (Line-by-Line): Service : https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Translation:
   - DB: Musixmatch
   - Online: [Google Translate](https://translate.google.com)
@@ -43,7 +43,7 @@ LRCv1 lacks:
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- One LRCv2 file can have all - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
+- One LRCv2 file can have all features - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
 **.lrc XML-inspired or in audio file's metadata**
@@ -207,7 +207,8 @@ The only one that I have ever known <Br>
 </details>
 
 ### Other Synced Lyric Formats
-- [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable used by Apple Music. TTML support word timing, translations, syling not meaning, chords.
+- [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable. Used by: Apple Music.
+TTML supports word timing, translations, syling not meaning, chords.
 - [LRCv1] [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag) (Word-by-Word)
 - (seems good) [Lyricify](https://github.com/WXRIW/Lyricify-App) https://amll.dev/en/guides/lyric/formats.html#lyricify-formats 
   - LYL	.lyl	Line-level	Lyricify	Lyricify's custom line-based format.
@@ -216,8 +217,8 @@ The only one that I have ever known <Br>
 - [Basic] WebVTT (used by YouTube for subtitle and lyrics)
 - [Basic] ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
 - [proprietary] KRC KuGou Music Word
-- [proprietary] YRC	.yrc	Word-level	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase.
-- [proprietary] QRC	.qrc	Word-level	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted.
+- YRC- .yrc - Word-by-word	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase. proprietary
+- QRC- .qrc - Word-by-word	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted. proprietary
 - [Subtitle oriented] TRC (Track Row Column) created by Motion Analysis Corporation.
 - [Subtitle oriented] Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
 
