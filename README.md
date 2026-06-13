@@ -560,18 +560,14 @@ Other Trnslated Lyrics Format: Syntax and UI
 
 # Censoring Words
 
-- Players MUST support this feature.
-
 - Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
 - Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
 # Extended Features
 
-## 4. Styling
+# 4. Styling
 
-- Players MUST support this feature.
-
-### 4.1 Custom Text Color (for expression)
+## 4.1 Custom Text Color (for expression)
 
 # Format
 ```
@@ -591,7 +587,7 @@ Other Trnslated Lyrics Format: Syntax and UI
 ```
 </details>
 
-## 5. Karaeoke (LRCv2-K)
+# 5. Karaeoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
 - May include meatdata `[midioffset:00:00.00]`
@@ -628,7 +624,7 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
-## 6. Chords
+# 6. Chords
 - Optional
 - Player MAY add options to -
   - Show Chord Charts for many instruments
@@ -689,7 +685,7 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 
 # Special Features
 
-## 7. Custom Images and Text
+# 7. Custom Images and Text
 - Optional
 - MUST NOT Show lyrics and `Custom Images and Text` together.
 - custom text usecase guitar/bass/drums tabs or Music notation.
@@ -701,7 +697,7 @@ Format
 ```
 <00:00.00>File Name</00:00.00>
 ```
-## 8. Background Image/Video
+# 8. Background Image/Video
 - Optional
 - MAY load background images/video in zip file
 - Player MUST not play audio from the video
@@ -745,7 +741,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 **Android Players**
 1. https://github.com/MetrolistGroup/Metrolist
-2.  https://github.com/mardous/BoomingMusic
+2. https://github.com/mardous/BoomingMusic
 3. https://powerampapp.com/
 4. https://symfonium.app/
 5. https://github.com/Moriafly/SaltPlayerSource (Android - Car Features, Windows, HarmonyOS)
@@ -780,7 +776,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 #### Other Lyric Formats
-1. ID3 Specs - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
+1. ID3 SYNCEDLYRICS - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 **Music Notation**
 1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
@@ -788,7 +784,9 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files
 
 ## Software
-- LRCv2 needs WYSIWYG editor specially when using many features at once. Something like https://github.com/Royce551/FRESHLyricMaker. For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
+- LRCv2 needs WYSIWYG editor specially when using many features at once.
+- Something like https://github.com/Royce551/FRESHLyricMaker.
+- For Kareoke fork https://github.com/UltraStar-Deluxe/USDX/.
 
 ## License
 - LRCv2 specs is free to use.
