@@ -46,20 +46,20 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 - One LRCv2 file can have all features - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
-**.lrc XML-inspired or in audio file's metadata**
-- as sidecar file.
-- Player to read filename with type speficied
-- Can have seperate .lrc per usecase or all-in-one
+**.lrc2 sidecar file or audio's metadata**
+sidecar file.
+  - Player to read filename with type speficied
+  - Can have seperate .lrc2 per usecase or all-in-one
 *Suggested sidecar file naming*
 ```
-AudioFilename.lrc              -
-AudioFilename_translation.lrc  -  for seperate translation lrc
-AudioFilename_meaning.lrc      -  for seperate meaning lrc
+AudioFilename.lrc2              -
+AudioFilename_translation.lrc2  -  for seperate translation lrc
+AudioFilename_meaning.lrc2      -  for seperate meaning lrc
 AudioFilename.chordpro         -  for chords
 ```
 Benefit of sidecar is player can load what it supports.
 
-### When inside audio use Metadata fields -
+### Metadata field names -
 ```
 SYNCEDLYRICS             - Synced Lyrics
 SYNCEDLYRICS_Word        - Word-by-Word Lyrics
@@ -854,7 +854,7 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 1. https://www.musixmatch.com/ eg. https://www.musixmatch.com/lyrics/Jenni-Vartiainen/Miss%C3%A4-muruseni-on/translation/english
 
 #### Other Lyric Formats
-1. ID3 SYNCEDLYRICS - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc.
+1. ID3 SYNCEDLYRICS - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc2.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 **Music Notation**
 1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
