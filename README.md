@@ -3,7 +3,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 
 <img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/168d0a32-3e1f-4bdd-8f55-45924f34180e" />
 
-## Use Cases
+## Features & Use Cases
 1. Synced Lyrics
 2. Meaning
 3. Translation: For multilingual people, Language learning, foreign music listening.
@@ -25,7 +25,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 - Too much fragmentation in formats, all trying to achive the same thing and few differences in the features TTML, WebVTT, LRCv1-A2, YRC, QRC, KRC, LQE, LyricsFile.
 
 ### Automation
-**All features for creating .lrc can be automated**
+**All features for creating LRCv2 can be automated**
 1. Lyrics
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
@@ -633,13 +633,19 @@ Other Trnslated Lyrics Format: Syntax and UI
 ### Big Screen
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
 
-- In meaning mode: hovering should show line, phrase or paragraph hilighted depening on context (explaination for only lines or paragraph is sufficient, words may be used rarely) 
-- In translation mode: hovering over should hilight phrases (as small as possible) giving meaning of the phrase and words used targeted for langauge learning.
+- meaning mode: hovering should hilight line, phrase or paragraph
+- translation mode: hovering over should hilight line, phrase or paragraph giving meaning of the line, phrase, paragraph or words.
+- words used targeted for langauge learning.
 
-# Censoring Words
+- explaination for only lines or paragraph is sufficient, words may be used rarely
 
-- Players MAY have option to censor explicit words eg. F**k and S**t or completely ****.
+# Censore Words
+**Suggested Feature**
+
+- Players MAY have option to censor explicit words, eg. `Fu*k` `F**k` and `S**t` or `F***` `****`.
 - Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+- Users/Sources don't have to make/store 2 versions - un/censored.
+- Can switch un/censored lyrics.
 
 # Extended Features
 
