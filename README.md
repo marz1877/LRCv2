@@ -109,7 +109,6 @@ section := "<c:name>"
   
 ```
 <c:Verse 1>
-<soc>
 <00:11.45><m>I walk a lonely road<br>
 <00:14.09>The only one that I have ever known<br>
 <00:17.25>Don't know where it goes<br>
@@ -121,29 +120,25 @@ The title, “Boulevard of Broken Dreams”, is inspired by Gottfried Helnwein�
 This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin’s classic “What Becomes of the Brokenhearted” where he sings<br>As I walk this land of broken dreams<br>There are many other similar lines in both this song and the one cited, which was written almost 40 years earlier.<br>Though the phrase “Boulevard of Broken Dreams” is used by various songwriters, the one most relevant to Green Day generally and this song specifically is probably Elvis Costello, in Brilliant Mistake:<br>He thought he was the king of America<br>But it was just a boulevard of broken dreams<br>The themes of the Costello song are quite similar to those in American Idiot.>
 <00:33.77>Where the city sleeps<br>
 <00:37.04>And I'm the only one, and I walk alone<br>
-<eoc>
+</c>
 
 <c:Pre-Chorus>
-<soc>
 <00:41.37>I walk alone, I walk alone<br>
 <00:45.15>I walk alone, and I walk a—<br>
-<eoc>
+</c>
 
 <c:Chorus>
-<soc>
 <00:51.64><m>My shadow's the only one that walks beside me<br></m:When people walk, they often form shadows, which is a dark area or shape produced by a body coming between rays of light and a surface. It is relative to the amount of sunlight the Sun provides at a particular time and location, and as the Jesus of Suburbia is the only person in the area, his shadow is his only accompaniment.<br> Also for some reason Billie just doesn’t say “the” in this lyric, but “the” is more or less implied to be said.><br>My shallow heart's the only thing that's beatin'<br>
 <01:03.46><m>Sometimes, I wish someone out there will find me<br>
 <01:08.72>'Til then, I walk alone</m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.>
-<eoc>
+</c>
 
 <c:Post-Chorus>
-<soc>
 <01:13.48>Ah-ah, ah-ah, ah-ah, ah-ah<br>
 <01:20.44>Ah-ah, ah-ah, ah-ah<br>
-<eoc>
+</c>
 
 <c:Verse 2>
-<soc>
 <01:25.28><m>I'm walkin' down the line<br>
 <01:28.92>That divides me somewhere in my mind<br>
 <01:28.92>On the borderline<br>
@@ -152,13 +147,12 @@ This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin�
 <01:44.56>What's fucked up and everything's all right<br></m:He’s trying to decode his inner thoughts and work out which parts of him are still functioning properly.>
 <01:48.66><m>Check my vital signs<br>
 <01:51.95>To know I'm still alive, and I walk alone<br></m:During live performances, Billie Joe Armstrong often changes this lyrics asking the crowd:>
-<eoc>
+</c>
 
 <c:Pre-Chorus>
-<soc>
 <01:55.71>I walk alone, I walk alone<br>
 <02:03.08>I walk alone, and I walk a—<br>
-<eoc>
+</c>
 
 <c:Chorus: Billie Joe Armstrong, Jason White>
 <02:05.82>My shadow's the only one that walks beside me<br>
@@ -167,27 +161,26 @@ This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin�
 <02:23.62>'Til then, I walk alone<br>
 
 <c:Post-Chorus>
-<soc>
 <02:28.78>Ah-ah, ah-ah, ah-ah, ah-ah<br></02:27.78>
 <02:35.09>Ah-ah, ah-ah<br>
 <02:35.09>I walk alone, and I walk a—<br>
-<eoc>
+</c>
 
-<c:Guitar Solo>
+<c:Guitar Solo></c>
 
 <c:Bridge>
 <03:05.50>I walk this empty street<br>
 <03:09.51>On the Boulevard of Broken Dreams<br>
 <03:12.72>Where the city sleeps<br>
 <03:14.93>And I'm the only one, and I walk a—<br>
+</c>
 
 <c:Chorus>
-<soc>
 <03:18.21>My shadow's the only one that walks beside me<br>
 <03:23.89>My shallow heart's the only thing that's beatin'<br>
 <03:29.56><m>Sometimes, I wish someone out there will find me<br>
 <03:35.56>'Til then, I walk alone<br></m:This is a crucial aspect of the song and a look into Jesus of Suburbia’s mind. Lonely and depressed, he wants to seek comfort in a lover or friend. Instead of making an effort to find that person though, he takes a passive approach and gives into his isolating thoughts, hoping somebody else will stumble upon him. It’s an ineffective, kick the can down the road mindset that’s destined to fail.> </03:46.74>
-<eoc>
+</c>
 
 <03:46.74><c:Instrumental Outro>
 ```
@@ -475,85 +468,75 @@ Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
   
 ```
 <c:Verse 1: Harry, Liam>
-<soc>
 <00:00.00> <s:Harry>Written in these walls are the stories that I can't explain</s:Harry> <br>
 <00:04.50> <s:Harry>I leave my heart open, but it stays right here empty for days</s:Liam><br>
 <00:09.00> <s:Liam>She told me in the mornin' she don't feel the same about us in her bones</s:Liam><br>
 <00:13.50> <s:Liam>It seems to me that when I die, these words will be written on my stone</s:Liam><br>
-<eoc>
+</c>
 
 <c:Pre-Chorus: Zayn>
-<soc>
 <00:18.00> <s:Zayn>And I'll be gone, gone tonight</s:Zayn>
 <00:18.00> <s:All>Oh Oh Oh<00:20.00></s:All>
 <00:21.50> <s:Zayn>The ground beneath my feet is open wide</s:Zayn>
 <00:25.00> <s:Zayn>The way that I've been holding on too tight</s:Zayn>
 <00:29.00> <s:Zayn>With nothing in between</s:Zayn>
-<eoc>
+</c>
 
 <c:Chorus: Harry, All>
-<soc>
 <00:32.00> <s:Harry,All>The story of my life, I take her home</s:Harry,All>
 <00:35.50> <s:Harry,All>I drive all night to keep her warm</s:Harry,All>
 <00:39.00> <s:Harry,All>And time is frozen (The story of, the story of)</s:Harry,All>
 <00:43.00> <s:Harry,All>The story of my life, I give her hope</s:Harry,All>
 <00:46.50> <s:Harry,All>I spend her love until she's broke inside</s:Harry,All>
 <00:50.00> <s:Harry,All>The story of my life (The story of, the story of)</s:Harry,All>
-<eoc>
+</c>
 
 <c:Verse 2: Niall, Liam>
-<soc>
 <00:54.00> <s:Niall,Liam>Written on these walls are the colors that I can't change</s:Niall,Liam>
 <00:58.50> <s:Niall,Liam>Leave my heart open, but it stays right here in its cage</s:Niall,Liam>
 <01:03.00> <s:Niall,Liam>I know that in the mornin', I'll see us in the light up on the hill</s:Niall,Liam>
 <01:07.50> <s:Niall,Liam>Although I am broken, my heart is untamed still</s:Niall,Liam>
-<eoc>
+</c>
 
 <c:Pre-Chorus: Louis>
-<soc>
 <01:12.00> <s:Louis>And I'll be gone, gone tonight</s:Louis>
 <01:15.50> <s:Louis>The fire beneath my feet is burning bright</s:Louis>
 <01:19.00> <s:Louis>The way that I've been holding on so tight</s:Louis>
 <01:23.00> <s:Louis>With nothing in between</s:Louis>
-<eoc>
+</c>
 
 <c:Chorus: Harry, All>
-<soc>
 <01:26.00> <s:Harry,All>The story of my life, I take her home</s:Harry,All>
 <01:29.50> <s:Harry,All>I drive all night to keep her warm</s:Harry,All>
 <01:33.00> <s:Harry,All>And time is frozen (The story of, the story of)</s:Harry,All>
 <01:37.00> <s:Harry,All>The story of my life, I give her hope</s:Harry,All>
 <01:40.50> <s:Harry,All>I spend her love until she's broke inside</s:Harry,All>
 <01:44.00> <s:Harry,All>The story of my life (The story of, the story of)</s:Harry,All>
-<eoc>
+</c>
 
 <c:Bridge: Zayn>
-<soc>
 <01:48.00> <s:Zayn>And I've been waiting for this time to come around</s:Zayn>
 <01:52.00> <s:Zayn>But baby, running after you is like chasin' the clouds</s:Zayn>
-<eoc>
+</c>
 
 <c:Breakdown: Niall>
-<soc>
 <01:56.00> <s:Niall>The story of my life, I take her home</s:Niall>
 <02:00.00> <s:Niall>I drive all night to keep her warm</s:Niall>
 <02:04.00> <s:Niall>And time is frozen</s:Niall>
-<eoc>
+</c>
 
 <c:Chorus: All, Zayn>
-<soc>
 <02:08.00> <s:All,Zayn>The story of my life, I give her hope (I give her hope)</s:All,Zayn>
 <02:12.00> <s:All,Zayn>I spend her love until she's broke inside (Till she's broke inside)</s:All,Zayn>
 <02:16.00> <s:All,Zayn>The story of my life (The story of, the story of)</s:All,Zayn>
-<eoc>
+</c>
 
 <c:Outro: All, Harry>
-<soc>
 <02:20.00> <s:All,Harry>The story of my life</s:All,Harry>
 <02:24.00> <s:All,Harry>The story of my life (The story of)</s:All,Harry>
 <02:28.00> <s:All,Harry>(The story of, the story of)</s:All,Harry>
 <02:32.00> <s:All,Harry>The story of my life</s:All,Harry>
-<eoc>
+</c>
 ```
 </details>
 
@@ -580,7 +563,7 @@ section =
 
 - LRCv2 recommends `<>` for everything e.g. `<c:Verse 1>`
 - If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
-- Mark start of section with `<soc>` and end of section with `<eoc>`.
+- Mark end of section with `</c>`.
 
 Note: LRCv1 uses for `{c:Verse 1}`
 
@@ -592,10 +575,7 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics (Ge
 ```
 
 ### Directives
-<soc>
-<eoc>
-<instrumental>
-<duet>
+</c>
   
 ```ebnf
 directive =
@@ -606,7 +586,7 @@ directive =
 
 - Recommended Lyric meaning database: Genius
 
-Format`<m>Lyrics</m:Meaning>`
+Format`<m>Lyrics</m:Meaning_text>`
 
 ## Contextual
 **by Paragrah/line/word**
@@ -756,7 +736,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 - Users/Sources don't have to make/store 2 versions - un/censored.
 - Can switch un/censored lyrics.
 
-# Extended Features
+# EXTENDED FEATURES
 
 # 4. Styling
 
@@ -850,17 +830,17 @@ Please don't take [D7]my sunshine a[G]way
 
 ### LRCv2 Chord+Lyrics Format
 
-Format `<ch>Lyric </ch:Em>`
+Format `<ch:Em>Lyric </ch>`
 
 <details>
   <summary>LRCv2 Chord+Lyrics</summary>  
  
 ```
-<00:22.37> <ch>I walk a </ch:Em><ch>lonely road, </ch:G>the <ch>only one that </ch=D><ch>I have ever known</ch:Em> <br>
-<00:29.45> <ch>Don't know where it </ch:G><ch>goes,</ch:Em> <ch>but it's home to me </ch=G><ch>and I walk alone</ch:Em> <br>
-<00:36.72> <ch>I walk this empty</ch:Em> <ch>street</ch:G><ch>On the Boulevard of Broken Dreams</ch:D> <br>
-<00:43.78> <ch>Where the city</ch:Em> <ch>sleeps</ch:G><ch>and I'm the only one and I walk alone</ch:Em> <br>
-<00:57.58> <ch>I walk alone,</ch:Em> <ch>I walk alone</ch:G.<ch>I walk alone</ch:D><ch>I walk alone and I walk a...</ch:Em> <br>
+<00:22.37> <ch:Em>I walk a </ch><ch:G>lonely road, </ch>the <ch:D>only one that </ch><ch:Em>I have ever known</ch> <br>
+<00:29.45> <ch:G>Don't know where it </ch><ch:Em>goes,</ch> <ch:G>but it's home to me </ch><ch:Em>and I walk alone</ch> <br>
+<00:36.72> <ch:Em>I walk this empty</ch> <ch:G>street</ch><ch:D>On the Boulevard of Broken Dreams</ch> <br>
+<00:43.78> <ch:Em>Where the city</ch> <ch:G>sleeps</ch><ch:Em>and I'm the only one and I walk alone</ch> <br>
+<00:57.58> <ch:Em>>I walk alone,</ch <ch:G>I walk alone</ch><ch:D>I walk alone</ch><ch:Em>I walk alone and I walk a...</ch> <br>
 ```
 </details>
 
