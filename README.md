@@ -183,6 +183,7 @@ This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffinâ€
 </c>
 
 <03:46.74><c:Instrumental Outro>
+<04:46.74></c>
 ```
 </details>
 
@@ -312,6 +313,11 @@ They should switch to LRCv2 as every other format doesn't have all the features 
   <summary>LRCv2 Word-by-Word Full Song Example</summary>
 
 ```
+[lrc:2.0]
+[title:Cruel Summer]
+[artist:Taylor Swift]
+[lang:eng]
+[features:translation,meaning]
 <00:01.20>Yeah </00:01.54><00:02.54>yeah </00:02.96><00:03.96>yeah </00:04.40><00:05.37>yeah</00:05.75><br>
 <00:06.05>Fever </00:06.35><00:06.35>dream </00:06.66><00:06.66>high </00:07.06><00:07.06>in </00:07.29><00:07.29>the </00:07.48><00:07.48>quiet </00:07.74><00:07.74>of </00:07.96><00:07.96>the </00:08.13><00:08.13>night</00:08.45><br>
 <00:08.51>You </00:08.70><00:08.70>know </00:09.04><00:09.04>that </00:09.24><00:09.24>I </00:09.51><00:09.51>caught </00:09.72><00:09.72>it</00:09.95><br>
@@ -559,8 +565,9 @@ Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 ```ebnf
 section =
     "<c:" text ">" ;
+    content
+    "/c>"
 ```
-
 - LRCv2 recommends `<>` for everything e.g. `<c:Verse 1>`
 - If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
 - Mark end of section with `</c>`.
@@ -864,7 +871,7 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 - custom text usecase guitar/bass/drums tabs or Music notation.
 - Custom Images Along with with Lyrics.
 
-This would need a .7z zip with all the custom data
+This would need a .7z with all the custom data
 
 Format
 ```
