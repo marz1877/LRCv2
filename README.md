@@ -72,6 +72,12 @@ Chordpro             - Chords
 
 ## Metadata
 
+```ebnf
+metadata =
+    "[" key ":" value "]" ;
+
+```
+
 **Header**
 ```
 [lrc version:2.0]
@@ -430,6 +436,37 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 
 # 2. Multi Singers
 
+```ebnf
+singer_block =
+    singer_open ,
+    text ,
+    singer_close ;
+
+singer_open =
+    "<s:" ,
+    singer_list ,
+    ">" ;
+
+singer_close =
+    "</s:" ,
+    singer_list ,
+    ">" ;
+
+singer_list =
+    singer ,
+    { "," , singer } ;
+
+singer =
+    identifier ;
+
+identifier =
+    letter ,
+    { letter | digit | "_" | "-" | " " } ;
+
+text =
+    { character } ;
+```
+
 Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 
 
@@ -439,10 +476,10 @@ Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 ```
 <c:Verse 1: Harry, Liam>
 <soc>
-<00:00.00> <s:Harry>Written in these walls are the stories that I can't explain</s:Harry>
-<00:04.50> <s:Harry>I leave my heart open, but it stays right here empty for days</s:Liam>
-<00:09.00> <s:Liam>She told me in the mornin' she don't feel the same about us in her bones</s:Liam>
-<00:13.50> <s:Liam>It seems to me that when I die, these words will be written on my stone</s:Liam>
+<00:00.00> <s:Harry>Written in these walls are the stories that I can't explain</s:Harry> <br>
+<00:04.50> <s:Harry>I leave my heart open, but it stays right here empty for days</s:Liam><br>
+<00:09.00> <s:Liam>She told me in the mornin' she don't feel the same about us in her bones</s:Liam><br>
+<00:13.50> <s:Liam>It seems to me that when I die, these words will be written on my stone</s:Liam><br>
 <eoc>
 
 <c:Pre-Chorus: Zayn>
@@ -536,7 +573,12 @@ Format: `<0:00.00> <s:Singer1,Singer2>Words</s:Singer1>`
 
 ## 2.1 Per Section
 
-- LRCv2 recommends `<>` for everything `<c:Verse 1>`
+```ebnf
+section =
+    "<c:" text ">" ;
+```
+
+- LRCv2 recommends `<>` for everything e.g. `<c:Verse 1>`
 - If Entire Section is sung by 1 singer then `<c:Verse 1: Vocalist Name>`
 - Mark start of section with `<soc>` and end of section with `<eoc>`.
 
@@ -547,6 +589,17 @@ Genius Example - https://genius.com/Krewella-crying-on-the-dancefloor-lyrics (Ge
 ```
 <c:Verse 1: Vocalist Name>
 <00:24.94> Lyrics
+```
+
+### Directives
+<soc>
+<eoc>
+<instrumental>
+<duet>
+  
+```ebnf
+directive =
+    "<" identifier ">" ;
 ```
 
 ## 3. Meaning
@@ -565,7 +618,63 @@ FORMAT: See Main Example
 
 FORMAT: See Main Example
 
-## 3.2 Language Translation - Per Word,Phrase, Line
+## 3.2 Translation - Per Word,Phrase, Line
+
+```EBNF
+file =
+    { lyric_line } ;
+
+lyric_line =
+    timestamp ,
+    translation_block ;
+
+timestamp =
+    "<" ,
+    digit , digit ,
+    ":" ,
+    digit , digit ,
+    "." ,
+    digit , digit ,
+    ">" ;
+
+translation_block =
+    translation_open ,
+    source_text ,
+    [ literal_translation ] ,
+    [ contextual_translation ] ,
+    translation_close ;
+
+translation_open =
+    "<t:" ,
+    language_code ,
+    ":" ,
+    language_code ,
+    ">" ;
+
+translation_close =
+    "</t>" ;
+
+literal_translation =
+    "<l>" ,
+    text ,
+    "</l>" ;
+
+contextual_translation =
+    "<c>" ,
+    text ,
+    "</c>" ;
+
+language_code =
+    letter ,
+    letter ,
+    letter ;
+
+source_text =
+    text ;
+
+text =
+    { character } ;
+```
 
 ### Word-by-Word
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
@@ -581,21 +690,21 @@ LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 - MUST use ISO 639-3 language codes.
 - One lyric CAN multiple translations.
 - Format `<00:13.75> <T:lang1:lang2>Line</T:TransaltedText>`
-- MAY contain 'Literal' and 'Common Usage' meaning.
+- MAY contain 'Literal'<l> and 'Common Usage' <c> meaning.
 <details>
   <summary>Example with Literal and Commonusage </summary>
   
 ```
-<00:13.75> <t:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,</t:Literal=At night again I went to sleep in the balcony.CommonUsage=where's my baby?>
+<00:13.75> <t:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,</t <l>At night again I went to sleep in the balcony.</l><c>where's my baby?</c>>
 <00:19.62> <t:fin:eng>Jotta lähempänä mua ois hän</t:So that they would be closer to me>
 <00:25.30> <t:fin:eng>Pediltäni taivas näkyy, ryhdyin oottamaan,</t:From my bed I saw the sky, begun to wait>
 <00:57.81> Tuuli tuule sinne <T:fin:eng]missä muruseni on</T:Where my loved ones are, CommonUsage: where's my baby?>
 ```
 </details>
 
-Other Trnslated Lyrics Format: Syntax and UI
+LRCv1 Translated Lyrics Format workaround: Syntax and UI
 <details>
-  <summary>Current LRCv1 workaround Syntax and UI - with per-line translation and both laguages in sepearte lines with same time stamp</summary>
+  <summary>LRCv1 workaround- w/ per-line translation and both laguages in sepearte lines with same time stamp</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
