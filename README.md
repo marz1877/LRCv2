@@ -689,6 +689,50 @@ LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 ```
 </details>
 
+
+### LRCv2 phonetic translation
+
+Use ISO 15924 for script names
+
+```Загляни ты в сердечко мне <tp:Cyrl:Latn>Zaglyani ty v serdechko mne</tp>```
+```
+[Текст песни «Колыбельная»]
+
+[Куплет 1]
+Загляни ты в сердечко мне <tp:Cyrl:Latn>Zaglyani ty v serdechko mne</tp>
+И скажи «Уходи!» зиме <tp:Cyrl:Latn> I skazhi "ukhodi" zime</tp>
+Ветер воет, а ты грей меня <tp:Cyrl:Latn>Veter voyet, a ty grey menya</tp>
+Небо стонет, а у нас весна <tp:Cyrl:Latn>Nebo stonet, a u nas vesna</tp>
+
+[Припев]
+Попроси у облаков <tp:Cyrl:Latn> Poprosi u oblakov</tp>
+Подарить нам белых снов <tp:Cyrl:Latn>Podarit' nam belykh snov</tp>
+Ночь плывет и мы за ней <tp:Cyrl:Latn>Noch' plyvet I my za ney</tp>
+В мир таинственных огней <tp:Cyrl:Latn>V mir tainstvennykh ogney</tp>
+
+[Куплет 2]
+Разгони ты тоску во мне <tp:Cyrl:Latn>Razgoni ty tosku vo mne</tp>
+Неспокойно у меня в душе <tp:Cyrl:Latn>Nespokoyno u menya v dushe</tp>
+
+[Припев]
+Попроси у облаков <tp:Cyrl:Latn>Poprosi u oblakov</tp>
+Подарить нам белых снов <tp:Cyrl:Latn>Podarit' nam belykh snov</tp>
+Ночь плывет и мы за ней <tp:Cyrl:Latn>Noch' plyvet I my za ney</tp>
+В мир таинственных огней <tp:Cyrl:Latn>V mir tainstvennykh ogney</tp>
+Попроси у облаков <tp:Cyrl:Latn> Poprosi u oblakov</tp>
+Подарить нам белых снов <tp:Cyrl:Latn> Podarit' nam belykh snov</tp>
+Ночь плывет и мы за ней <tp:Cyrl:Latn> Noch' plyvet I my za ney</tp>
+В мир таинственных огней <tp:Cyrl:Latn> V mir tainstvennykh ogney</tp>
+
+[Припев]
+Попроси у облаков <tp:Cyrl:Latn>Poprosi u oblakov</tp>
+Подарить нам белых снов <tp:Cyrl:Latn>Podarit' nam belykh snov</tp>
+Ночь плывет и мы за ней <tp:Cyrl:Latn>Noch' plyvet I my za ney</tp>
+В мир таинственных огней <tp:Cyrl:Latn>V mir tainstvennykh ogney</tp>
+Попроси у облаков <tp:Cyrl:Latn>Poprosi u oblakov</tp>
+```
+
+
 LRCv1 Translated Lyrics Format workaround: Syntax and UI
 <details>
   <summary>LRCv1 workaround- w/ per-line translation and both laguages in sepearte lines with same time stamp</summary>
