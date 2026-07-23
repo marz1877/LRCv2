@@ -1,7 +1,7 @@
 # LRCv2 Specifications
 LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaeoke with Time and Pitch.
 
-<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/168d0a32-3e1f-4bdd-8f55-45924f34180e" />
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/01e228e8-80a5-4591-8cdf-79d27cabbbe4" />
 
 ## Features & Use Cases
 1. Synced Lyrics
