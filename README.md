@@ -823,7 +823,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 - MAYBE used as sidecar file for audio file with LRCv2.
 
 #### CREATION/AUTOMATION:
-- Extract Steam (realtime or pre-make) - https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
+- Extract Steam (realtime or pre-make) - https://github.com/mimrock/musichammer, https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
 #### Recommended Tools- Audio-to-Midi Convertion:
