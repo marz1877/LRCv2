@@ -313,7 +313,7 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 
 **Use Case:** Karaoke
 
-### Format Word-by-Word
+### 🔠Format Word-by-Word
 
 <details>
   <summary>LRCv2 Word-by-Word Full Song Example</summary>
@@ -416,7 +416,7 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 ```
 </details>
 
-#### Syllable-by-Syllable
+#### 👏Syllable-by-Syllable
 
 **Use Case:** karaoke or rap lyrics
 
@@ -439,7 +439,7 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 ```
 </details>
 
-# 2. Multi Singers
+# 2. 👩‍🎤👨‍🎤Multi Singers
 
 ```ebnf
 singer_block =
