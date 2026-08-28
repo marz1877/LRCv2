@@ -43,7 +43,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
   - Vocal Melody Isolation using (See below)
   - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- One LRCv2 file can have all features - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
+- One LRCv2 file may have all features - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
 **.lrc2 sidecar file or audio's metadata**
@@ -305,7 +305,7 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 
 ## Word-by-Word and Syllable-by-Syllable
 
-**Use Case:** Karaeoke
+**Use Case:** Karaoke
 
 ### Format Word-by-Word
 
@@ -412,7 +412,7 @@ They should switch to LRCv2 as every other format doesn't have all the features 
 
 #### Syllable-by-Syllable
 
-**Use Case:** kareoke or rap lyrics
+**Use Case:** karaoke or rap lyrics
 
 <details>
   <summary>Syllable-by-Syllable Format Example</summary>
@@ -596,7 +596,7 @@ directive =
 Format`<m>Lyrics</m:Meaning_text>`
 
 ## Contextual
-**by Paragrah/line/word**
+**by Paragraph/line/word**
 
 FORMAT: See Main Example
 
@@ -673,13 +673,14 @@ FORMAT: See Main Example
 LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 
 ### Translation Format
-- MUST specify translation lanuages. e.g. German to English is `deu:eng`.
+- MUST specify translation languages. e.g. German to English is `deu:eng`.
 - MUST use ISO 639-3 language codes.
 - One lyric CAN multiple translations.
 - Format `<00:13.75> <T:lang1:lang2>Line</T:TransaltedText>`
 - MAY contain 'Literal'<l> and 'Common Usage' <c> meaning.
+
 <details>
-  <summary>Example with Literal and Commonusage </summary>
+  <summary>Example with Literal and Common-usage </summary>
   
 ```
 <00:13.75> <t:fin:eng>Yöllä taas mä menin parvekkeelle nukkumaan,</t <l>At night again I went to sleep in the balcony.</l><c>where's my baby?</c>>
@@ -695,6 +696,10 @@ LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 Use ISO 15924 for script names
 
 ```Загляни ты в сердечко мне <tp:Cyrl:Latn>Zaglyani ty v serdechko mne</tp>```
+
+<details>
+  <summary>Example</summary>
+
 ```
 [Текст песни «Колыбельная»]
 
@@ -731,6 +736,7 @@ Use ISO 15924 for script names
 В мир таинственных огней <tp:Cyrl:Latn>V mir tainstvennykh ogney</tp>
 Попроси у облаков <tp:Cyrl:Latn>Poprosi u oblakov</tp>
 ```
+</details>
 
 
 LRCv1 Translated Lyrics Format workaround: Syntax and UI
@@ -757,9 +763,9 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ```
 </details>
 
-## 3.3 Contexual Language Translation - per Word/Phrase
+## 3.3 Contextual Language Translation - per Word/Phrase
 
-- NOTE: Dictionary in the player may not be useful as word can be contexual and as used in gerneral/other cases.
+- NOTE: Dictionary in the player may not be useful as word can be contextual and as used in general/other cases.
 - MAY use LLMs.
 
 ### Format
@@ -768,18 +774,24 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 [00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
 ```
 
-# Suggested UI for Translation and Meaning Feature
+# Suggested UI for Translation & Meaning Feature
 
 ### Big Screen
+
+<details>
+  <summary>ClickMe</summary>
+
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
+
+</details>
 
 - meaning mode: hovering should hilight line, phrase or paragraph
 - translation mode: hovering over should hilight line, phrase or paragraph giving meaning of the line, phrase, paragraph or words.
 - words used targeted for langauge learning.
 
-- explaination for only lines or paragraph is sufficient, words may be used rarely
+- explanation for only lines or paragraph is sufficient, words may be used rarely
 
-# Censore Words
+## 🤬Censore Words
 **Suggested Feature**
 
 - Players MAY have option to censor explicit words, eg. `Fu*k` `F**k` and `S**t` or `F***` `****`.
@@ -787,11 +799,13 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 - Users/Sources don't have to make/store 2 versions - un/censored.
 - Can switch un/censored lyrics.
 
-# EXTENDED FEATURES
+---
 
-# 4. Styling
+# ➕ EXTENDED FEATURES
 
-## 4.1 Custom Text Color (for expression)
+## 4. Styling
+
+### 4.1 Custom Text Color (for expression)
 
 # Format
 ```
@@ -799,7 +813,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 [02:18.00] See who gives a duck
 ```
 
-## 4.2 Custom Text Size (for word expression)
+### 4.2 Custom Text Size (for word expression)
 - MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
@@ -811,13 +825,13 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ```
 </details>
 
-# 5. Karaeoke (LRCv2-K)
+## 5. Karaeoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
 - May include meatdata `[midioffset:00:00.00]`
 - Optional: Players MAY support this feature but explicity tell when not suported.
 
-## 1. Voice melody MIDI
+### 1. Voice melody MIDI
 
 #### TORING:
 - MAYBE used as sidecar file for audio file with LRCv2.
@@ -831,7 +845,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
  - https://github.com/spotify/basic-pitch - Audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote .
 
-## 2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
+### 2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
 
 #### Other Audio+MIDI Formats
   1. Multitrack OGG
@@ -907,12 +921,13 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 ```
 </details>
 
-# Special Features
+# 🙄Special Features
 
-# 7. Custom Images and Text
+## 1. Custom Images and Text
 - Optional
+
 - MUST NOT Show lyrics and `Custom Images and Text` together.
-- custom text usecase guitar/bass/drums tabs or Music notation.
+- Custom text usecase: guitar/bass/drums tabs or Music notation.
 - Custom Images Along with with Lyrics.
 
 This would need a .7z with all the custom data
@@ -921,14 +936,17 @@ Format
 ```
 <00:00.00>File Name</00:00.00>
 ```
-# 8. Background Image/Video
+
+## 2. Background Image/Video
 - Optional
 - MAY load background images/video in zip file
 - Player MUST not play audio from the video
 
 Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
-## Other Recommendations
+# 🙄Recommended Feature for Player
+
+## Steam Separation
 - Player MAY have option to mute or turn down instruments using steam seperation.
 
 ## Expect Adaptation By
