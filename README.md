@@ -227,10 +227,11 @@ TTML supports word timing, translations, syling not meaning, chords.
 - [Subtitle oriented] Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
 
 - [Good but YAML is hard to work with and it doesn't support many features] **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
+</details>
 
 <details>
   <summary>Lyricsfile Format</summary>
-
+  
 ```
 version: '1.0'
 metadata:
