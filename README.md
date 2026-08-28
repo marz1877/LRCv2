@@ -207,6 +207,10 @@ The only one that I have ever known <Br>
 </details>
 
 ### Other Synced Lyric Formats
+
+<details>
+  <summary>List</summary>
+  
 - [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable. Used by: Apple Music.
 TTML supports word timing, translations, syling not meaning, chords.
 - [LRCv1] [LRC's A2_extension:_word_time_tag](https://en.wikipedia.org/wiki/LRC_(file_format)#A2_extension:_word_time_tag) (Word-by-Word)
@@ -217,14 +221,16 @@ TTML supports word timing, translations, syling not meaning, chords.
 - [Basic] WebVTT (used by YouTube for subtitle and lyrics)
 - [Basic] ASS/SSA - https://www.quicklrc.com/subtitle-formats/ass
 - [proprietary] KRC KuGou Music Word
-- YRC- .yrc - Word-by-word	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase. proprietary
-- QRC- .qrc - Word-by-word	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted. proprietary
+- YRC  .yrc  Word-by-word	`NetEase Cloud Music`	Proprietary karaoke-style lyric format used by NetEase. proprietary
+- QRC  .qrc  Word-by-word	`QQ Music`	Similar to YRC but with different syntax; sometimes distributed encrypted. proprietary
 - [Subtitle oriented] TRC (Track Row Column) created by Motion Analysis Corporation.
 - [Subtitle oriented] Universal Subtitle Format(https://en.wikipedia.org/wiki/Universal_Subtitle_Format)
 
 - [Good but YAML is hard to work with and it doesn't support many features] **Lyrics File** (YAML based open format) - https://github.com/tranxuanthang/lrcget/releases/tag/2.0.0 Word-by-word lyric file format
 <details>
   <summary>Lyricsfile Format</summary>
+</details>
+  
   
 ```
 version: '1.0'
