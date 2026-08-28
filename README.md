@@ -607,6 +607,9 @@ FORMAT: See Main Example
 
 ## 3.2 Translation - Per Word,Phrase, Line
 
+<details>
+  <summary>EBNF</summary>
+
 ```EBNF
 file =
     { lyric_line } ;
@@ -662,6 +665,7 @@ source_text =
 text =
     { character } ;
 ```
+</details>
 
 ### Word-by-Word
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
@@ -785,13 +789,13 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 </details>
 
-- meaning mode: hovering should hilight line, phrase or paragraph
-- translation mode: hovering over should hilight line, phrase or paragraph giving meaning of the line, phrase, paragraph or words.
-- words used targeted for langauge learning.
+- meaning mode: hovering should highlight line, phrase or paragraph
+- translation mode: hovering over should highlight line, phrase or paragraph giving meaning of the line, phrase, paragraph or words.
+- words used targeted for language learning.
 
 - explanation for only lines or paragraph is sufficient, words may be used rarely
 
-## 🤬Censore Words
+## 🤬Censor Words
 **Suggested Feature**
 
 - Players MAY have option to censor explicit words, eg. `Fu*k` `F**k` and `S**t` or `F***` `****`.
@@ -825,7 +829,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ```
 </details>
 
-## 5. Karaeoke (LRCv2-K)
+## 5. 🎤Karaeoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
 - May include meatdata `[midioffset:00:00.00]`
@@ -833,11 +837,11 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 ### 1. Voice melody MIDI
 
-#### TORING:
+#### STORING:
 - MAYBE used as sidecar file for audio file with LRCv2.
 
 #### CREATION/AUTOMATION:
-- Extract Steam (realtime or pre-make) - https://github.com/mimrock/musichammer, https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
+- Extract Steam (real-time or pre-make) - https://github.com/mimrock/musichammer, https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
 #### Recommended Tools- Audio-to-Midi Convertion:
