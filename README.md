@@ -30,7 +30,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
   - Speech-to-Text: https://github.com/openai/whisper
   - Synced Lyrics DB: MusixMatch
   - Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
-   - Lyrics Syncer (Line-by-Line): Service : https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
+    - Lyrics Syncer (Line-by-Line): Service: https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Translation:
   - DB: Musixmatch
   - Online: [Google Translate](https://translate.google.com)
