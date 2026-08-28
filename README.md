@@ -187,7 +187,7 @@ This line also seems to draw inspiration from the the Motown 1966 Jimmy Ruffin�
 ```
 </details>
 
-# Core Features
+# 👑Core Features
 
 ## 1.⏱️Time Stamping
 - MAY use opening and closing time.
