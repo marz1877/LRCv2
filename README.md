@@ -1,5 +1,5 @@
 # LRCv2 Specifications
-LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaeoke with Time and Pitch.
+LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaoke with Time and Pitch.
 
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/01e228e8-80a5-4591-8cdf-79d27cabbbe4" />
 
@@ -7,43 +7,43 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 1. Synced Lyrics
 2. Meaning
 3. Translation: For multilingual people, Language learning, foreign music listening.
-4. Singer metadata: Kareoke
+4. Singer metadata: Karaoke
 5. Custom Styling: Expressive lyrics.
-6. Kareoke with Time and Pitch Data, Singing Learning Tool.
+6. Karaoke with Time and Pitch Data, Singing Learning Tool.
 7. Chords: Music Learner.
 8. Custom Images and Text: Music Learning Tool for Music Chords/Notation
 9. Background Image/Video
 
 ### Why LRCv2 is needed
 **LRCv1 lacks:**
-1. Translation: LRCv1 Translation is a wordaround, only per line translation is possible not word or phase or paragraph
+1. Translation: LRCv1 Translation is a workaround, only per line translation is possible not word or phase or paragraph
 1. Meaning/annotations: Lyrics meaning usage is popular and needs a standardization.
 1. Multiple singers
 1. Reliable word-level timing
 1. Styling
 
-- Too much fragmentation in formats, all trying to achive the same thing and few differences in the features TTML, WebVTT, LRCv1-A2, YRC, QRC, KRC, LQE, LyricsFile.
+- Too much fragmentation in formats, all trying to achieve the same thing and few differences in the features TTML, WebVTT, LRCv1-A2, YRC, QRC, KRC, LQE, LyricsFile.
 
 ### Automation
 **All features for creating LRCv2 can be automated**
 1. Lyrics
-  - Speech-to-Text: https://github.com/openai/whisper
-  - Synced Lyrics DB: MusixMatch
-  - Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
-    - Lyrics Syncer (Line-by-Line): Service: https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
+  A. Speech-to-Text: https://github.com/openai/whisper
+  B. Synced Lyrics DB: MusixMatch
+  C. Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
+    C.1. Lyrics Syncer (Line-by-Line): Service: https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Translation:
-  - DB: Musixmatch
-  - Online: [Google Translate](https://translate.google.com)
-  - Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
+  A. DB: Musixmatch
+  B. Online: [Google Translate](https://translate.google.com)
+  C. Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
 3. Meaning: DB: Genius (https://github.com/johnwmillr/LyricsGenius) or LLM
 4. Chords:
-  - Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
-  - DB: UltimateGuitar
+  A. Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
+  B. DB: [UltimateGuitar](https://www.ultimate-guitar.com/)
 5. Karaoke:
-  - Vocal Melody Isolation using (See below)
-  - Covert it to MIDI using (See Below), for Karaoke Pitch matching.
+  A. Vocal Melody Isolation using (See below)
+  B. Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- One LRCv2 file may have all features - Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
+- One LRCv2 file may have all features: Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
 **.lrc2 sidecar file or audio's metadata**
@@ -209,7 +209,7 @@ The only one that I have ever known <Br>
 ### Other Synced Lyric Formats
 
 <details>
-  <summary>List</summary>
+  <summary>Other Synced Lyric Formats List</summary>
   
 - [Best Current] [TTML (Timed Text Markup Language)](https://www.w3.org/TR/2018/REC-ttml1-20181108/) [Word-by-Word, transliteration] https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md .ttml Word-by-Word or Syllable-by-Syllable. Used by: Apple Music.
 TTML supports word timing, translations, syling not meaning, chords.
@@ -750,6 +750,7 @@ Use ISO 15924 for script names
 
 
 LRCv1 Translated Lyrics Format workaround: Syntax and UI
+
 <details>
   <summary>LRCv1 workaround- w/ per-line translation and both laguages in sepearte lines with same time stamp</summary>
 
@@ -778,11 +779,9 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 - NOTE: Dictionary in the player may not be useful as word can be contextual and as used in general/other cases.
 - MAY use LLMs.
 
-### Format
+### Format 
 
-```
-[00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]
-```
+```[00:00.00] [WordMeanind,de>en]Überheblich[/WordMeanind:Arrogant], [WordMeanind]überlegen[/WordMeanind:consider]```
 
 # Suggested UI for Translation & Meaning Feature
 
@@ -792,7 +791,6 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
   <summary>ClickMe</summary>
 
 ![ui](https://user-images.githubusercontent.com/105455604/168247326-d772633e-c073-4928-9400-ada37fa4817d.png)
-
 </details>
 
 - meaning mode: hovering should highlight line, phrase or paragraph
@@ -801,8 +799,10 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 - explanation for only lines or paragraph is sufficient, words may be used rarely
 
+
+# Suggested Feature
+
 ## 🤬Censor Words
-**Suggested Feature**
 
 - Players MAY have option to censor explicit words, eg. `Fu*k` `F**k` and `S**t` or `F***` `****`.
 - Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
@@ -813,29 +813,34 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 # ➕ EXTENDED FEATURES
 
-## 4. Styling
+## 1. Styling
 
-### 4.1 Custom Text Color (for expression)
+### A. Custom Text Color (for expression)
 
 # Format
+<details>
+  <summary>ClickMe</summary>
+
 ```
 [02:16.00] [cr=#dc143c]Destroy yourself, see who gives a[/cr] [cr=#420612]duck[/cr]
 [02:18.00] See who gives a duck
 ```
+</details>details>
 
-### 4.2 Custom Text Size (for word expression)
+### B. Custom Text Size (for word expression)
 - MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
 
 ### Format
 <details>
   <summary>ClickMe</summary>
+
 ```
 [02:16.00] [sz=10]Destroy yourself, see who gives a[/sz] [sz=20]duck[/sz]
 [02:18.00] See who gives a duck
 ```
 </details>
 
-## 5. 🎤Karaeoke (LRCv2-K)
+## 2. 🎤Karaoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
 - May include meatdata `[midioffset:00:00.00]`
@@ -872,16 +877,17 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 ![image](https://user-images.githubusercontent.com/105455604/168251330-d98a8d35-936d-44b7-9988-b86f71f4a67c.png)
 </details>
 
-# 6. Chords
+## 3. Chords
 - Optional
 - Player MAY add options to -
   - Show Chord Charts for many instruments
   - Transpose scale / "No Capo version"
   - Show chord Progression eg. `II V IV` (https://chromewebstore.google.com/detail/kantan-chord/ncdpcgdgemdklhocjgecijjjhaboopbp)
 
-- ChordPro - https://github.com/ChordPro/chordpro, https://www.chordpro.org/
+- ChordPro: `https://github.com/ChordPro/chordpro`, `https://www.chordpro.org/`
+
 <details>
-  <summary>ChordPro Format</summary>
+  <summary>ChordPro Format example</summary>
 
 ```
 {title: You Are My Sunshine}
@@ -919,9 +925,9 @@ Format `<ch:Em>Lyric </ch>`
 ```
 </details>
 
-### LRCv2 Chord+Lyrics (Chords Seperately) Format Type 2
+### LRCv2 Chord+Lyrics (Chords Separately) Format Type 2
 
-Use a seperate Chord file with time stamps without lyrics. Which helps with song has many instrumental breaks.
+Use a separate Chord file with time stamps without lyrics. Which helps with song has many instrumental breaks.
 
 <details>
   <summary>LRCv2 Format</summary>  
@@ -931,21 +937,20 @@ Use a seperate Chord file with time stamps without lyrics. Which helps with song
 ```
 </details>
 
-# 🙄Special Features
+## 🙄Special Features
+
+<details>
+  <summary>Special Features</summary>  
 
 ## 1. Custom Images and Text
 - Optional
-
 - MUST NOT Show lyrics and `Custom Images and Text` together.
 - Custom text usecase: guitar/bass/drums tabs or Music notation.
 - Custom Images Along with with Lyrics.
-
 This would need a .7z with all the custom data
 
-Format
-```
-<00:00.00>File Name</00:00.00>
-```
+Format: `<00:00.00>File Name</00:00.00>`
+
 
 ## 2. Background Image/Video
 - Optional
@@ -954,22 +959,27 @@ Format
 
 Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
+</details>
+
 ---
 
-# 🙄Recommended Feature for Player
+## 🙄Recommended Feature for Player
 
-## Steam Separation
-- Player MAY have option to mute or turn down instruments using steam seperation.
+- Steam Separation: Player MAY have option to mute or turn down instruments using steam separation.
 
 ---
 
 #### Other Lyric Formats
+
+<details>
+  <summary>Other Music/Lyric Formats</summary>
 1. ID3 SYNCEDLYRICS - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc2.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
 **Music Notation**
 1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
 1. .mscz/.mscx - https://musescore.org/en/handbook/3/file-formats#mscz
 1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files
+</details>
 
 ## Software
 - LRCv2 needs WYSIWYG editor specially when using many features at once.
@@ -978,13 +988,18 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 
 ## License
 - LRCv2 specs is free to use.
+- MUST give credit can't just rip off and rename it.
 
 ## GUI Tool to Manually Per Word Sync:
+
+<details>
+  <summary>GUI Tool to Manually Per Word Sync</summary>
   - https://github.com/pxeemo/LySy
   - https://github.com/better-lyrics/composer (does steam seperation using HTDemucs)
   - https://github.com/streetlegithub/amll-ttml-tool-english
   - https://github.com/amll-dev/applemusic-like-lyrics
     - https://github.com/Raqhael-ux/Voxen-LRC-Editor
+</details>
 
 ## Other Tools
   - https://github.com/eepyyyy/enhanced-lrc (TTML to ELRC)
