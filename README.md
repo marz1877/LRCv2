@@ -52,10 +52,10 @@ sidecar file.
   - Can have seperate .lrc2 per usecase or all-in-one
 *Suggested sidecar file naming*
 ```
-AudioFilename.lrc2              -
-AudioFilename_translation.lrc2  -  for seperate translation lrc
-AudioFilename_meaning.lrc2      -  for seperate meaning lrc
-AudioFilename.chordpro         -  for chords
+Song.lrc2              -
+Song_translation.lrc2  -  for seperate translation lrc
+Song_meaning.lrc2      -  for seperate meaning lrc
+Song.chordpro         -  for chords
 ```
 Benefit of sidecar is player can load what it supports.
 
@@ -63,19 +63,18 @@ Benefit of sidecar is player can load what it supports.
 ```
 SYNCEDLYRICS             - Synced Lyrics
 SYNCEDLYRICS_Word        - Word-by-Word Lyrics
-SYNCEDLYRICS_Syllable        - Syllable-by-Syllable Lyrics
+SYNCEDLYRICS_Syllable    - Syllable-by-Syllable Lyrics
 LYRICS_TRANSLATION       - Translation
-  LYRICS_TRANSLATION_ES   - Translation Spanish
-LYRICS_meaning       - Meaning
-Chordpro             - Chords
+  LYRICS_TRANSLATION_ES  - Translation Spanish
+LYRICS_Meaning           - Meaning
+CHORDPRO                 - Chords
 ```
 
 ## Metadata
 
-```ebnf
+```EBNF
 metadata =
     "[" key ":" value "]" ;
-
 ```
 
 **Header**
@@ -100,7 +99,7 @@ line := timestamp text "<br>"
 section := "<c:name>"
 ```
 
-- LRCv1 uses `[ti:Let's Twist Again]`, ChordPro uses Title `{title: You Are My Sunshine}`
+- LRCv1 uses: `[ti:Let's Twist Again]`, ChordPro uses Title `{title: You Are My Sunshine}`
 
 # Example
 
