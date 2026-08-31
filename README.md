@@ -595,7 +595,7 @@ directive =
     "<" identifier ">" ;
 ```
 
-## 3. Meaning
+## 3-A Meaning
 
 - Recommended Lyric meaning database: Genius
 
@@ -611,7 +611,7 @@ FORMAT: See Main Example
 
 FORMAT: See Main Example
 
-## 3.2 Translation - Per Word,Phrase, Line
+## 3-B Translation - Per Word,Phrase, Line
 
 <details>
   <summary>EBNF</summary>
@@ -752,7 +752,7 @@ Use ISO 15924 for script names
 LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 <details>
-  <summary>LRCv1 workaround- w/ per-line translation and both laguages in sepearte lines with same time stamp</summary>
+  <summary>LRCv1 workaround- w/ per-line translation and both languages in separate lines with same time stamp</summary>
 
 ```
 [00:13.75] Yöllä taas mä menin parvekkeelle nukkumaan,
@@ -774,7 +774,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ```
 </details>
 
-## 3.3 Contextual Language Translation - per Word/Phrase
+## 3-C Contextual Language Translation: per Word/Phrase
 
 - NOTE: Dictionary in the player may not be useful as word can be contextual and as used in general/other cases.
 - MAY use LLMs.
@@ -828,7 +828,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 </details>details>
 
 ### B. Custom Text Size (for word expression)
-- MAY turn off when using slidding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamicly resize.
+- MAY turn off when using sliding lyrics depending of screen types. e.g. phone with scrolling lyrics size can be hard to dynamically resize.
 
 ### Format
 <details>
@@ -843,8 +843,8 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ## 2. 🎤Karaoke (LRCv2-K)
 **Voice melody MIDI + Mic Input w/ Pitch-Recognition on MIDI-piano-roll**
 
-- May include meatdata `[midioffset:00:00.00]`
-- Optional: Players MAY support this feature but explicity tell when not suported.
+- May include metadata `[midioffset:00:00.00]`
+- Optional: Players MAY support this feature but explicitly tell when not supported.
 
 ### 1. Voice melody MIDI
 
@@ -855,12 +855,12 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 - Extract Steam (real-time or pre-make) - https://github.com/mimrock/musichammer, https://github.com/nomadkaraoke/python-audio-separator, https://github.com/facebookresearch/demucs , https://hub.docker.com/r/aclmb/stemgen, https://github.com/anjok07/ultimatevocalremovergui .
 - Audio to MIDI - https://gist.github.com/natowi/d26c7e97443ec97e8032fb7e7596f0b0, https://github.com/DamRsn/NeuralNote, https://github.com/spotify/basic-pitch, https://sourceforge.net/projects/a2m/
 
-#### Recommended Tools- Audio-to-Midi Convertion:
+#### Recommended Tools- Audio-to-Midi Conversion:
  - https://www.sonicvisualiser.org/tony/ , https://github.com/sonic-visualiser/tony
  - https://github.com/spotify/basic-pitch - Audio-to-Midi   
  - https://github.com/DamRsn/NeuralNote .
 
-### 2. Player MUST show midi-piano-roll to work as a karaeoke or Singing Learing Tool.
+### 2. Player MUST show midi-piano-roll to work as a karaoke or Singing Learning Tool.
 
 #### Other Audio+MIDI Formats
   1. Multitrack OGG
