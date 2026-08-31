@@ -804,7 +804,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ## 🤬Censor Words
 
 - Players MAY have option to censor explicit words, eg. `Fu*k` `F**k` and `S**t` or `F***` `****`.
-- Explicit Dictionary - https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+- Explicit Dictionary: https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 - Users/Sources don't have to make/store 2 versions - un/censored.
 - Can switch un/censored lyrics.
 
@@ -862,9 +862,9 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 ### 2. Player MUST show midi-piano-roll to work as a karaoke or Singing Learning Tool.
 
 #### Other Audio+MIDI Formats
-  1. Multitrack OGG
-  1. MP4/M4A with SMF tracks
-  1. WAV with MIDI Metadata
+ 1. Multi-track OGG
+ 1. MP4/M4A with SMF tracks
+ 1. WAV with MIDI Metadata
 
  - https://github.com/jeffreyjohnens/MetaMIDIDataset
 
