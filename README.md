@@ -27,23 +27,24 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
 ### Automation
 **All features for creating LRCv2 can be automated**
 1. Lyrics
-  A. Speech-to-Text: https://github.com/openai/whisper
-  B. Synced Lyrics DB: MusixMatch
-  C. Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
-    C.1. Lyrics Syncer (Line-by-Line): Service: https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
+  1. Speech-to-Text: https://github.com/openai/whisper
+  2. Synced Lyrics DB: MusixMatch
+  3. Lyrics Syncer: https://github.com/s9swata/ttml-parser (Input Audio+Lyrics Ouput:TTML using Groq Whisper), https://github.com/oseiskar/autosubsync , https://juanumusic.github.io/lyricssyncher/ , https://github.com/Alien501/lrc-generator , https://github.com/mikezzb/lyrics-sync ,
+    3.1. Lyrics Syncer (Line-by-Line): Service: https://lyricpotato.com/ , https://lyrisync.ovokacho.com/en
 2. Translation:
-  A. DB: Musixmatch
-  B. Online: [Google Translate](https://translate.google.com)
-  C. Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
+  1. DB: Musixmatch
+  2. Online: [Google Translate](https://translate.google.com)
+  3. Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
 3. Meaning: DB: Genius (https://github.com/johnwmillr/LyricsGenius) or LLM
 4. Chords:
-  A. Software: Fender Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, chordify.net 
-  B. DB: [UltimateGuitar](https://www.ultimate-guitar.com/)
+  1. Software: Fender Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, chordify.net 
+  2. DB: [UltimateGuitar](https://www.ultimate-guitar.com/)
+  3. Optional support for voicing
 5. Karaoke:
-  A. Vocal Melody Isolation using (See below)
-  B. Covert it to MIDI using (See Below), for Karaoke Pitch matching.
+  1. Vocal Melody Isolation using (See below)
+  2. Covert it to MIDI using (See Below), for Karaoke Pitch matching.
 
-- One LRCv2 file may have all features: Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
+- 1-LRCv2 file can have all features: Synced Lyrics + Meaning + Translation + Chords + Kareoke Data.
 
 ## Storing
 **.lrc2 sidecar file or audio's metadata**
@@ -85,7 +86,7 @@ metadata =
 [encoding:UTF-8]
 [id:musicbrainz-id]
 [isrc:USWB19xxx589]
-[BPM:123]
+[BPM:123.45]
 ```
 
 ```metadata
