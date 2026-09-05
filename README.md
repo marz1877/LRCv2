@@ -1,5 +1,6 @@
 # LRCv2 Specifications
 LRCv2 XML-inspired format specification proposal draft with features - Synced Lyrics with Meaning, Translation, Singer metadata, Custom Styling, Chords, Karaoke with Time and Pitch.
+Not just Lyrics, a new Chord FileFomart and language learning file-format.
 
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/01e228e8-80a5-4591-8cdf-79d27cabbbe4" />
 
@@ -676,6 +677,8 @@ text =
 ### Word-by-Word
 - Player MAY include dictionary for per word/phrase/slang/idiom translation.
 
+Purpose: Multilingual lyrics for foreigner listeners and Language leanring.
+
 ### Line(s)
 
 FORMAT: See Main Example
@@ -684,7 +687,7 @@ LRCv1 uses `[xx:xx.xx]` LRCv2 uses `<xx:xx.xx>` with `<br>` at end of lines
 
 ### Translation Format
 - MUST specify translation languages. e.g. German to English is `deu:eng`.
-- MUST use ISO 639-3 language codes.
+- MUST use `ISO 639-3` language codes.
 - One lyric CAN multiple translations.
 - Format `<00:13.75> <T:lang1:lang2>Line</T:TransaltedText>`
 - MAY contain 'Literal'<l> and 'Common Usage' <c> meaning.
@@ -811,7 +814,7 @@ LRCv1 Translated Lyrics Format workaround: Syntax and UI
 
 ---
 
-# ➕ EXTENDED FEATURES
+# ➕EXTENDED FEATURES
 
 ## 1. Styling
 
@@ -943,11 +946,13 @@ Example with Voicing
 <00:29.45> <ch:G-Normal>Don't know where it </ch><ch:Em-Normal>goes,</ch> <ch:G-Normal>but it's home to me </ch><ch:Em-Normal>and I walk alone</ch> <br>
 </details>
 ```
----------------------------------------------------
 
-Idea - to use bars and beats
+# ---------------------------------------------------Idea - to use bars and beats---------------------------------------------------
 
----------------------------------------------------
+Define Bar No.x it's time-signature and enter lyrics/chord by beats
+to consider musicXML like approach
+
+
 
 #### Format
 
