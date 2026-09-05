@@ -1013,13 +1013,18 @@ Format: `<bi=filename.ext>lyrics</bi=filename.ext>`
 #### Other Lyric Formats
 
 <details>
-  <summary>Other Music/Lyric Formats</summary>
+  <summary>Other Lyric Formats</summary>
+
 1. ID3 SYNCEDLYRICS - https://id3.org/Lyrics3v21. ID3 standardized SYNCEDLYRICS but not .lrc2.
 1. **OpenLyrics** - (https://github.com/openlyrics/openlyrics) - free-open XML standard. app / OS-independant song format for interoperability between apps
-**Music Notation**
+</details>
+
+<details>
+  <summary>Other Lyric Formats</summary>
+  
 1. [Music_notation_file_formats](https://en.wikipedia.org/wiki/Category:Music_notation_file_formats)
 1. .mscz/.mscx - https://musescore.org/en/handbook/3/file-formats#mscz
-1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files
+1. .mxl (Music XML) - https://handbook.musescore.org/file-management/working-with-musicxml-files , https://handbook.musescore.org/text/lyrics , https://www.w3.org/2021/06/musicxml40/tutorial/structure-of-musicxml-files/ , https://www.musicxml.com/publications/makemusic-recordare/xml-2001/elements-of-musicxml-design/
 </details>
 
 ## Software
