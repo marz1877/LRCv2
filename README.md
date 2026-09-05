@@ -887,8 +887,15 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
   - Chord Vocings
   - Transpose scale / "No Capo version"
   - Show chord Progression eg. `II V IV` (https://chromewebstore.google.com/detail/kantan-chord/ncdpcgdgemdklhocjgecijjjhaboopbp)
+ 
+#### Header
+- Optional
+```
+[instrument:Guitar-6 string-Electric]
+[tuning:EADGBe]
+```
 
-- Other Format: ChordPro
+### Other Format: ChordPro
 `https://github.com/ChordPro/chordpro`, `https://www.chordpro.org/`
 
 <details>
@@ -916,20 +923,8 @@ Please don't take [D7]my sunshine a[G]way
 
 ### LRCv2 Chord+Lyrics Format
 
-
-#### Header
-
-- Optional
-
-```
-[instrument:Guitar-6 string-Electric]
-[tuning:EADGBe]
-```
-
 #### Footer (for custom voicing)
-
 - Optional
-
 ```
 [voicing:ChordName-CodeName,fingeringBottomToTop]
 [voicing:Em-Normal,000220]
@@ -937,7 +932,7 @@ Please don't take [D7]my sunshine a[G]way
 [voicing:D-Normal,xx0232]
 ```
 
-Example with Voicing
+**Example with Voicing**
 ```
 <details>
   <summary>Example with Voicing</summary>  
@@ -947,16 +942,9 @@ Example with Voicing
 </details>
 ```
 
-# ---------------------------------------------------Idea - to use bars and beats---------------------------------------------------
-
-Define Bar No.x it's time-signature and enter lyrics/chord by beats
-to consider musicXML like approach
-
-
-
 #### Format
 
-Format `<ch:Em>Lyric </ch>`
+- Format: `<ch:Em>Lyric </ch>`
 
 <details>
   <summary>LRCv2 Chord+Lyrics</summary>  
@@ -982,6 +970,13 @@ Which helps with song has many instrumental breaks.
 <00:22.37=Em> Word Word</00:00.00> <00:22.37=G>Word Word </00:22.37 <00:22.37=D>Word WordWord Word </00:22.37> <00:22.37=A> Word Word</00:22.37><Br>
 ```
 </details>
+
+# Idea - to use bars and beats
+
+Define Bar No.x it's time-signature and enter lyrics/chord by beats
+to consider musicXML like approach
+
+------------------------------------------------------------------------------------------------------
 
 ## 🙄Special Features
 
