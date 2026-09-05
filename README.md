@@ -37,7 +37,7 @@ LRCv2 XML-inspired format specification proposal draft with features - Synced Ly
   C. Software: https://github.com/argosopentech/argos-translate , https://github.com/Spikatrix/Traly
 3. Meaning: DB: Genius (https://github.com/johnwmillr/LyricsGenius) or LLM
 4. Chords:
-  A. Software: Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, Chordify 
+  A. Software: Fender Riffstation, https://ecoliving-tips.github.io/chord-finder.html, https://guitariz.studio/chord-ai, chordify.net 
   B. DB: [UltimateGuitar](https://www.ultimate-guitar.com/)
 5. Karaoke:
   A. Vocal Melody Isolation using (See below)
@@ -880,10 +880,12 @@ It is "not similar" to https://en.wikipedia.org/wiki/CD%2BG / https://en.wikiped
 - Optional
 - Player MAY add options to -
   - Show Chord Charts for many instruments
+  - Chord Vocings
   - Transpose scale / "No Capo version"
   - Show chord Progression eg. `II V IV` (https://chromewebstore.google.com/detail/kantan-chord/ncdpcgdgemdklhocjgecijjjhaboopbp)
 
-- ChordPro: `https://github.com/ChordPro/chordpro`, `https://www.chordpro.org/`
+- Other Format: ChordPro
+`https://github.com/ChordPro/chordpro`, `https://www.chordpro.org/`
 
 <details>
   <summary>ChordPro Format example</summary>
@@ -910,6 +912,44 @@ Please don't take [D7]my sunshine a[G]way
 
 ### LRCv2 Chord+Lyrics Format
 
+
+#### Header
+
+- Optional
+
+```
+[instrument:Guitar-6 string-Electric]
+[tuning:EADGBe]
+```
+
+#### Footer (for custom voicing)
+
+- Optional
+
+```
+[voicing:ChordName-CodeName,fingeringBottomToTop]
+[voicing:Em-Normal,000220]
+[voicing:G-Normal,320033]
+[voicing:D-Normal,xx0232]
+```
+
+Example with Voicing
+```
+<details>
+  <summary>Example with Voicing</summary>  
+  
+<00:22.37> <ch:Em-Normal>I walk a </ch><ch:G-Normal>lonely road, </ch>the <ch:D-Normal>only one that </ch><ch:Em-Normal>I have ever known</ch> <br>
+<00:29.45> <ch:G-Normal>Don't know where it </ch><ch:Em-Normal>goes,</ch> <ch:G-Normal>but it's home to me </ch><ch:Em-Normal>and I walk alone</ch> <br>
+</details>
+```
+---------------------------------------------------
+
+Idea - to use bars and beats
+
+---------------------------------------------------
+
+#### Format
+
 Format `<ch:Em>Lyric </ch>`
 
 <details>
@@ -924,12 +964,13 @@ Format `<ch:Em>Lyric </ch>`
 ```
 </details>
 
-### LRCv2 Chord+Lyrics (Chords Separately) Format Type 2
+#### LRCv2 Chord+Lyrics Format Type 2 [Chord file with time stamps without lyrics + Normal Lyrics]
 
-Use a separate Chord file with time stamps without lyrics. Which helps with song has many instrumental breaks.
+Use a separate - Chord file with time stamps without lyrics.
+Which helps with song has many instrumental breaks.
 
 <details>
-  <summary>LRCv2 Format</summary>  
+  <summary>LRCv2 Chord+Lyrics Format Type 2 Format</summary>  
  
 ```
 <00:22.37=Em> Word Word</00:00.00> <00:22.37=G>Word Word </00:22.37 <00:22.37=D>Word WordWord Word </00:22.37> <00:22.37=A> Word Word</00:22.37><Br>
